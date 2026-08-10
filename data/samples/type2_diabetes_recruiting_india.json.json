@@ -1,0 +1,2343 @@
+{
+  "studies": [
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT06035874",
+          "orgStudyIdInfo": {
+            "id": "B-LIFTMED001"
+          },
+          "organization": {
+            "fullName": "Medanta, The Medicity, India",
+            "class": "OTHER"
+          },
+          "briefTitle": "Effect of Bempedoic Acid on Liver Fat in Individuals With Nonalcoholic Fatty Liver Disease and Type 2 Diabetes",
+          "officialTitle": "Effect of Bempedoic Acid on Liver Fat in Individuals With Nonalcoholic Fatty Liver Disease and Type 2 Diabetes: Randomized Controlled Trial",
+          "acronym": "B-LIFT"
+        },
+        "statusModule": {
+          "statusVerifiedDate": "2025-06",
+          "overallStatus": "RECRUITING",
+          "expandedAccessInfo": {
+            "hasExpandedAccess": false
+          },
+          "startDateStruct": {
+            "date": "2023-10-15",
+            "type": "ACTUAL"
+          },
+          "primaryCompletionDateStruct": {
+            "date": "2024-11-01",
+            "type": "ACTUAL"
+          },
+          "completionDateStruct": {
+            "date": "2025-10-01",
+            "type": "ESTIMATED"
+          },
+          "studyFirstSubmitDate": "2023-09-06",
+          "studyFirstSubmitQcDate": "2023-09-06",
+          "studyFirstPostDateStruct": {
+            "date": "2023-09-13",
+            "type": "ACTUAL"
+          },
+          "lastUpdateSubmitDate": "2025-06-12",
+          "lastUpdatePostDateStruct": {
+            "date": "2025-06-13",
+            "type": "ACTUAL"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "responsibleParty": {
+            "type": "PRINCIPAL_INVESTIGATOR",
+            "investigatorFullName": "Dr Mohammad Shafi Kuchay",
+            "investigatorTitle": "Senior Consultant, Division of Endocrinology & Diabetes",
+            "investigatorAffiliation": "Medanta, The Medicity, India"
+          },
+          "leadSponsor": {
+            "name": "Medanta, The Medicity, India",
+            "class": "OTHER"
+          },
+          "collaborators": [
+            {
+              "name": "Diabetes & Endocrinology Foundation",
+              "class": "UNKNOWN"
+            }
+          ]
+        },
+        "oversightModule": {
+          "oversightHasDmc": true,
+          "isFdaRegulatedDrug": false,
+          "isFdaRegulatedDevice": false,
+          "isUsExport": false
+        },
+        "descriptionModule": {
+          "briefSummary": "Nonalcoholic fatty liver disease (NAFLD) is a spectrum of liver conditions ranging from liver steatosis (NAFL), steatohepatitis (NASH), advanced liver fibrosis and ultimately leads to cirrhosis in a significant proportion of individuals. NAFLD is intimately associated with insulin resistance and associated disorders, such as type 2 diabetes, metabolic syndrome and dyslipidemia.\n\nBempedoic acid, an ATP-citrate lyase inhibitor, is recently approved for patients with dyslipidemia as a second line drug. Bempedoic acid reduces liver fat in mice model of NASH. Data regarding the effect of bempedoic acid on human liver fat are scarce. Therefore, the current study is planned to evaluate the effect of bempedoic acid versus standard treatment on liver and pancreatic fat content in patients with NAFLD",
+          "detailedDescription": "OBJECTIVE Nonalcoholic fatty liver disease (NAFLD) is a spectrum of liver conditions ranging from liver steatosis (NAFL), steatohepatitis (NASH), advanced liver fibrosis and ultimately leads to cirrhosis in a significant proportion of individuals. NAFLD is intimately associated with insulin resistance and associated disorders, such as type 2 diabetes, metabolic syndrome and dyslipidemia.\n\nBempedoic acid, an ATP-citrate lyase inhibitor, is recently approved for patients with dyslipidemia as a second line drug. Bempedoic acid reduces liver fat in mice model of NASH. Data regarding the effect of bempedoic acid on human liver fat are scarce. Therefore, the current study is planned to evaluate the effect of bempedoic acid versus standard treatment on liver and pancreatic fat content in patients with NAFLD.\n\nMaterials and methods\n\nStudy design This B-LIFT (effect of Bempedoic acid on Liver fat content) trial is an investigator initiated, open label, randomized clinical study to examine the effect of bempedoic acid 180 mg tablet once a day for 24 weeks (Bemp group) versus standard treatment (control group) on liver and pancreatic fat content. Hepatic steatosis (intracellular fat accumulation in hepatocytes) will be measured by MRI-PDFF, a validated quantitative biomarker for liver fat. Controlled attenuation parameter (CAP) and liver stiffness measurement (LSM) will be measured by Fibroscan. The study will be conducted according to the CONSORT guidelines. The patient population for the trial will be derived from Medanta-The Medicity Hospital endocrine out-patient clinic, who would primarily visit for management of type 2 diabetes and other co-morbidities. The study will be conducted in Medanta-The Medicity Hospital, Gurugram, Haryana, which is a tertiary care center in North India. Patients deemed eligible will be screened for the trial. The study will be registered at clinicaltrials.gov. The clinical trial protocol will be presented for approval to the institutional ethics review board. Informed written consent will be obtained from all the participants before enrolment into the study.\n\nAll patients will undergo a baseline assessment before randomization, including detailed medical history, physical examination including anthropometry and biochemical evaluation.\n\nRandomization\n\nA research assistant will randomize the patients into Bem group or Control group in a 1:1 ratio using computer-generated numbers. It will be ensured that these are equal in number. Opaque envelopes will be prepared with serial number on the top and the assigned group inside the envelop. After recruiting the subjects, the envelop with corresponding serial number will be opened and the subjects assign to the relevant groups after opening the envelop. The patients will then be sent back to their respective consultants in the endocrine department for initiation and/or adjustment of treatment for type 2 diabetes (according to randomization into Bemp or control groups) and other co-morbidities.\n\nStudy visits\n\nAfter careful assessment at the baseline visit, patients meeting all inclusion and exclusion criteria will be randomized to receive bempedoic acid 180 mg once a day or the standard treatment (no treatment for fatty liver, control group) for 24 weeks. Patients will be advised to return to the out-patient endocrine clinic for follow-up visits at weeks 12 and 24.\n\nPrimary outcome The primary outcome measure will be the difference of the change in liver fat content from 0 (baseline) to 24 weeks between groups. \\[liver fat content as quantified by MRI-PDFF in colocalized regions of interest (ROI) within each of the nine liver segments\\].\n\nSecondary outcomes\n\n1. The difference of the change in pancreatic fat content from 0 (baseline) to 24 weeks between groups. \\[Pancreatic fat content as quantified by MRI PDFF\\].\n2. The difference of the change in controlled attenuation parameter (CAP) from 0 (baseline) to 24 weeks between groups. \\[CAP will be assessed by transient elastography\\].\n3. The difference of the change in liver stiffness measurement (LSM) from 0 (baseline) to 24 weeks between groups. \\[LSM will be measured by transient elastography\\].\n4. Change between the groups in aspartate aminotransferase (AST) levels.\n5. Change between groups in alanine aminotransferase (ALT) levels.\n6. Change between groups in gamma-glutamyl transpeptidase (GGT) levels.\n7. Change between the groups in serum creatinine concentrations.\n8. Change between the groups in total cholesterol levels.\n9. Change between groups in triglycerides levels.\n10. Change between groups in LDL levels.\n11. Change between groups in HDL levels.\n\nMRI-PDFF protocols\n\nMRI-PDFF for fat quantification\n\nMRI-PDFF is a non-invasive, objective, and quantitative MR imaging-based biomarker that can accurately estimate liver fat. MRI-PDFF has been demonstrated to be a robust technique for assessing treatment response in NASH clinical trials. In this study, the time interval from obtaining the baseline MRI-PDFF to initiating the study drug will be less than one week.\n\nMRI-PDFF for detailed fat mapping of the entire liver\n\nAll MR examinations will be done by an experienced MR technologist in the Medanta Radiology department under the direction of the radiologist investigator (SK). The radiologist investigator, blinded to the patients' treatment group allocation, clinical and biochemical data, and order of scans (baseline and follow-up), will perform the image analyses.\n\nROI colocalization before and after treatment\n\nTo assess longitudinal changes in liver fat content, one colocalized ROI will be placed in each of the nine liver segments (nine separate ROIs) on the baseline and follow-up MRI examinations.\n\nStatistical analysis Plan\n\nThe analysis will include profiling of patients on different demographic, clinical and laboratory parameters etc. Quantitative data will be presented in terms of means and standard deviation and qualitative/categorical data will be presented as absolute numbers and proportions. To compare between the two groups, the Chi-squared test or Fisher's exact test will be used for categorical variables, and the independent samples t test or Wilcoxon-Mann-Whitney U test will be used for the differences between continuous variables. Pearson correlation coefficient will be used to evaluate correlations between variables. Additional analyses of primary and secondary outcomes within treatment groups will be performed by using two-tailed independent sample t tests, paired t tests, or non-parametric tests, when indicated. P-value \\< 0.05 is considered statistically significant. SPSS software will be used for analysis.\n\nSample size calculation\n\nInvestigator assumed that a 5.0% difference in absolute liver fat content between bempedoic acid versus control group would be the minimally appreciable and clinically relevant difference. Based on the results of previous similar clinical studies involving ezetimibe and empagliflozin, Investigator expected the bempedoic acid group to have a liver fat reduction of \\>5% compared to baseline, and control group to have \\<2% reduction in liver fat compared to baseline. With these assumptions the sample size per group works out as 30 in each group to achieve a power of at least 90% with a β of 0.05. Therefore, Investigator plan to randomize 100 patients, 50 in each group to ensure adequate study power even with dropouts.\n\nMethod of sample size calculation\n\nAssumptions:\n\nChange in absolute liver fat from baseline to week 24 in Bemp group (m1) = 5.0% Change in absolute liver fat from baseline to week 24 in Control group (m2) = 2.0% Confidence level -95% Power - 90% Coefficient of variation = 100%\n\nFormula for sample size calculation:\n\nn = (Zα+Zβ)2 \\* (σ12 + σ22)) / (m1-m2)2, where Zα is the value of normal distribution corresponding to desired confidence level Zβ is the value of the Normal distribution corresponding to desired power σ1 and σ2 are the standard deviation of the two groups With these assumptions the sample size per group works out as 30. Investigator will randomize 50 in each group to ensure adequate power even after dropouts.\n\nPatient confidentiality\n\nPrecautions will be taken to ensure confidentiality. Data collection forms will not reveal the name of patients included in study. All the participants will be covered by insurance to cover the cost of any untoward effect directly resulting from enrolment in the study."
+        },
+        "conditionsModule": {
+          "conditions": [
+            "Type 2 Diabetes",
+            "Non Alcholic Fatty Liver Disease"
+          ]
+        },
+        "designModule": {
+          "studyType": "INTERVENTIONAL",
+          "phases": [
+            "NA"
+          ],
+          "designInfo": {
+            "allocation": "RANDOMIZED",
+            "interventionModel": "PARALLEL",
+            "primaryPurpose": "TREATMENT",
+            "maskingInfo": {
+              "masking": "NONE"
+            }
+          },
+          "enrollmentInfo": {
+            "count": 100,
+            "type": "ESTIMATED"
+          }
+        },
+        "armsInterventionsModule": {
+          "armGroups": [
+            {
+              "label": "Bem group",
+              "type": "ACTIVE_COMPARATOR",
+              "description": "Patient will get Bempedoic acid along with the standard of Care",
+              "interventionNames": [
+                "Drug: Bempedoic acid"
+              ]
+            },
+            {
+              "label": "Control Group",
+              "type": "NO_INTERVENTION",
+              "description": "Patient will get the standard of Care as per routine practice"
+            }
+          ],
+          "interventions": [
+            {
+              "type": "DRUG",
+              "name": "Bempedoic acid",
+              "description": "Patient willl be randomized 1:1 in both the arms",
+              "armGroupLabels": [
+                "Bem group"
+              ]
+            }
+          ]
+        },
+        "outcomesModule": {
+          "primaryOutcomes": [
+            {
+              "measure": "The change in liver fat content",
+              "description": "The primary outcome measure will be the difference of the change in liver fat content from 0 (baseline) to 24 weeks between groups",
+              "timeFrame": "Baseline to 24 Weeks"
+            }
+          ],
+          "secondaryOutcomes": [
+            {
+              "measure": "The change in pancreatic fat",
+              "description": "The difference of the change in pancreatic fat content from 0 (baseline) to 24 weeks between groups. \\[Pancreatic fat content as quantified by MRI PDFF\\]",
+              "timeFrame": "Baseline to 24 Weeks"
+            },
+            {
+              "measure": "The change in controlled attenuation parameter",
+              "description": "The difference of the change in controlled attenuation parameter (CAP) from 0 (baseline) to 24 weeks between groups. \\[CAP will be assessed by transient elastography\\].",
+              "timeFrame": "Baseline to 24 Weeks"
+            },
+            {
+              "measure": "The change in liver stiffness measurement (LSM)",
+              "description": "The difference of the change in liver stiffness measurement (LSM) from 0 (baseline) to 24 weeks between groups. \\[LSM will be measured by transient elastography\\].",
+              "timeFrame": "Baseline to 24 Weeks"
+            },
+            {
+              "measure": "Change between the groups in aspartate aminotransferase (AST) levels",
+              "description": "Change between the groups in aspartate aminotransferase (AST) levels",
+              "timeFrame": "Baseline to 24 Weeks"
+            },
+            {
+              "measure": "Change between groups in alanine aminotransferase (ALT) levels",
+              "description": "Change between groups in alanine aminotransferase (ALT) levels",
+              "timeFrame": "Baseline to 24 Weeks"
+            },
+            {
+              "measure": "Change between groups in gamma-glutamyl transpeptidase (GGT) levels.",
+              "description": "Change between groups in gamma-glutamyl transpeptidase (GGT) levels.",
+              "timeFrame": "Baseline to 24 Weeks"
+            },
+            {
+              "measure": "Change between the groups in serum creatinine concentrations.",
+              "description": "Change between the groups in serum creatinine concentrations.",
+              "timeFrame": "Baseline to 24 Weeks"
+            },
+            {
+              "measure": "Change between the groups in total cholesterol levels.",
+              "description": "Change between the groups in total cholesterol levels.",
+              "timeFrame": "Baseline to 24 Weeks"
+            },
+            {
+              "measure": "Change between groups in triglycerides levels.",
+              "description": "Change between groups in triglycerides levels.",
+              "timeFrame": "Baseline to 24 Weeks"
+            },
+            {
+              "measure": "Change between groups in LDL levels",
+              "description": "Change between groups in LDL levels",
+              "timeFrame": "Baseline to 24 Weeks"
+            },
+            {
+              "measure": "Change between groups in HDL levels",
+              "description": "Change between groups in HDL levels",
+              "timeFrame": "Baseline to 24 Weeks"
+            }
+          ]
+        },
+        "eligibilityModule": {
+          "eligibilityCriteria": "Inclusion Criteria:\n\n1. A man or woman, 20 years of age or above with the diagnosis of type 2 diabetes for at least 3 months who meets all the following two criteria:\n\n   1. On standard anti-diabetic agents (metformin, DPP-4 inhibitors, sulphonylureas or insulin, in any combination) with an HbA1c of \\<9% at screening\n   2. Have documented hepatic steatosis (MRI-PDFF \\>5.6%) on screening MRI- PDFF\n2. Participants must be medically stable based on medical history, physical examination and laboratory investigations.\n3. Participants must be willing and able to adhere to the prohibitions and restrictions specified in this protocol.\n4. Each participant must sign an informed consent form (ICF) indicating that he or she understands the purpose of the study and are willing to participate in the study.\n\nExclusion Criteria:\n\n1. History of diabetic ketoacidosis, type 1 diabetes, pancreas or beta-cell transplantation, or diabetes secondary to pancreatitis or pancreatectomy.\n2. History of brittle or labile glycemic control, with widely varying glucose measurements by FPG or SMBG such that stable glucose control over the treatment period would be unlikely.\n3. History of drug or alcohol abuse according to Diagnostic and Statistical Manual of Mental Disorders (5th edition) (DSM-V) criteria within 3 years before Screening, or an Alcohol Use Disorders Identification Test (AUDIT) with a score \\>8, or alcohol consumption of more than 20 g per day in the case of women and more than 30 g per day in the case of men for at least three consecutive months during the previous 5 years.\n4. Thyroid stimulating hormone (TSH) value that is either \\< 0.45 mIU/L or \\>10 mIU/L at Screening. Note: Subjects on thyroid hormone replacement therapy must be on a stable dose and dosing regimen for at least 4 weeks prior to enrollment.\n5. Use of a PPAR-γ agonist \\[e.g., a thiazolidinedione (pioglitazone\\], an SGLT2 inhibitor (e.g., canagliflozin, empagliflozin, dapagliflozin), GLP-1 receptor agonists (e.g., liraglutide, dulaglutide) or saroglitazar (Dual PPARα/γ agonist) within 12 weeks before the enrollment.\n6. BMI \\>40 kg/m2.\n7. Ongoing eating disorder, or a significant weight loss or weight gain within 12 weeks before the Screening visit, defined as an increase or decrease of 5% in body weight based upon clinic-based measurement or, if not available, based on subject's report.\n8. Use of weight loss medication (prescription and/or over the counter) within 3 months prior to Screening or have participated in a weight loss/diet program within 12 months prior to Screening.\n9. Renal disease that required treatment with immunosuppressive therapy or a history of dialysis or renal transplant.\n10. Myocardial infarction, unstable angina, pulmonary hypertension, revascularization procedure (e.g., stent or bypass graft surgery), or cerebrovascular accident within 3 months before Screening, or revascularization procedure is planned, or subject has a history of New York Heart Association (NYHA) Class III-IV cardiac disease.\n11. History of hepatitis B surface antigen (HBsAg) or hepatitis C antibody (anti-HCV) positive, or other clinically active liver disease, or tests positive for HBsAg or anti- HCV at Screening.\n12. Use of vitamin E within 12 weeks before screening.\n13. History of prior bariatric (e.g., Roux-en-Y gastric bypass) or other major upper gastrointestinal surgical procedure (including gastric resection).\n14. History of diabetic gastroparesis (or symptoms suggestive of this disorder, including postprandial bloating or vomiting), malabsorption, inflammatory bowel disease, or any other chronic, clinically important gastrointestinal disorder.\n15. Estimated glomerular filtration rate (eGFR) \\<60 mL/min/1•73 m2 using the Modification of Diet in Renal Disease Study (MDRD) equation.\n16. Subjects with a history of having or possibly having metallic material in the body or any contraindication for a MR examination.\n17. Claustrophobia, or anxiety related to previous negative experiences with magnetic resonance imaging procedures or if the subject is unwilling to participate in magnetic resonance imaging procedures.\n18. Clinically important hematologic disorder (e.g., symptomatic anemia, proliferative bone marrow disorder, thrombocytopenia) at Screening.\n19. History of human immunodeficiency virus (HIV) antibody positive at Screening.\n20. Major surgery (e.g., requiring general anesthesia) within 12 weeks before Screening, or will not have fully recovered from surgery, or has surgery planned during the time the subject is expected to participate in the study.\n21. Contraindications to the use of bempedoic acid (per BEMPEDOIC ACID Prescribing Information).\n22. Current use of a corticosteroid medication or immunosuppressive agent, or likely to require treatment with a corticosteroid medication or an immunosuppressive agent.",
+          "healthyVolunteers": false,
+          "sex": "ALL",
+          "minimumAge": "20 Years",
+          "stdAges": [
+            "ADULT",
+            "OLDER_ADULT"
+          ]
+        },
+        "contactsLocationsModule": {
+          "centralContacts": [
+            {
+              "name": "Mr Surender, PhD",
+              "role": "CONTACT",
+              "phone": "01244141414",
+              "phoneExt": "6596",
+              "email": "yadavsurender89@gmail.com"
+            }
+          ],
+          "locations": [
+            {
+              "facility": "Division Of Endocrinology , Medanta The Medicity Sec 38",
+              "status": "RECRUITING",
+              "city": "Gurgaon",
+              "state": "Haryana",
+              "zip": "122001",
+              "country": "India",
+              "contacts": [
+                {
+                  "name": "Mohammad S kuchay, MBBS, MD",
+                  "role": "CONTACT",
+                  "phone": "0124-4141414",
+                  "phoneExt": "6596",
+                  "email": "drshafikuchay@gmail.con"
+                },
+                {
+                  "name": "Surender Rao, Msc",
+                  "role": "CONTACT",
+                  "phone": "0124-4141414",
+                  "phoneExt": "6596",
+                  "email": "yadavsurender89@gmail.com"
+                }
+              ],
+              "geoPoint": {
+                "lat": 28.4601,
+                "lon": 77.02635
+              }
+            }
+          ]
+        },
+        "referencesModule": {
+          "references": [
+            {
+              "pmid": "19938117",
+              "type": "RESULT",
+              "citation": "Malik SM, Devera ME, Fontes P, Shaikh O, Sasatomi E, Ahmad J. Recurrent disease following liver transplantation for nonalcoholic steatohepatitis cirrhosis. Liver Transpl. 2009 Dec;15(12):1843-51. doi: 10.1002/lt.21943."
+            },
+            {
+              "pmid": "22025886",
+              "type": "RESULT",
+              "citation": "Reeder SB, Cruite I, Hamilton G, Sirlin CB. Quantitative Assessment of Liver Fat with Magnetic Resonance Imaging and Spectroscopy. J Magn Reson Imaging. 2011 Oct;34(4):729-749. doi: 10.1002/jmri.22775. Epub 2011 Sep 16."
+            },
+            {
+              "pmid": "22554256",
+              "type": "RESULT",
+              "citation": "Permutt Z, Le TA, Peterson MR, Seki E, Brenner DA, Sirlin C, Loomba R. Correlation between liver histology and novel magnetic resonance imaging in adult patients with non-alcoholic fatty liver disease - MRI accurately quantifies hepatic steatosis in NAFLD. Aliment Pharmacol Ther. 2012 Jul;36(1):22-9. doi: 10.1111/j.1365-2036.2012.05121.x. Epub 2012 May 3."
+            },
+            {
+              "pmid": "22431131",
+              "type": "RESULT",
+              "citation": "Le TA, Chen J, Changchien C, Peterson MR, Kono Y, Patton H, Cohen BL, Brenner D, Sirlin C, Loomba R; San Diego Integrated NAFLD Research Consortium (SINC). Effect of colesevelam on liver fat quantified by magnetic resonance in nonalcoholic steatohepatitis: a randomized controlled trial. Hepatology. 2012 Sep;56(3):922-32. doi: 10.1002/hep.25731. Epub 2012 Jul 2."
+            },
+            {
+              "pmid": "25482832",
+              "type": "RESULT",
+              "citation": "Loomba R, Sirlin CB, Ang B, Bettencourt R, Jain R, Salotti J, Soaft L, Hooker J, Kono Y, Bhatt A, Hernandez L, Nguyen P, Noureddin M, Haufe W, Hooker C, Yin M, Ehman R, Lin GY, Valasek MA, Brenner DA, Richards L; San Diego Integrated NAFLD Research Consortium (SINC). Ezetimibe for the treatment of nonalcoholic steatohepatitis: assessment by novel magnetic resonance imaging and magnetic resonance elastography in a randomized trial (MOZART trial). Hepatology. 2015 Apr;61(4):1239-50. doi: 10.1002/hep.27647. Epub 2015 Feb 27."
+            },
+            {
+              "pmid": "34909677",
+              "type": "RESULT",
+              "citation": "Sanjay KV, Vishwakarma S, Zope BR, Mane VS, Mohire S, Dhakshinamoorthy S. ATP citrate lyase inhibitor Bempedoic Acid alleviate long term HFD induced NASH through improvement in glycemic control, reduction of hepatic triglycerides & total cholesterol, modulation of inflammatory & fibrotic genes and improvement in NAS score. Curr Res Pharmacol Drug Discov. 2021 Sep 4;2:100051. doi: 10.1016/j.crphar.2021.100051. eCollection 2021."
+            },
+            {
+              "pmid": "34887111",
+              "type": "RESULT",
+              "citation": "Bentanachs R, Velazquez AM, Sanchez RM, Alegret M, Laguna JC, Roglans N. Bempedoic acid as a PPARalpha activator: new perspectives for hepatic steatosis treatment in a female rat experimental model. Clin Investig Arterioscler. 2022 Mar-Apr;34(2):57-67. doi: 10.1016/j.arteri.2021.09.004. Epub 2021 Dec 6. English, Spanish."
+            }
+          ]
+        },
+        "ipdSharingStatementModule": {
+          "ipdSharing": "UNDECIDED"
+        }
+      },
+      "derivedSection": {
+        "miscInfoModule": {
+          "versionHolder": "2026-08-07"
+        },
+        "conditionBrowseModule": {
+          "meshes": [
+            {
+              "id": "D003924",
+              "term": "Diabetes Mellitus, Type 2"
+            }
+          ],
+          "ancestors": [
+            {
+              "id": "D003920",
+              "term": "Diabetes Mellitus"
+            },
+            {
+              "id": "D044882",
+              "term": "Glucose Metabolism Disorders"
+            },
+            {
+              "id": "D008659",
+              "term": "Metabolic Diseases"
+            },
+            {
+              "id": "D009750",
+              "term": "Nutritional and Metabolic Diseases"
+            },
+            {
+              "id": "D004700",
+              "term": "Endocrine System Diseases"
+            }
+          ]
+        },
+        "interventionBrowseModule": {
+          "meshes": [
+            {
+              "id": "C581236",
+              "term": "8-hydroxy-2,2,14,14-tetramethylpentadecanedioic acid"
+            }
+          ]
+        }
+      },
+      "hasResults": false
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT07438444",
+          "orgStudyIdInfo": {
+            "id": "27235"
+          },
+          "secondaryIdInfos": [
+            {
+              "id": "I8F-IN-GPIZ",
+              "type": "OTHER",
+              "domain": "Eli Lilly and Company"
+            }
+          ],
+          "organization": {
+            "fullName": "Eli Lilly and Company",
+            "class": "INDUSTRY"
+          },
+          "briefTitle": "A Study of Tirzepatide (LY3298176) in Adult Participants in India With Either Type 2 Diabetes Mellitus or Obesity",
+          "officialTitle": "A Phase 4, Open-Label, Single-Arm, 46-Week Study to Investigate the Safety and Efficacy With Tirzepatide in Adult Indian Participants With Either Type 2 Diabetes or Obesity"
+        },
+        "statusModule": {
+          "statusVerifiedDate": "2026-05",
+          "overallStatus": "RECRUITING",
+          "expandedAccessInfo": {
+            "hasExpandedAccess": false
+          },
+          "startDateStruct": {
+            "date": "2026-02-27",
+            "type": "ACTUAL"
+          },
+          "primaryCompletionDateStruct": {
+            "date": "2027-10",
+            "type": "ESTIMATED"
+          },
+          "completionDateStruct": {
+            "date": "2027-10",
+            "type": "ESTIMATED"
+          },
+          "studyFirstSubmitDate": "2026-02-23",
+          "studyFirstSubmitQcDate": "2026-02-23",
+          "studyFirstPostDateStruct": {
+            "date": "2026-02-27",
+            "type": "ACTUAL"
+          },
+          "lastUpdateSubmitDate": "2026-05-18",
+          "lastUpdatePostDateStruct": {
+            "date": "2026-05-19",
+            "type": "ACTUAL"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "responsibleParty": {
+            "type": "SPONSOR"
+          },
+          "leadSponsor": {
+            "name": "Eli Lilly and Company",
+            "class": "INDUSTRY"
+          }
+        },
+        "oversightModule": {
+          "oversightHasDmc": false,
+          "isFdaRegulatedDrug": false,
+          "isFdaRegulatedDevice": false
+        },
+        "descriptionModule": {
+          "briefSummary": "The main purpose of this study is to measure the safety and efficacy of tirzepatide in adult participants in India who have type 2 diabetes or who have obesity or overweight without type 2 diabetes. Participation in the study will last about 46 weeks."
+        },
+        "conditionsModule": {
+          "conditions": [
+            "Diabetes Mellitus, Type 2",
+            "Obesity",
+            "Overweight"
+          ],
+          "keywords": [
+            "Type 2 Diabetes in India",
+            "Obesity in India",
+            "Obese in India",
+            "Tirzepatide",
+            "Tirzepatide in India"
+          ]
+        },
+        "designModule": {
+          "studyType": "INTERVENTIONAL",
+          "phases": [
+            "PHASE4"
+          ],
+          "designInfo": {
+            "allocation": "NA",
+            "interventionModel": "SINGLE_GROUP",
+            "primaryPurpose": "TREATMENT",
+            "maskingInfo": {
+              "masking": "NONE"
+            }
+          },
+          "enrollmentInfo": {
+            "count": 344,
+            "type": "ESTIMATED"
+          }
+        },
+        "armsInterventionsModule": {
+          "armGroups": [
+            {
+              "label": "Tirzepatide",
+              "type": "EXPERIMENTAL",
+              "description": "Participants will receive tirzepatide subcutaneously (SC)",
+              "interventionNames": [
+                "Drug: Tirzepatide"
+              ]
+            }
+          ],
+          "interventions": [
+            {
+              "type": "DRUG",
+              "name": "Tirzepatide",
+              "description": "Administered SC",
+              "armGroupLabels": [
+                "Tirzepatide"
+              ],
+              "otherNames": [
+                "LY3298176"
+              ]
+            }
+          ]
+        },
+        "outcomesModule": {
+          "primaryOutcomes": [
+            {
+              "measure": "Number of Participants with One or More Serious Adverse Events (SAE) Considered by the Investigator to be Related to Study Drug Administration",
+              "description": "A summary of treatment emergent adverse events (TEAEs), SAEs and other non-serious adverse events (AEs), regardless of causality, will be reported in the Reported Adverse Events module",
+              "timeFrame": "Baseline through Week 46"
+            }
+          ],
+          "secondaryOutcomes": [
+            {
+              "measure": "Percentage of Participants with ≥5% Body Weight Reduction",
+              "timeFrame": "Week 46"
+            },
+            {
+              "measure": "Percentage of Participants with Hemoglobin A1c (HbA1c) <7.0% in Participants with Type 2 Diabetes",
+              "timeFrame": "Week 46"
+            },
+            {
+              "measure": "Change from Baseline in Waist Circumference in Participants with Obesity or Overweight",
+              "timeFrame": "Baseline, Week 46"
+            }
+          ]
+        },
+        "eligibilityModule": {
+          "eligibilityCriteria": "Inclusion Criteria:\n\nParticipants with Type 2 Diabetes:\n\n* Have had type 2 diabetes for at least one year\n* Insulin naive\n* Have HbA1c ≥7.5% and ≤10% at screening\n* Have body mass index (BMI) ≥23 kilograms per square meter (kg/m2)\n\nParticipants with Obesity or Overweight without Type 2 Diabetes:\n\n* Have a BMI\n\n  * Greater than or equal to 30 kg/m2 OR\n  * Greater than or equal to 27 kg/m2 AND previously diagnosed with at least one of the following weight-related comorbidities: high blood pressure, lipid disorder, obstructive sleep apnea, heart disease\n\nExclusion Criteria:\n\nParticipants with Type 2 Diabetes:\n\n* Have type 1 diabetes\n* Have had any of the following heart conditions within 6 months prior to screening:\n\n  * heart attack\n  * stroke\n  * hospitalization due to heart failure\n* Have New York Heart Association Functional Classification Class III or IV congestive heart failure (CHF)\n* Have type 2 diabetes along with morbid obesity and being considered for bariatric surgery or any other procedure intended for weight loss\n\nParticipants with Obesity or Overweight without Type 2 Diabetes:\n\n* Have type 1 diabetes or type 2 diabetes\n* Have a self-reported change in body weight greater than 5 kilograms (kg) (11 pounds) within 3 months prior to screening\n* Have a prior or planned surgical treatment for obesity\n* Have had any of the following heart conditions within 6 months prior to screening:\n\n  * heart attack\n  * stroke\n  * hospitalization due to heart failure\n* Have New York Heart Association Functional Classification Class III or IV CHF\n* Have taken any medications or alternative remedies for weight loss within 3 months prior to screening",
+          "healthyVolunteers": false,
+          "sex": "ALL",
+          "minimumAge": "18 Years",
+          "stdAges": [
+            "ADULT",
+            "OLDER_ADULT"
+          ]
+        },
+        "contactsLocationsModule": {
+          "centralContacts": [
+            {
+              "name": "Trial questions or participation questions: 1-877-CTLILLY (1-877-285-4559) or",
+              "role": "CONTACT",
+              "phone": "317-615-4559",
+              "email": "LillyTrials@Lilly.com"
+            },
+            {
+              "name": "Physicians interested in becoming principal investigators please contact",
+              "role": "CONTACT",
+              "email": "clinical_inquiry_hub@lilly.com"
+            }
+          ],
+          "overallOfficials": [
+            {
+              "name": "Call 1-877-CTLILLY (1-877-285-4559) or 1-317-615-4559 Mon - Fri 8 AM - 8 PM Eastern time (UTC/GMT - 5 hours, EST)",
+              "affiliation": "Eli Lilly and Company",
+              "role": "STUDY_DIRECTOR"
+            }
+          ],
+          "locations": [
+            {
+              "facility": "B. J. Medical College & Civil Hospital",
+              "status": "RECRUITING",
+              "city": "Ahmedabad",
+              "zip": "380 016",
+              "country": "India",
+              "contacts": [
+                {
+                  "role": "CONTACT",
+                  "phone": "9586974089"
+                },
+                {
+                  "name": "Kartikeya Parmar",
+                  "role": "PRINCIPAL_INVESTIGATOR"
+                }
+              ],
+              "geoPoint": {
+                "lat": 23.02579,
+                "lon": 72.58727
+              }
+            },
+            {
+              "facility": "V.S. General Hospital",
+              "status": "NOT_YET_RECRUITING",
+              "city": "Ahmedabad",
+              "zip": "380006",
+              "country": "India",
+              "contacts": [
+                {
+                  "role": "CONTACT",
+                  "phone": "9426641888"
+                },
+                {
+                  "name": "DHAIWAT SHUKLA",
+                  "role": "PRINCIPAL_INVESTIGATOR"
+                }
+              ],
+              "geoPoint": {
+                "lat": 23.02579,
+                "lon": 72.58727
+              }
+            },
+            {
+              "facility": "Gujarat Endocrine Center",
+              "status": "RECRUITING",
+              "city": "Ahmedabad",
+              "zip": "380052",
+              "country": "India",
+              "contacts": [
+                {
+                  "role": "CONTACT",
+                  "phone": "9825599450 and 9428044608"
+                },
+                {
+                  "name": "parag Shah",
+                  "role": "PRINCIPAL_INVESTIGATOR"
+                }
+              ],
+              "geoPoint": {
+                "lat": 23.02579,
+                "lon": 72.58727
+              }
+            },
+            {
+              "facility": "Jawahar Lal Nehru Medical College",
+              "status": "NOT_YET_RECRUITING",
+              "city": "Ajmer",
+              "zip": "305001",
+              "country": "India",
+              "contacts": [
+                {
+                  "role": "CONTACT",
+                  "phone": "7737258659"
+                },
+                {
+                  "name": "Sanjeev Maheshwari",
+                  "role": "PRINCIPAL_INVESTIGATOR"
+                }
+              ],
+              "geoPoint": {
+                "lat": 26.4521,
+                "lon": 74.63867
+              }
+            },
+            {
+              "facility": "Motilal Nehru Medical College Hospital",
+              "status": "RECRUITING",
+              "city": "Allahābād",
+              "zip": "211002",
+              "country": "India",
+              "contacts": [
+                {
+                  "role": "CONTACT",
+                  "phone": "7007590702"
+                },
+                {
+                  "name": "JITENDRA SHUKLA",
+                  "role": "PRINCIPAL_INVESTIGATOR"
+                }
+              ],
+              "geoPoint": {
+                "lat": 29.22096,
+                "lon": 78.37997
+              }
+            },
+            {
+              "facility": "Lifecare Hospital and Research Centre",
+              "status": "RECRUITING",
+              "city": "Bengaluru",
+              "zip": "560092",
+              "country": "India",
+              "contacts": [
+                {
+                  "role": "CONTACT",
+                  "phone": "9663370338"
+                },
+                {
+                  "name": "Sreenivasa Murthy",
+                  "role": "PRINCIPAL_INVESTIGATOR"
+                }
+              ],
+              "geoPoint": {
+                "lat": 12.97194,
+                "lon": 77.59369
+              }
+            },
+            {
+              "facility": "AIIMS, Bhubaneshwar",
+              "status": "NOT_YET_RECRUITING",
+              "city": "Bhubaneswar",
+              "zip": "751019",
+              "country": "India",
+              "contacts": [
+                {
+                  "role": "CONTACT",
+                  "phone": "7327030798 6370421141"
+                },
+                {
+                  "name": "Debananda Sahoo",
+                  "role": "PRINCIPAL_INVESTIGATOR"
+                }
+              ],
+              "geoPoint": {
+                "lat": 20.27241,
+                "lon": 85.83385
+              }
+            },
+            {
+              "facility": "Sri Ramachandra MedicaL College & Research Institute",
+              "status": "RECRUITING",
+              "city": "Chennai",
+              "zip": "600116",
+              "country": "India",
+              "contacts": [
+                {
+                  "role": "CONTACT",
+                  "phone": "044-45928916"
+                },
+                {
+                  "name": "Sudagar Singh",
+                  "role": "PRINCIPAL_INVESTIGATOR"
+                }
+              ],
+              "geoPoint": {
+                "lat": 13.08784,
+                "lon": 80.27847
+              }
+            },
+            {
+              "facility": "Kovai Diabetes Speciality Center and Hospital",
+              "status": "RECRUITING",
+              "city": "Coimbatore",
+              "zip": "641009",
+              "country": "India",
+              "contacts": [
+                {
+                  "role": "CONTACT",
+                  "phone": "9444548713"
+                },
+                {
+                  "name": "Balamurugan Ramanathan",
+                  "role": "PRINCIPAL_INVESTIGATOR"
+                }
+              ],
+              "geoPoint": {
+                "lat": 11.00555,
+                "lon": 76.96612
+              }
+            },
+            {
+              "facility": "Apollo Excelcare Hospital",
+              "status": "RECRUITING",
+              "city": "Guwahati",
+              "zip": "781033",
+              "country": "India",
+              "contacts": [
+                {
+                  "role": "CONTACT",
+                  "phone": "9085174978"
+                },
+                {
+                  "name": "Manash Baruah",
+                  "role": "PRINCIPAL_INVESTIGATOR"
+                }
+              ],
+              "geoPoint": {
+                "lat": 26.1844,
+                "lon": 91.7458
+              }
+            },
+            {
+              "facility": "Osmania Medical College & Hospital",
+              "status": "RECRUITING",
+              "city": "Hyderabad",
+              "zip": "500012",
+              "country": "India",
+              "contacts": [
+                {
+                  "role": "CONTACT",
+                  "phone": "9000464657 9652050894"
+                },
+                {
+                  "name": "Rakesh Sahay",
+                  "role": "PRINCIPAL_INVESTIGATOR"
+                }
+              ],
+              "geoPoint": {
+                "lat": 17.38405,
+                "lon": 78.45636
+              }
+            },
+            {
+              "facility": "Eternal Heart Care Center and Research Institute",
+              "status": "RECRUITING",
+              "city": "Jaipur",
+              "zip": "302017",
+              "country": "India",
+              "contacts": [
+                {
+                  "role": "CONTACT",
+                  "phone": "9982021057"
+                },
+                {
+                  "name": "Jugal Gupta",
+                  "role": "PRINCIPAL_INVESTIGATOR"
+                }
+              ],
+              "geoPoint": {
+                "lat": 26.91962,
+                "lon": 75.78781
+              }
+            },
+            {
+              "facility": "K care Hospital",
+              "status": "RECRUITING",
+              "city": "Kanpur",
+              "zip": "208001",
+              "country": "India",
+              "contacts": [
+                {
+                  "role": "CONTACT",
+                  "phone": "9557808393"
+                },
+                {
+                  "name": "Amit Gupta",
+                  "role": "PRINCIPAL_INVESTIGATOR"
+                }
+              ],
+              "geoPoint": {
+                "lat": 26.46523,
+                "lon": 80.34975
+              }
+            },
+            {
+              "facility": "Brij Medical Centre Private Limited",
+              "status": "NOT_YET_RECRUITING",
+              "city": "Kanpur",
+              "zip": "208020",
+              "country": "India",
+              "contacts": [
+                {
+                  "role": "CONTACT",
+                  "phone": "8009626511"
+                },
+                {
+                  "name": "brij mohan",
+                  "role": "PRINCIPAL_INVESTIGATOR"
+                }
+              ],
+              "geoPoint": {
+                "lat": 26.46523,
+                "lon": 80.34975
+              }
+            },
+            {
+              "facility": "ILS Hospitals",
+              "status": "RECRUITING",
+              "city": "Kolkata",
+              "zip": "700064",
+              "country": "India",
+              "contacts": [
+                {
+                  "role": "CONTACT",
+                  "phone": "9831058704"
+                },
+                {
+                  "name": "Ghanshyam Goyal",
+                  "role": "PRINCIPAL_INVESTIGATOR"
+                }
+              ],
+              "geoPoint": {
+                "lat": 22.56263,
+                "lon": 88.36304
+              }
+            },
+            {
+              "facility": "Government Medical College, Kozhikode",
+              "status": "RECRUITING",
+              "city": "Kozhikode",
+              "zip": "673008",
+              "country": "India",
+              "contacts": [
+                {
+                  "role": "CONTACT",
+                  "phone": "9778730848"
+                },
+                {
+                  "name": "Rojith Balakrishnan",
+                  "role": "PRINCIPAL_INVESTIGATOR"
+                }
+              ],
+              "geoPoint": {
+                "lat": 11.24802,
+                "lon": 75.7804
+              }
+            },
+            {
+              "facility": "Wockhardt Hospitals",
+              "status": "NOT_YET_RECRUITING",
+              "city": "Mumbai",
+              "zip": "400011",
+              "country": "India",
+              "contacts": [
+                {
+                  "role": "CONTACT",
+                  "phone": "8975247275"
+                },
+                {
+                  "name": "Ramen Goel",
+                  "role": "PRINCIPAL_INVESTIGATOR"
+                }
+              ],
+              "geoPoint": {
+                "lat": 19.07283,
+                "lon": 72.88261
+              }
+            },
+            {
+              "facility": "Shri Krishna Hrudayalaya & Critical Care Centre",
+              "status": "RECRUITING",
+              "city": "Nagpur",
+              "zip": "440012",
+              "country": "India",
+              "contacts": [
+                {
+                  "role": "CONTACT",
+                  "phone": "7020875496"
+                },
+                {
+                  "name": "Mahesh Fulwani",
+                  "role": "PRINCIPAL_INVESTIGATOR"
+                }
+              ],
+              "geoPoint": {
+                "lat": 21.14631,
+                "lon": 79.08491
+              }
+            },
+            {
+              "facility": "Sahyadri Super Speciality Hospital",
+              "status": "RECRUITING",
+              "city": "Pune",
+              "zip": "411004",
+              "country": "India",
+              "contacts": [
+                {
+                  "role": "CONTACT",
+                  "phone": "9503105354"
+                },
+                {
+                  "name": "Shashank Shah",
+                  "role": "PRINCIPAL_INVESTIGATOR"
+                }
+              ],
+              "geoPoint": {
+                "lat": 18.51957,
+                "lon": 73.85535
+              }
+            },
+            {
+              "facility": "All India Institute of Medical Sciences",
+              "status": "NOT_YET_RECRUITING",
+              "city": "Raipur",
+              "zip": "492099",
+              "country": "India",
+              "contacts": [
+                {
+                  "role": "CONTACT",
+                  "phone": "9408388382"
+                },
+                {
+                  "name": "Sabah Siddiqui",
+                  "role": "PRINCIPAL_INVESTIGATOR"
+                }
+              ],
+              "geoPoint": {
+                "lat": 21.23333,
+                "lon": 81.63333
+              }
+            },
+            {
+              "facility": "King George Hospital, Andhra Medical College",
+              "status": "NOT_YET_RECRUITING",
+              "city": "Visakhapatnam",
+              "zip": "530002",
+              "country": "India",
+              "contacts": [
+                {
+                  "role": "CONTACT",
+                  "phone": "8555976042 7075852341"
+                },
+                {
+                  "name": "Valluri Prasad",
+                  "role": "PRINCIPAL_INVESTIGATOR"
+                }
+              ],
+              "geoPoint": {
+                "lat": 17.68009,
+                "lon": 83.20161
+              }
+            }
+          ]
+        },
+        "ipdSharingStatementModule": {
+          "ipdSharing": "YES",
+          "description": "Anonymized individual patient level data will be provided in a secure access environment upon approval of a research proposal and a signed data sharing agreement.",
+          "infoTypes": [
+            "STUDY_PROTOCOL",
+            "SAP",
+            "CSR"
+          ],
+          "timeFrame": "Data are available 6 months after the primary publication or approval of the indication studied in the US and EU, whichever is later. Data will be indefinitely available for requesting.",
+          "accessCriteria": "A research proposal must be approved by an independent review panel and researchers must sign a data sharing agreement.",
+          "url": "https://vivli.org/"
+        }
+      },
+      "derivedSection": {
+        "miscInfoModule": {
+          "versionHolder": "2026-08-07"
+        },
+        "conditionBrowseModule": {
+          "meshes": [
+            {
+              "id": "D003924",
+              "term": "Diabetes Mellitus, Type 2"
+            },
+            {
+              "id": "D009765",
+              "term": "Obesity"
+            },
+            {
+              "id": "D050177",
+              "term": "Overweight"
+            }
+          ],
+          "ancestors": [
+            {
+              "id": "D003920",
+              "term": "Diabetes Mellitus"
+            },
+            {
+              "id": "D044882",
+              "term": "Glucose Metabolism Disorders"
+            },
+            {
+              "id": "D008659",
+              "term": "Metabolic Diseases"
+            },
+            {
+              "id": "D009750",
+              "term": "Nutritional and Metabolic Diseases"
+            },
+            {
+              "id": "D004700",
+              "term": "Endocrine System Diseases"
+            },
+            {
+              "id": "D044343",
+              "term": "Overnutrition"
+            },
+            {
+              "id": "D009748",
+              "term": "Nutrition Disorders"
+            },
+            {
+              "id": "D001835",
+              "term": "Body Weight"
+            },
+            {
+              "id": "D012816",
+              "term": "Signs and Symptoms"
+            },
+            {
+              "id": "D013568",
+              "term": "Pathological Conditions, Signs and Symptoms"
+            }
+          ]
+        },
+        "interventionBrowseModule": {
+          "meshes": [
+            {
+              "id": "D000098860",
+              "term": "Tirzepatide"
+            }
+          ],
+          "ancestors": [
+            {
+              "id": "D000067757",
+              "term": "Glucagon-Like Peptide-1 Receptor"
+            },
+            {
+              "id": "D000067756",
+              "term": "Glucagon-Like Peptide Receptors"
+            },
+            {
+              "id": "D043562",
+              "term": "Receptors, G-Protein-Coupled"
+            },
+            {
+              "id": "D011956",
+              "term": "Receptors, Cell Surface"
+            },
+            {
+              "id": "D008565",
+              "term": "Membrane Proteins"
+            },
+            {
+              "id": "D011506",
+              "term": "Proteins"
+            },
+            {
+              "id": "D000602",
+              "term": "Amino Acids, Peptides, and Proteins"
+            },
+            {
+              "id": "D011964",
+              "term": "Receptors, Gastrointestinal Hormone"
+            },
+            {
+              "id": "D018000",
+              "term": "Receptors, Peptide"
+            }
+          ]
+        }
+      },
+      "hasResults": false
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT07495787",
+          "orgStudyIdInfo": {
+            "id": "2025/01/EDIT"
+          },
+          "organization": {
+            "fullName": "iIDEAS Group Holdings Limited",
+            "class": "INDUSTRY"
+          },
+          "briefTitle": "Magnetic Compression Anastomosis Procedure for Partial Jejunoileal Anastomosis: Assessing the Viability of an Innovative Metabolic Approach",
+          "officialTitle": "Magnetic Compression Anastomosis Procedure for Partial Jejunoileal Anastomosis: Assessing the Viability of an Innovative Metabolic Approach"
+        },
+        "statusModule": {
+          "statusVerifiedDate": "2026-03",
+          "overallStatus": "RECRUITING",
+          "expandedAccessInfo": {
+            "hasExpandedAccess": false
+          },
+          "startDateStruct": {
+            "date": "2025-04-22",
+            "type": "ACTUAL"
+          },
+          "primaryCompletionDateStruct": {
+            "date": "2026-09-30",
+            "type": "ESTIMATED"
+          },
+          "completionDateStruct": {
+            "date": "2026-09-30",
+            "type": "ESTIMATED"
+          },
+          "studyFirstSubmitDate": "2025-12-26",
+          "studyFirstSubmitQcDate": "2026-03-24",
+          "studyFirstPostDateStruct": {
+            "date": "2026-03-27",
+            "type": "ACTUAL"
+          },
+          "lastUpdateSubmitDate": "2026-03-24",
+          "lastUpdatePostDateStruct": {
+            "date": "2026-03-27",
+            "type": "ACTUAL"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "responsibleParty": {
+            "type": "SPONSOR"
+          },
+          "leadSponsor": {
+            "name": "iIDEAS Group Holdings Limited",
+            "class": "INDUSTRY"
+          }
+        },
+        "oversightModule": {
+          "isFdaRegulatedDrug": false,
+          "isFdaRegulatedDevice": false
+        },
+        "descriptionModule": {
+          "briefSummary": "English, Hindi and Gujarati",
+          "detailedDescription": "Title: Magnetic Compression Anastomosis Procedure for Partial Jejunoileal Anastomosis: Assessing the Viability of an Innovative Metabolic Approach Protocol Number 2025/01/EDIT Trial Type Investigator Initiated Trial This investigator-initiated trial (IIT) is a prospective, single-center, single-arm observation study in patients designed to explore metabolic indicator and procedural outcomes in patients with T2DM. A total of 5 patients with T2DM will be recruited in the study. Following the administration of general anesthesia, surgeon will introduce the ring component of the magnetic compression anastomosis system through an enterotomy. The insertion of the distal ring into the terminal ileum via an enterotomy, positioned approximately 30 cm proximal to the ileocecal valve, utilizing a laparoscopic deployment instrument. The proximal ring is then placed in the proximal jejunum, located around 20 cm (with a variance of ± 10 cm) distal to the ligament of Treitz. Laparoscopic techniques are employed to maneuver the bowel, aligning the proximal and distal magnets for effective magnetic coupling and observing the ring pair mating via intraoperative imaging (fluoroscopy or plain x-ray). This IIT will be conducted in single centre in India by a qualified investigator. It will be initiated after Institutional Review Board (IRB)/Independent Ethics Committee (IEC).\n\nThe anticipated timeline for this study is as follows:\n\n* Study Participant Enrollment: 02 months\n* Procedure Period: 01 day\n* Post procedure care: As suggested by the PI\n* Safety and functionality follow-up: 6 weeks, 3 months, 6 months, 9 months\n* Additional indications of efficacy follow-up: 12 months"
+        },
+        "conditionsModule": {
+          "conditions": [
+            "Diabete Type 2"
+          ],
+          "keywords": [
+            "Magnetic Compression Anastomosis"
+          ]
+        },
+        "designModule": {
+          "studyType": "INTERVENTIONAL",
+          "phases": [
+            "NA"
+          ],
+          "designInfo": {
+            "allocation": "NA",
+            "interventionModel": "SINGLE_GROUP",
+            "primaryPurpose": "TREATMENT",
+            "maskingInfo": {
+              "masking": "NONE"
+            }
+          },
+          "enrollmentInfo": {
+            "count": 5,
+            "type": "ESTIMATED"
+          }
+        },
+        "armsInterventionsModule": {
+          "armGroups": [
+            {
+              "label": "Magnetic Compression Anastomosis Procedure for Partial Jejuno-ileal Anastomosis",
+              "type": "EXPERIMENTAL",
+              "interventionNames": [
+                "Device: Magnetic Compression Anastomosis"
+              ]
+            }
+          ],
+          "interventions": [
+            {
+              "type": "DEVICE",
+              "name": "Magnetic Compression Anastomosis",
+              "description": "This is an Investigator Initiated trial, prospective, single-center, single-arm observational study in patients with Type II Diabetes Mellitus (T2DM). A total of 5 patients with T2DM will be recruited in the study. Following the administration of general anesthesia, surgeon will introduce the ring component of the magnetic compression anastomosis system through an enterotomy. Laparoscopic techniques are employed to maneuver the bowel, aligning the proximal and distal magnets for effective magnetic coupling and observing the ring pair mating via intraoperative imaging (fluoroscopy or plain x-ray).",
+              "armGroupLabels": [
+                "Magnetic Compression Anastomosis Procedure for Partial Jejuno-ileal Anastomosis"
+              ]
+            }
+          ]
+        },
+        "outcomesModule": {
+          "primaryOutcomes": [
+            {
+              "measure": "Placement success rate - ≥ 90% alignment of magnets Passage of magnets without surgical re-intervention Safety",
+              "description": "evaluating Placement success rate Passage of magnets without surgical re-intervention Radiological confirmation of patent anastomosis Safety profile To monitor the safety profile of the device by assessing the incidence and severity of procedural and device related complications or adverse events",
+              "timeFrame": "Changes in glycosylated hemoglobin A1c (HbA1c) levels will be observed from baseline, 3 months, 6 months, 9 months and at 12 months following the index procedure."
+            }
+          ]
+        },
+        "eligibilityModule": {
+          "eligibilityCriteria": "Inclusion Criteria:\n\n* Subjects will be included in the study if they meet the following criteria:\n\n  1. Participant is willing and able to give informed consent for participation in the study.\n  2. Male or Female, aged ≥ 25 years to ≤ 65 years.\n  3. BMI greater than or equal to 25 and less than 50\n  4. Clinical diagnosis of T2DM by plasma glucose criteria, either the fasting plasma glucose (FPG) value or the 2-h plasma glucose (2-h PG) value during a 75-g oral glucose tolerance test (OGTT), or A1C criteria\n  5. Glycated Hemoglobin greater than or equal to 7.5% and less than 10.5% in at least one laboratory analysis conducted within the past 3 months, typically associated with a recommendation by patient's primary care physician and/or endocrinologist for intensification of treatment beyond oral medications\n  6. Currently taking oral combination therapy for T2DM\n  7. At least 12 months of experience with Diabetes Self-Management and Support\n\nExclusion Criteria:\n\n* 1\\. Pregnancy or breastfeeding mothers, or individuals planning to become pregnant in next 9-12 months 2. Vulnerable individuals (mentally disabled, physically disabled, prisoner, etc.) 3. Current enrolment in another research study or previous participation within 30 days of enrolment 4. Current history of injected Glucagon Like Peptide 1 (GLP1) 5. American Society of Anesthesiologists (ASA) physical classification level of 4 or greater 6. Hypoglycemia unawareness or a history of severe hypoglycemia (more than 1 severe hypoglycemic event, as defined by need for third-party-assistance, in the last year) 7. Evidence of type 1 diabetes or of pancreatic exhaustion, as indicated by a C peptide fasting level less than 1 or, for type 1 diabetes, based on measurable levels of serum anti-GAD-65 autoantibodies or, at investigator's discretion, based on measurable levels of other T1D-associated autoantibodies 8. History of highly unusual or challenging gastrointestinal tract anatomy ascertained through earlier endoscopic examination or other diagnostic imaging 9. History of (or known to be at prohibitive risk for) any of the following diseases of the small bowel or closely related conditions: Crohn's disease or other inflammatory bowel disease, celiac disease, resection for cancer, or intra-abdominal adhesive disease including intussusception, perforated appendix and Meckel's diverticulum 10. History of small bowel surgery such as small bowel resection 11. Active H. pylori infection (prospective participants with active H. pylori may continue with the screening process if they are treated via medication and re-testing verifies the condition has resolved.) 12. History of chronic or acute pancreatitis 13. Known active hepatitis or active liver disease 14. Symptomatic gallstones or kidney stones or acute cholecystitis\n\nSubjects will be deemed ineligible to participate if they fulfill any of the following criteria:\n\n1. Pregnancy or breastfeeding mothers, or individuals planning to become pregnant in next 9-12 months\n2. Vulnerable individuals (mentally disabled, physically disabled, prisoner, etc.)\n3. Current enrolment in another research study or previous participation within 30 days of enrolment\n4. Current history of injected Glucagon Like Peptide 1 (GLP1)\n5. American Society of Anesthesiologists (ASA) physical classification level of 4 or greater\n6. Hypoglycemia unawareness or a history of severe hypoglycemia (more than 1 severe hypoglycemic event, as defined by need for third-party-assistance, in the last year)\n7. Evidence of type 1 diabetes or of pancreatic exhaustion, as indicated by a C peptide fasting level less than 1 or, for type 1 diabetes, based on measurable levels of serum anti-GAD-65 autoantibodies or, at investigator's discretion, based on measurable levels of other T1D-associated autoantibodies\n8. History of highly unusual or challenging gastrointestinal tract anatomy ascertained through earlier endoscopic examination or other diagnostic imaging\n9. History of (or known to be at prohibitive risk for) any of the following diseases of the small bowel or closely related conditions: Crohn's disease or other inflammatory bowel disease, celiac disease, resection for cancer, or intra-abdominal adhesive disease including intussusception, perforated appendix and Meckel's diverticulum\n10. History of small bowel surgery such as small bowel resection\n11. Active H. pylori infection (prospective participants with active H. pylori may continue with the screening process if they are treated via medication and re-testing verifies the condition has resolved.)\n12. History of chronic or acute pancreatitis\n13. Known active hepatitis or active liver disease\n14. Symptomatic gallstones or kidney stones or acute cholecystitis\n15. History of coagulopathy, upper gastro-intestinal bleeding conditions such as ulcers, gastric varices, strictures, congenital or acquired intestinal telangiectasia\n16. Use of anticoagulation therapy (such as warfarin) which cannot be discontinued for 7 days before and 14 days after the procedure\n17. Use of P2Y12 inhibitors (clopidogrel, pasugrel, ticagrelor) which cannot be discontinued for 14 days before and 14 days after the procedure (use of low-dose aspirin allowable)\n18. History of serious complications of T2DM including coronary artery disease, hypertension, peripheral vascular disease, diabetic retinopathy, and/or diabetes-related soft tissue infection\n19. Taking corticosteroids or drugs known to affect GI motility (e.g. Metoclopramide)\n20. Receiving weight loss medications such as Meridia, Xenical, or over-the-counter weight loss medications\n21. Persistent anemia, defined as Hgb\\<10 g dL-1\n22. Estimated Glomerular Filtration Rate (eGFR) or Modified of Diet in Renal Disease (MDRD) \\<30 ml/min/1.73m2\n23. Active systemic infection\n24. Currently on anticoagulation therapy other than a low-dose aspirin regimen\n25. Chemotherapeutic cancer treatment within past 9 months, history of abdominal radiation, or active malignancy within the past 5 years\n26. Active illicit substance abuse or alcoholism\n27. Known sensitivity to possible medications used before, during, or after the Connect procedure, including but not limited to the following: sedative agents, general anesthetics, topical anesthetics, and opioid analgesics\n28. Any other serological markers likely to be associated with poor outcomes",
+          "healthyVolunteers": false,
+          "sex": "ALL",
+          "genderBased": true,
+          "minimumAge": "25 Years",
+          "maximumAge": "65 Years",
+          "stdAges": [
+            "ADULT",
+            "OLDER_ADULT"
+          ]
+        },
+        "contactsLocationsModule": {
+          "centralContacts": [
+            {
+              "name": "Purvi A Chavda, MD",
+              "role": "CONTACT",
+              "phone": "8905818034",
+              "email": "purvi@curexbio.com"
+            }
+          ],
+          "locations": [
+            {
+              "facility": "AB Plus Speciality Hospital",
+              "status": "RECRUITING",
+              "city": "Ahmedabad",
+              "state": "Gujarat",
+              "zip": "380054",
+              "country": "India",
+              "contacts": [
+                {
+                  "name": "Purvi A Chavda, MD",
+                  "role": "CONTACT",
+                  "phone": "08905818034",
+                  "email": "purvi@curexbio.com"
+                }
+              ],
+              "geoPoint": {
+                "lat": 23.02579,
+                "lon": 72.58727
+              }
+            }
+          ]
+        },
+        "ipdSharingStatementModule": {
+          "ipdSharing": "NO"
+        }
+      },
+      "derivedSection": {
+        "miscInfoModule": {
+          "versionHolder": "2026-08-07"
+        },
+        "conditionBrowseModule": {
+          "meshes": [
+            {
+              "id": "D003924",
+              "term": "Diabetes Mellitus, Type 2"
+            }
+          ],
+          "ancestors": [
+            {
+              "id": "D003920",
+              "term": "Diabetes Mellitus"
+            },
+            {
+              "id": "D044882",
+              "term": "Glucose Metabolism Disorders"
+            },
+            {
+              "id": "D008659",
+              "term": "Metabolic Diseases"
+            },
+            {
+              "id": "D009750",
+              "term": "Nutritional and Metabolic Diseases"
+            },
+            {
+              "id": "D004700",
+              "term": "Endocrine System Diseases"
+            }
+          ]
+        }
+      },
+      "hasResults": false
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT07549373",
+          "orgStudyIdInfo": {
+            "id": "ShardaU"
+          },
+          "organization": {
+            "fullName": "Sharda University",
+            "class": "OTHER"
+          },
+          "briefTitle": "Effect of Diode Laser, Gudmar and Vinegar in Diabetic Patients During Root Canal Treatment",
+          "officialTitle": "Antibacterial Effect Of 940nm Diode Laser, Apple Cider Vinegar And Gymnema Sylvestre In Diabetic Patients With Apical Periodontitis Against Peptostreptococcus Species- A Randomized Clinical Trial"
+        },
+        "statusModule": {
+          "statusVerifiedDate": "2026-05",
+          "overallStatus": "RECRUITING",
+          "expandedAccessInfo": {
+            "hasExpandedAccess": false
+          },
+          "startDateStruct": {
+            "date": "2026-05-01",
+            "type": "ESTIMATED"
+          },
+          "primaryCompletionDateStruct": {
+            "date": "2026-12-31",
+            "type": "ESTIMATED"
+          },
+          "completionDateStruct": {
+            "date": "2027-05-01",
+            "type": "ESTIMATED"
+          },
+          "studyFirstSubmitDate": "2026-04-01",
+          "studyFirstSubmitQcDate": "2026-04-17",
+          "studyFirstPostDateStruct": {
+            "date": "2026-04-24",
+            "type": "ACTUAL"
+          },
+          "lastUpdateSubmitDate": "2026-05-24",
+          "lastUpdatePostDateStruct": {
+            "date": "2026-05-28",
+            "type": "ACTUAL"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "responsibleParty": {
+            "type": "PRINCIPAL_INVESTIGATOR",
+            "investigatorFullName": "Dr Lakshmi Pandey",
+            "investigatorTitle": "Associate professor",
+            "investigatorAffiliation": "Sharda University"
+          },
+          "leadSponsor": {
+            "name": "Sharda University",
+            "class": "OTHER"
+          }
+        },
+        "oversightModule": {
+          "oversightHasDmc": true,
+          "isFdaRegulatedDrug": false,
+          "isFdaRegulatedDevice": false
+        },
+        "descriptionModule": {
+          "briefSummary": "Methodology\n\nPatient with diabetes 2 with informed consent -convenience sampling over a one year period.The tooth isolated with a rubber dam and the correct disinfection procedures will be used. researcher will do the Access preparation Working length -electronic apex locator (Dentsply Propex II) as well as a radiographic approach.\n\nAfter the canals will be obturated using ZOE sealer and gutta percha and post endodontic restoration is done using composite restoration. Patient is kept on follow up for 7days, 15 days, 30 days ,45 days and 60 days Clinical outcome is measure using periapical radiograph (RVG) Pain is measured using visual analog scale to mark the pain intensity. Data will be analysed statistically To enlarge the root canals (ISO size 20 file)\n\nA sterile paper point inside the root canal for one minute until the apex of the root canal is reached\n\nUsing T.E Buffer, samples will be delivered to the School Of Basic Life Sciences, Sharda University.\n\nThe samples will be subjected to traditional PCR analysis for the detection of Peptostreptococcus spp. in the root canal.\n\nGrouping Following instrumentation, 5% NaOCl and 17% EDTA irrigation will be done. Control group (n=15) The final irrigant will be saline Group 1 (n=15) Irrigation using 5% apple cider vinegar done The final irrigant will be saline Group 2 (n=15) Diode laser is used for disinfection in the presence of saline Group 3 (n=15) Gymnema Sylvestre Mother Tincture Q 1000 CH solution is used for disinfection in the presence of saline Group 4 (n=15) Diode laser is used for disinfection in the presence of 5% apple cider vinegar. The final irrigant will be saline Group 5 (n=15) Diode laser is used for disinfection in the presence of Gymnema Sylvestre Mother Tincture Q 1000 CH solution. The final irrigant will be saline\n\nAfter cleaning and shaping, samples will be collected and sent through T.E. Buffer to the School Of Basic Life Sciences, Sharda University.\n\nThe samples will be subjected to traditional PCR analysis for the detection of Peptostreptococcus spp. in the root canal.",
+          "detailedDescription": "Study design and ethical consideration The present study will be a randomized controlled clinical study conducted over the period of one year; the study protocol will be reviewed and approved by the institutional; ethics committee , sharda university. All procedures will be performed in accordance with the ethical standards laid down in the declaration of Helsinki.\n\nPatients diagnosed with type 2 diabetes mellitus will be recruited after obtaining written informed consent. Convenience sampling will be employed due to the clinical nature of the study and availability of eligible patient reporting to the out patient department during the study period. .Randomisation will be done using lottery method Patient selection and sampling method Type 2 diabetic patients fulfilling the inclusion criteria will be selected using a convenience sampling technique over a one year period.\n\nConvenience sampling has been widely used in clinical endodontic trials where strict criteria limit patient availability.\n\nAfter patient recruitment, the selected tooth will be isolated using the rubber dam to maintain asepsis and prevent salivary contamination, which is critical for accurate microbiological sampling.\n\nAccess cavity preparation will be performed using and access opening bur # 2 followed by refinement of the access wall using an endo z carbide bur to ensure straight line access to root canals.\n\nWorking length determination The working length was determined using the electronic apex locator (Dentsply propex II) and radiographic verification. The use of an electronic apex locator in conjunction with a radiograph has been shown to improve accuracy and reduce procedural errors.\n\nCanal instrumentation and initial microbiological sampling Root canal enlargement was performed up ISO size 20 file , following standardized instrumentation protocol to ensure uniformity across all groups For predisinfection microbial sampling , a sterile paper point was inserted into the root canal and maintained for 1 min, ensuring it reached the apical 3rd of the canal. This technique has been validated for effective recovery of intracanal microorganisms.\n\nThe collected paper points were immediately transferred into strile vials containing TE buffer, which preserve bacterial DNA integrity during transport.\n\nTransport and microbiological analysis All sample were transported to the school of basics life sciences , under sterile conditions The samples were subjected to PCR analysis for the detection of peptostreptococcus species, which are obligate anaerobics commonly associated with persistent endodontic infections and apical periodontitis.\n\nPCR was chosen due to its high sensitivity and specificity in detecting low bacterial loads compared to culture methods\n\nGrouping and Disinfection Protocol Following biochemical preparations, all canals were irrigated using 5% sodium hypochlorite (NaOCI) and 17% EDTA, which are considered the gold standard for organic tissues dissolution and smear layer removal, respectively\n\nPatients were randomly allocated into six groups as follows:\n\nControl Group (n=15) Final irrigation was performed using sterile saline\n\nGroup 1 - Apple Cider Vinegar (n=15) Irrigation was performed using 5% apple cider vinegar, followed by final irrigation with sterile saline. Apple Cider Vinegar has demonstrated antimicrobial efficacy due to its acetic acid content Group 2 - Diode Laser (n=15) A 940nm diode laser was used for canal disinfection in the presence of saline. Diode lasers have been shown to penetrate dentinal tubules and reduce anaerobic bacterial load effectively Group 3 - Gymnema Sylvestre (n=15) Disinfection was carried out using the Gymnema Sylvestre mother tincture Q 1000 CH solution in the presence of saline. Gymnema sylvestre exhibits documented antimicrobial and anit-infalamatory properties\n\nGroup 4 - Diode Laser + Apple Cider Vinegar (n=15) Disinfection was performed using a 940 nm diode laser in the presence of 5% apple cider vinegar followed by saline irrigation\n\nGroup 5 - Diode laser + Gymenam Sylvestre (n=15) Disinfection was performed using a 940 nm diode laser in the presence of Gynema Sylvestre mother tincture followed by saline irrigation.\n\nPost-disinfection Sampling After completion of cleaning and shaping and final disinfection protocols, post-treatment microbial samples were collected using sterile paper points and transported in T.E buffer for PCR analysis to assess bacterial reduction.\n\nFollow-up and Outcome Assessment Patients were recalled at 7, 15, 30, 45, 60 days for follow-up Clinical outcome was measured using RVG and PAI was calculated Post-operative pain was assessed using a VAS, a validated toll for pain assessment in endodontics studies Microbiological analysis using traditional polymerase chain reaction (PCR)"
+        },
+        "conditionsModule": {
+          "conditions": [
+            "Diabete Type 2"
+          ],
+          "keywords": [
+            "Endodontics",
+            "Diode laser",
+            "Apple cider vinegar",
+            "Gymnema sylvestre"
+          ]
+        },
+        "designModule": {
+          "studyType": "INTERVENTIONAL",
+          "phases": [
+            "NA"
+          ],
+          "designInfo": {
+            "allocation": "RANDOMIZED",
+            "interventionModel": "PARALLEL",
+            "primaryPurpose": "TREATMENT",
+            "maskingInfo": {
+              "masking": "DOUBLE",
+              "whoMasked": [
+                "PARTICIPANT",
+                "OUTCOMES_ASSESSOR"
+              ]
+            }
+          },
+          "enrollmentInfo": {
+            "count": 90,
+            "type": "ESTIMATED"
+          }
+        },
+        "armsInterventionsModule": {
+          "armGroups": [
+            {
+              "label": "Saline",
+              "type": "EXPERIMENTAL",
+              "description": "Saline is used in the ideal conditions",
+              "interventionNames": [
+                "Other: 940 nm diode laser",
+                "Other: apple cider vinegar",
+                "Other: Gymnema Sylvestre",
+                "Other: Saline (NaCl)",
+                "Other: Diode laser and Gymnema Sylvestre",
+                "Other: Diode laser and apple cider vinegar"
+              ]
+            },
+            {
+              "label": "940 nm diode laser",
+              "type": "EXPERIMENTAL",
+              "description": "it is used for disinfecting the canal",
+              "interventionNames": [
+                "Other: 940 nm diode laser",
+                "Other: apple cider vinegar",
+                "Other: Gymnema Sylvestre",
+                "Other: Saline (NaCl)",
+                "Other: Diode laser and Gymnema Sylvestre",
+                "Other: Diode laser and apple cider vinegar"
+              ]
+            },
+            {
+              "label": "Apple cider vinegar",
+              "type": "EXPERIMENTAL",
+              "description": "It is used as irrigating agent",
+              "interventionNames": [
+                "Other: 940 nm diode laser",
+                "Other: apple cider vinegar",
+                "Other: Gymnema Sylvestre",
+                "Other: Saline (NaCl)",
+                "Other: Diode laser and Gymnema Sylvestre",
+                "Other: Diode laser and apple cider vinegar"
+              ]
+            },
+            {
+              "label": "Gymnema sylvestre",
+              "type": "EXPERIMENTAL",
+              "description": "It is used as irrigating agent",
+              "interventionNames": [
+                "Other: 940 nm diode laser",
+                "Other: apple cider vinegar",
+                "Other: Gymnema Sylvestre",
+                "Other: Saline (NaCl)",
+                "Other: Diode laser and Gymnema Sylvestre",
+                "Other: Diode laser and apple cider vinegar"
+              ]
+            },
+            {
+              "label": "940 diode laser and Apple cider vinegar",
+              "type": "EXPERIMENTAL",
+              "description": "For disinfecting the canal",
+              "interventionNames": [
+                "Other: 940 nm diode laser",
+                "Other: apple cider vinegar",
+                "Other: Gymnema Sylvestre",
+                "Other: Saline (NaCl)",
+                "Other: Diode laser and Gymnema Sylvestre",
+                "Other: Diode laser and apple cider vinegar"
+              ]
+            },
+            {
+              "label": "940 diode laser and Gymnema sylvestre",
+              "type": "EXPERIMENTAL",
+              "description": "For disinfecting the canal",
+              "interventionNames": [
+                "Other: 940 nm diode laser",
+                "Other: apple cider vinegar",
+                "Other: Gymnema Sylvestre",
+                "Other: Saline (NaCl)",
+                "Other: Diode laser and Gymnema Sylvestre",
+                "Other: Diode laser and apple cider vinegar"
+              ]
+            }
+          ],
+          "interventions": [
+            {
+              "type": "OTHER",
+              "name": "940 nm diode laser",
+              "description": "laser for irrigation",
+              "armGroupLabels": [
+                "940 diode laser and Apple cider vinegar",
+                "940 diode laser and Gymnema sylvestre",
+                "940 nm diode laser",
+                "Apple cider vinegar",
+                "Gymnema sylvestre",
+                "Saline"
+              ],
+              "otherNames": [
+                "diode laser"
+              ]
+            },
+            {
+              "type": "OTHER",
+              "name": "apple cider vinegar",
+              "description": "5% apple cider vinegar",
+              "armGroupLabels": [
+                "940 diode laser and Apple cider vinegar",
+                "940 diode laser and Gymnema sylvestre",
+                "940 nm diode laser",
+                "Apple cider vinegar",
+                "Gymnema sylvestre",
+                "Saline"
+              ]
+            },
+            {
+              "type": "OTHER",
+              "name": "Gymnema Sylvestre",
+              "description": "antidiabetic agent",
+              "armGroupLabels": [
+                "940 diode laser and Apple cider vinegar",
+                "940 diode laser and Gymnema sylvestre",
+                "940 nm diode laser",
+                "Apple cider vinegar",
+                "Gymnema sylvestre",
+                "Saline"
+              ],
+              "otherNames": [
+                "gudmar"
+              ]
+            },
+            {
+              "type": "OTHER",
+              "name": "Saline (NaCl)",
+              "description": "saline is used as ideal irrigant",
+              "armGroupLabels": [
+                "940 diode laser and Apple cider vinegar",
+                "940 diode laser and Gymnema sylvestre",
+                "940 nm diode laser",
+                "Apple cider vinegar",
+                "Gymnema sylvestre",
+                "Saline"
+              ],
+              "otherNames": [
+                "saline"
+              ]
+            },
+            {
+              "type": "OTHER",
+              "name": "Diode laser and Gymnema Sylvestre",
+              "description": "This is the combination disinfection",
+              "armGroupLabels": [
+                "940 diode laser and Apple cider vinegar",
+                "940 diode laser and Gymnema sylvestre",
+                "940 nm diode laser",
+                "Apple cider vinegar",
+                "Gymnema sylvestre",
+                "Saline"
+              ],
+              "otherNames": [
+                "combination therapy"
+              ]
+            },
+            {
+              "type": "OTHER",
+              "name": "Diode laser and apple cider vinegar",
+              "description": "combination therapy used will enhance the disinfection",
+              "armGroupLabels": [
+                "940 diode laser and Apple cider vinegar",
+                "940 diode laser and Gymnema sylvestre",
+                "940 nm diode laser",
+                "Apple cider vinegar",
+                "Gymnema sylvestre",
+                "Saline"
+              ]
+            }
+          ]
+        },
+        "outcomesModule": {
+          "primaryOutcomes": [
+            {
+              "measure": "Visual Analog Scale (VAS)",
+              "description": "A Visual Analog Scale is a validated, subjective, 1-dimensional tool used to measure intensity, most commonly pain. It consists of a 10-cm (100-mm) horizontal or vertical line, with endpoints anchored by extremes, such as \"no pain\" and \"worst imaginable pain,\" with patients marking their level",
+              "timeFrame": "6 months"
+            },
+            {
+              "measure": "Detection of peptostreptococcus species after the use of intervention",
+              "description": "Absence of peptostreptococcus species on PCR signifies disinfection of canal presence of peptostreptococcus species on PCR signifies irrigating agent is not effective",
+              "timeFrame": "one year"
+            }
+          ]
+        },
+        "eligibilityModule": {
+          "eligibilityCriteria": "Inclusion Criteria:\n\n* Using radiographs, intraoral periapical radiographs (RVG) primary endodontic infection will be selected.\n* Multirooted teeth , root with periapical lesion will be selected\n* Type 2 diabetics between the ages of 25 years and 60 years will be chosen; both male and female patients\n* A fasting blood sugar level of 126 mg/dl and a random blood sugar level of less than 200 mg/dl\n* HbA1c (glycated haemoglobin) ≥ 6.5%\n\nExclusion Criteria:\n\n* Patients with systemic conditions other than type 2 diabetes\n* Women who are pregnant\n* Those patients that have used antibiotics within the previous three months,\n* Those patients that have teeth with developmental defects, calcified canals,\n* Teeth that cannot be isolated with rubber dams,\n* Tortuous canals\n* Roots that are fractured",
+          "healthyVolunteers": false,
+          "sex": "ALL",
+          "minimumAge": "25 Years",
+          "maximumAge": "60 Years",
+          "stdAges": [
+            "ADULT"
+          ]
+        },
+        "contactsLocationsModule": {
+          "centralContacts": [
+            {
+              "name": "Lakshmi Pandey, MDS",
+              "role": "CONTACT",
+              "phone": "+917349052235",
+              "email": "drlakshmipandey024@gmail.com"
+            }
+          ],
+          "overallOfficials": [
+            {
+              "name": "Dr Ekta Choudhary, MDS",
+              "affiliation": "School of Dental Sciences , Sharda University",
+              "role": "STUDY_DIRECTOR"
+            }
+          ],
+          "locations": [
+            {
+              "facility": "Dr Lakshmi Pandey",
+              "status": "RECRUITING",
+              "city": "Noida",
+              "state": "Uttar Pradesh",
+              "zip": "201310",
+              "country": "India",
+              "contacts": [
+                {
+                  "name": "Lakshmi Pandey",
+                  "role": "CONTACT",
+                  "phone": "07349052235",
+                  "email": "drlakshmipandey024@gmail.com"
+                }
+              ],
+              "geoPoint": {
+                "lat": 28.58,
+                "lon": 77.33
+              }
+            }
+          ]
+        },
+        "referencesModule": {
+          "references": [
+            {
+              "pmid": "34393125",
+              "type": "BACKGROUND",
+              "citation": "Jambagi N, Kore P, Dhaded NS, Patil SA, Shankar M. Comparison of Antimicrobial Efficacy of Diode Laser, Ultrasonic Activated and Conventional Irrigation with 2.5% NaOCl during RCT: An Interventional Study. J Contemp Dent Pract. 2021 Jun 1;22(6):669-673."
+            },
+            {
+              "pmid": "29674826",
+              "type": "BACKGROUND",
+              "citation": "Sonarkar SS, Singh S, Podar R, Kulkarni G, Purba R. An in vivo comparison of the antibacterial efficacy of photoactivated disinfection, diode laser, and 5% sodium hypochlorite in root canal disinfection. J Conserv Dent. 2018 Mar-Apr;21(2):205-209. doi: 10.4103/JCD.JCD_227_17."
+            },
+            {
+              "pmid": "25219289",
+              "type": "BACKGROUND",
+              "citation": "Mota AC, de Castro RD, de Araujo Oliveira J, de Oliveira Lima E. Antifungal Activity of Apple Cider Vinegar on Candida Species Involved in Denture Stomatitis. J Prosthodont. 2015 Jun;24(4):296-302. doi: 10.1111/jopr.12207. Epub 2014 Sep 14."
+            },
+            {
+              "pmid": "32013917",
+              "type": "BACKGROUND",
+              "citation": "Mirzaei M, Rahmaninan M, Mirzaei M, Nadjarzadeh A, Dehghani Tafti AA. Epidemiology of diabetes mellitus, pre-diabetes, undiagnosed and uncontrolled diabetes in Central Iran: results from Yazd health study. BMC Public Health. 2020 Feb 3;20(1):166. doi: 10.1186/s12889-020-8267-y."
+            },
+            {
+              "pmid": "34205290",
+              "type": "BACKGROUND",
+              "citation": "Korona-Glowniak I, Piatek D, Fornal E, Lukowiak A, Gerasymchuk Y, Kedziora A, Bugla-Ploskonska G, Grywalska E, Bachanek T, Malm A. Patterns of Oral Microbiota in Patients with Apical Periodontitis. J Clin Med. 2021 Jun 19;10(12):2707. doi: 10.3390/jcm10122707."
+            },
+            {
+              "pmid": "31624647",
+              "type": "BACKGROUND",
+              "citation": "Farcas-Berechet CM, Berechet EM, Craitoiu S, Alexandru DO, Gheorghe AG, Gheorghita LM, Diaconu OA, Tuculina MJ, Moraru AI, Iacov-Craitoiu MM. Statistical Study of Dental Changes in Patients Diagnosed with Diabetes Mellitus. Curr Health Sci J. 2019 Apr-Jun;45(2):190-197. doi: 10.12865/CHSJ.45.02.10. Epub 2019 Jun 30."
+            },
+            {
+              "pmid": "36148044",
+              "type": "BACKGROUND",
+              "citation": "Owlia F, Zarezadeh F, Jambarsang S, Kazemipoor M. Comparison of the Response to Pulpal Sensibility Tests in Well-Controlled and Uncontrolled Type II Diabetes Mellitus Patients: A Cross-Sectional Study. Int J Dent. 2022 Sep 13;2022:6197070. doi: 10.1155/2022/6197070. eCollection 2022."
+            },
+            {
+              "pmid": "33082657",
+              "type": "BACKGROUND",
+              "citation": "Nair RR, Nayak M, Prasada LK, Nair AV, Soman D, Krishnan RH. PCR-based detection of three anaerobic bacteria associated with endodontic-periodontic lesions in type-2 diabetic and nondiabetic subjects. J Conserv Dent. 2019 Sep-Oct;22(5):430-435. doi: 10.4103/JCD.JCD_326_19. Epub 2020 Aug 4."
+            }
+          ]
+        },
+        "ipdSharingStatementModule": {
+          "ipdSharing": "YES",
+          "description": "PROTOCOL STRATERGIES, STATISTICAL ANALYSIS",
+          "infoTypes": [
+            "STUDY_PROTOCOL",
+            "SAP",
+            "ICF",
+            "CSR"
+          ],
+          "timeFrame": "one year",
+          "accessCriteria": "anyone with the link"
+        }
+      },
+      "documentSection": {
+        "largeDocumentModule": {
+          "largeDocs": [
+            {
+              "typeAbbrev": "Prot_SAP_ICF",
+              "hasProtocol": true,
+              "hasSap": true,
+              "hasIcf": true,
+              "label": "Study Protocol, Statistical Analysis Plan, and Informed Consent Form",
+              "date": "2026-03-28",
+              "uploadDate": "2026-04-17T00:28",
+              "filename": "Prot_SAP_ICF_000.pdf",
+              "size": 1362684
+            }
+          ]
+        }
+      },
+      "derivedSection": {
+        "miscInfoModule": {
+          "versionHolder": "2026-08-07"
+        },
+        "conditionBrowseModule": {
+          "meshes": [
+            {
+              "id": "D003924",
+              "term": "Diabetes Mellitus, Type 2"
+            }
+          ],
+          "ancestors": [
+            {
+              "id": "D003920",
+              "term": "Diabetes Mellitus"
+            },
+            {
+              "id": "D044882",
+              "term": "Glucose Metabolism Disorders"
+            },
+            {
+              "id": "D008659",
+              "term": "Metabolic Diseases"
+            },
+            {
+              "id": "D009750",
+              "term": "Nutritional and Metabolic Diseases"
+            },
+            {
+              "id": "D004700",
+              "term": "Endocrine System Diseases"
+            }
+          ]
+        },
+        "interventionBrowseModule": {
+          "meshes": [
+            {
+              "id": "D054023",
+              "term": "Lasers, Semiconductor"
+            },
+            {
+              "id": "C075206",
+              "term": "Gurmarin protein, Gymnema sylvestre"
+            },
+            {
+              "id": "D012965",
+              "term": "Sodium Chloride"
+            },
+            {
+              "id": "D003131",
+              "term": "Combined Modality Therapy"
+            }
+          ],
+          "ancestors": [
+            {
+              "id": "D007834",
+              "term": "Lasers"
+            },
+            {
+              "id": "D055096",
+              "term": "Optical Devices"
+            },
+            {
+              "id": "D004864",
+              "term": "Equipment and Supplies"
+            },
+            {
+              "id": "D055618",
+              "term": "Radiation Equipment and Supplies"
+            },
+            {
+              "id": "D002712",
+              "term": "Chlorides"
+            },
+            {
+              "id": "D006851",
+              "term": "Hydrochloric Acid"
+            },
+            {
+              "id": "D017606",
+              "term": "Chlorine Compounds"
+            },
+            {
+              "id": "D007287",
+              "term": "Inorganic Chemicals"
+            },
+            {
+              "id": "D017670",
+              "term": "Sodium Compounds"
+            },
+            {
+              "id": "D013812",
+              "term": "Therapeutics"
+            }
+          ]
+        }
+      },
+      "hasResults": false
+    },
+    {
+      "protocolSection": {
+        "identificationModule": {
+          "nctId": "NCT07282743",
+          "orgStudyIdInfo": {
+            "id": "UTRE-24-01"
+          },
+          "organization": {
+            "fullName": "Sun Pharmaceutical Industries Limited",
+            "class": "INDUSTRY"
+          },
+          "briefTitle": "Efficacy and Safety of GL0034 in Overweight or Obese Adults With Type II Diabetes Mellitus",
+          "officialTitle": "A Phase II, Randomized, Double-blind, Placebo-controlled Study to Evaluate the Efficacy and Tolerability of GL0034 Among Type II Diabetes Mellitus Subjects Who Are Obese or Overweight With Weight-related Comorbidities"
+        },
+        "statusModule": {
+          "statusVerifiedDate": "2026-03",
+          "overallStatus": "RECRUITING",
+          "expandedAccessInfo": {
+            "hasExpandedAccess": false
+          },
+          "startDateStruct": {
+            "date": "2026-01-20",
+            "type": "ACTUAL"
+          },
+          "primaryCompletionDateStruct": {
+            "date": "2027-04",
+            "type": "ESTIMATED"
+          },
+          "completionDateStruct": {
+            "date": "2027-08",
+            "type": "ESTIMATED"
+          },
+          "studyFirstSubmitDate": "2025-12-05",
+          "studyFirstSubmitQcDate": "2025-12-05",
+          "studyFirstPostDateStruct": {
+            "date": "2025-12-15",
+            "type": "ACTUAL"
+          },
+          "lastUpdateSubmitDate": "2026-03-17",
+          "lastUpdatePostDateStruct": {
+            "date": "2026-03-18",
+            "type": "ACTUAL"
+          }
+        },
+        "sponsorCollaboratorsModule": {
+          "responsibleParty": {
+            "type": "SPONSOR"
+          },
+          "leadSponsor": {
+            "name": "Sun Pharmaceutical Industries Limited",
+            "class": "INDUSTRY"
+          }
+        },
+        "oversightModule": {
+          "isFdaRegulatedDrug": true,
+          "isFdaRegulatedDevice": false
+        },
+        "descriptionModule": {
+          "briefSummary": "This is a phase II, randomized, double-blind, placebo-controlled study to evaluate the efficacy and tolerability of GL0034 among type II diabetes mellitus subjects who are obese or overweight with weight-related comorbidities. Subjects will be put on either one of the four treatment arms (GL0034, once a week, subcutaneous injection) or placebo arm (once a week, subcutaneous injection) following initial dose-up titration that takes up to approximately 20 weeks. The primary end point is change in HbA1c levels from baseline (Week 0) to Week 36 following treatments in all participants."
+        },
+        "conditionsModule": {
+          "conditions": [
+            "Type II Diabetes Mellitus"
+          ]
+        },
+        "designModule": {
+          "studyType": "INTERVENTIONAL",
+          "phases": [
+            "PHASE2"
+          ],
+          "designInfo": {
+            "allocation": "RANDOMIZED",
+            "interventionModel": "PARALLEL",
+            "primaryPurpose": "TREATMENT",
+            "maskingInfo": {
+              "masking": "TRIPLE",
+              "whoMasked": [
+                "PARTICIPANT",
+                "CARE_PROVIDER",
+                "INVESTIGATOR"
+              ]
+            }
+          },
+          "enrollmentInfo": {
+            "count": 285,
+            "type": "ESTIMATED"
+          }
+        },
+        "armsInterventionsModule": {
+          "armGroups": [
+            {
+              "label": "Arm 1",
+              "type": "EXPERIMENTAL",
+              "description": "Dose Up-titration Period: Participants receive GL0034 starting at Dose Level 1 with titration up to Dose Level 2 for approximately 20 weeks\n\nMaintenance Treatment Period: Once participants reach their final designated doses, they will continue to receive the final designated doses by weekly subcutaneous administration until the end of Week 48.",
+              "interventionNames": [
+                "Drug: GL0034 Dose Level 1",
+                "Drug: GL0034 Dose Level 2"
+              ]
+            },
+            {
+              "label": "Arm 2",
+              "type": "EXPERIMENTAL",
+              "description": "Dose Up-titration Period: Participants receive GL0034 starting at Dose Levels 1 to 3 with titration up to Dose Level 2 for approximately 20 weeks\n\nMaintenance Treatment Period: Once participants reach their final designated doses, they will continue to receive the final designated doses by weekly subcutaneous administration until the end of Week 48.",
+              "interventionNames": [
+                "Drug: GL0034 Dose Level 1",
+                "Drug: GL0034 Dose Level 2",
+                "Drug: GL0034 Dose Level 3"
+              ]
+            },
+            {
+              "label": "Arm 3",
+              "type": "EXPERIMENTAL",
+              "description": "Dose Up-titration Period: Participants receive GL0034 starting at Dose Levels 1 to 4 with titration up to Dose Level 2 for approximately 20 weeks\n\nMaintenance Treatment Period: Once participants reach their final designated doses, they will continue to receive the final designated doses by weekly subcutaneous administration until the end of Week 48.",
+              "interventionNames": [
+                "Drug: GL0034 Dose Level 1",
+                "Drug: GL0034 Dose Level 2",
+                "Drug: GL0034 Dose Level 3",
+                "Drug: GL0034 Dose Level 4"
+              ]
+            },
+            {
+              "label": "Arm 4",
+              "type": "EXPERIMENTAL",
+              "description": "Dose Up-titration Period: Participants receive GL0034 starting at Dose Levels 1 to 6 with titration up to Dose Level 2 for approximately 20 weeks\n\nMaintenance Treatment Period: Once participants reach their final designated doses, they will continue to receive the final designated doses by weekly subcutaneous administration until the end of Week 48.",
+              "interventionNames": [
+                "Drug: GL0034 Dose Level 1",
+                "Drug: GL0034 Dose Level 2",
+                "Drug: GL0034 Dose Level 3",
+                "Drug: GL0034 Dose Level 4",
+                "Drug: GL0034 Dose Level 5",
+                "Drug: GL0034 Dose Level 6"
+              ]
+            },
+            {
+              "label": "Placebo",
+              "type": "PLACEBO_COMPARATOR",
+              "description": "Dose Up-titration Period: Participants receive sham placebo up titration, once weekly for approximately 20 weeks.\n\nMaintenance Treatment Period: Participants will continue to receive placebo once weekly through subcutaneous administration until the end of Week 48.",
+              "interventionNames": [
+                "Other: Placebo"
+              ]
+            }
+          ],
+          "interventions": [
+            {
+              "type": "DRUG",
+              "name": "GL0034 Dose Level 1",
+              "description": "Dose 1, once a week",
+              "armGroupLabels": [
+                "Arm 1",
+                "Arm 2",
+                "Arm 3",
+                "Arm 4"
+              ]
+            },
+            {
+              "type": "DRUG",
+              "name": "GL0034 Dose Level 2",
+              "description": "Dose 2, once a week",
+              "armGroupLabels": [
+                "Arm 1",
+                "Arm 2",
+                "Arm 3",
+                "Arm 4"
+              ]
+            },
+            {
+              "type": "DRUG",
+              "name": "GL0034 Dose Level 3",
+              "description": "Dose 3, once a week",
+              "armGroupLabels": [
+                "Arm 2",
+                "Arm 3",
+                "Arm 4"
+              ]
+            },
+            {
+              "type": "DRUG",
+              "name": "GL0034 Dose Level 4",
+              "description": "Dose 4, once a week",
+              "armGroupLabels": [
+                "Arm 3",
+                "Arm 4"
+              ]
+            },
+            {
+              "type": "DRUG",
+              "name": "GL0034 Dose Level 5",
+              "description": "Dose 5, once a week",
+              "armGroupLabels": [
+                "Arm 4"
+              ]
+            },
+            {
+              "type": "DRUG",
+              "name": "GL0034 Dose Level 6",
+              "description": "Dose 6, once a week",
+              "armGroupLabels": [
+                "Arm 4"
+              ]
+            },
+            {
+              "type": "OTHER",
+              "name": "Placebo",
+              "description": "Placebo, once a week",
+              "armGroupLabels": [
+                "Placebo"
+              ]
+            }
+          ]
+        },
+        "outcomesModule": {
+          "primaryOutcomes": [
+            {
+              "measure": "Change in HbA1c levels from baseline (Week 0) to Week 36 following treatments in all participants",
+              "timeFrame": "Week 36"
+            }
+          ],
+          "secondaryOutcomes": [
+            {
+              "measure": "Number of participants with an HbA1c <7.0%, <6.5%, or <5.7%",
+              "timeFrame": "Week 36 or Week 48"
+            },
+            {
+              "measure": "Change in HbA1c levels from baseline (Week 0) to Week 48 following treatments in all participants",
+              "timeFrame": "Week 48"
+            },
+            {
+              "measure": "Change in HbA1c levels over time from baseline (Week 0) to Week 48 following treatments in all participants",
+              "timeFrame": "Week 48"
+            },
+            {
+              "measure": "Percent change (%) in body weight and BMI from baseline (Week 0) to Week 36, Week 48, and over time from baseline to Week 48 following treatments in all participants.",
+              "timeFrame": "Week 36 and Week 48"
+            },
+            {
+              "measure": "Percent of participants who achieved ≥5%, ≥10%, ≥15%, >20%, >25% weight loss from baseline to Week 36 or Week 48 of treatments in all participants.",
+              "timeFrame": "Week 36 or Week 48"
+            }
+          ]
+        },
+        "eligibilityModule": {
+          "eligibilityCriteria": "Inclusion Criteria:\n\n1. Participant is willing and able to sign a written ICF or e-ICF.\n2. Men or women ≥18 years of age at the time of signing ICF or e-ICF.\n3. Participant was diagnosed with type II diabetes mellitus at least 180 days prior to the day of screening.\n4. Participant has a HbA1c level of 7.0 - 10.5%, both inclusive, at the time of screening.\n5. Participant has a stable BMI ≥27 kg/m2 for at least 90 days prior to screening.\n6. Participant is able and willing to undergo fasting blood draw (i.e. at least 8 hours after last eating or drinking) as well as 7-point SMBG check for 3 consecutive days prior to designated scheduled visits by using a home glucometer that is provided by the study site.\n7. Participant on stable daily doses of metformin for at least 90 days prior to screening.\n8. Participant who are on metformin and not the following agents for at least 3 months prior to screening: DPP-4 inhibitors, alpha-glucosidase enzyme inhibitors, sulfonylureas, sodium-glucose transport 2 inhibitors, amylin analogues, thiazolidinediones, any insulin product, herbals, or ayurvedic agents. Participants are encouraged to follow the standard of care in their study regions, including appropriate diet and lifestyle modifications, rather than make abrupt change in the diabetic management prior to screening without consulting their physicians.\n9. If participant is a woman of childbearing potential (WOCP)\\*, she must agree to use a highly effective method of contraception during the study in conjunction with a barrier method of contraception, and continue the same contraception method at least one months after the last dose of study drug. Highly effective methods of contraception include one of the following: intrauterine device, injectable hormonal contraceptive, contraceptive patch or implant, partner's vasectomy, bilateral tubal occlusion, and sexual abstinence.\n\n   \\*WOCP includes women who are not surgically sterilized \\[using hysterectomy/bilateral salpingectomy/bilateral oophorectomy\\] or post-menopausal \\[defined as 12 consecutive months of amenorrhea without an alternative medical cause\\].\n10. Male participants with female partners of child-bearing potential must use a barrier method of contraception (e.g., condom) if not surgically sterile (i.e., vasectomy) during the study. In addition, male participants agree to use the same method of contraception for an additional 30 days after the last IP dose and refrain from donating sperm during this period. In the event that the female partner of the male participant becomes pregnant during the study period + 30 days after the last IP dose, an ICF will be provided to the female partner in order to monitor the female partner, pregnancy, and the newborn.\n11. If participant is a WOCP, she must have a negative serum pregnancy test (SPT) at Screening and a negative urine pregnancy at baseline, with results available before IP administration.\n12. Participant is willing and able to comply with the study protocol, visit schedule, and other study-related instructions and procedures.\n13. Participant is willing and able to independently record the response on various scales and make entries using the e-Patient reported outcomes (ePRO) device.\n\nExclusion Criteria:\n\n1. Participants who have a history of type I diabetes mellitus.\n2. A self-reported change in \\>5% of body weight within 90 days before screening irrespective of medical records.\n3. History of pancreatitis (acute or chronic) or \\>3 hypoglycemic episodes (blood glucose level \\<70 mg/dL or 3.9 mmol/L) within 90 days prior to screening.\n4. Diagnosis of chronic kidney disease with estimated glomerular filtration rate \\<60.\n5. Poorly controlled hypertension with systolic blood pressure \\>160 mmHg and/or diastolic blood pressure \\>100 mmHg.\n6. Poorly controlled hypothyroidism defined as thyroid-stimulating hormone \\>6 mIU/L or \\<0.4 mIU/L.\n7. Diabetes mellitus and/or obesity that is induced by endocrine disorders (e.g. Cushing Syndrome) or medication use (e.g. corticosteroids) as judged by the Investigator.\n8. Previous surgical treatment for obesity (liposuction and/or abdominoplasty performed \\>1 year before screening is allowed). Previous or planned (during the trial period) obesity treatment with surgery or a weight loss device. However, previous interventions that, due to reversal or removal, does not have any influence on the participant's weight, in the opinion of the Investigator, are allowed.\n9. History of major depressive disorder within 2 years before randomization.\n10. History of other severe psychiatric illnesses (i.e. schizophrenia, bipolar disorder).\n11. Any lifetime history of a suicidal attempt.\n12. Participants with any medical condition \\[i.e. gastroparesis, uncontrolled gastroesophageal reflux disease, or diarrhea with or without a diagnosis of a diagnosis of irritable bowel syndrome\\] that, in the opinion of the Investigator, can confound study efficacy assessments or safety concerns.\n13. Participant had a myocardial infarction, unstable angina pectoris, or ischemic stroke within the past 6 months prior to IP administration.\n14. Personal or family history of medullary thyroid carcinoma or multiple endocrine neoplasia syndrome type 2, sudden cardiac death, unexplained death, long QT syndrome, or death from a primary dysrhythmia potentially associated with QT prolongation in any family member.\n15. Surgery scheduled for the trial duration period, except for very minor surgical procedures in the opinion of the Investigator.\n16. Participants with active malignancy.\n\n    Note: participants with past history of malignancy may be included if:\n    * Participant has history of basal cell or in-situ squamous cell carcinoma of skin that has been adequately treated and resolved, per Investigator's judgement.\n    * Participant has history of other malignancy that have been adequately treated with no evidence of recurrence/relapse within the last 5 years, per Investigator's judgement.\n17. Presence of diabetic retinopathy \\[both nonproliferative diabetic retinopathy and proliferative diabetic retinopathy\\]) or maculopathy in either eye that was verified by a fundoscopic examination within 90 days prior to screening or during the study.\n18. Known moderate to severe coronary, carotid, or peripheral vascular disease that has planned or will likely need revascularization during the study.\n19. Participants with any other condition, which in the opinion of the Investigator, precludes participation in the study (either poses an unacceptable risk to the participant or interferes with assessment/interpretation of study outcomes).\n20. Known hypersensitivity to the study IP or its excipients.\n21. History of alcohol or drug abuse in the previous two years (Alcohol abuse in this study is defined as \\>14 standard drinks per week in men or \\>7 standard drinks per week in women ± a history of alcohol withdrawal symptoms ± institutionalized/hospitalized due to alcohol use ± binge drinking with \\>5 standard drinks on a single occasion in men or \\>4 standard drinks on a single occasion in women).\n22. Participants are taking, or will start, medications with narrow therapeutic index such as digoxin, warfarin, etc, or those that will prolong QTc interval.\n23. Participants received any medications for the treatment of type II diabetes mellitus other than those stated in the inclusion criteria within 90 days before screening. Short-term insulin treatment for a maximum of 7 days prior to screening is allowed. Prior insulin treatment for gestational diabetes is also allowed.\n24. Participants who have used medications in the family of GLP-1 agonists in the past.\n25. Treatment with any herbal diet supplements, over-the-counter diet medications as an attempt to lose weight within 90 days before screening.\n26. Treatment with orlistat, lorcaserin, zonisamide, topiramate, phentermine, buproprion, or naltrexone that could promote weight loss within 90 days before screening.\n27. Participation in any organized or online weight-reduction program (i.e. Weight Watchers) within 90 days before screening.\n28. Screening calcitonin ≥50 ng/L (pg/mL).\n29. Participants having clinically significant abnormal values on Screening laboratory tests or other evidence of uncontrolled disease involving any system-organ (e.g., cardiovascular, pulmonary, renal, hepatic, neurological, endocrine, gastrointestinal, psychiatric etc.) that, in the opinion of the Investigator, would put the participant at risk by participating in the study.\n30. Participants with positive urine drug screen \\[amphetamine, barbiturate, benzodiazepine, cocaine, opiates\\] with substances that are not part of participant's routine medical care. Tetrahydrocannabinols is acceptable for as long as its use is legally allowed by participant 's home state or country.\n31. Participants have clinically significant ECG abnormality , including QTcF \\>450 msec for males and \\>470 msec for females, or at high risk for arrhythmia such as judged by the Investigator conditions listed in Criteria #13 above, brady-arrhythmias, tachy-arrhythmias, ventricular arrhythmias, torsade de pointes, high-degree atrioventricular block, or New York Heart Association Class III and IV congestive heart failure.\n32. Pregnant or lactating females.",
+          "healthyVolunteers": false,
+          "sex": "ALL",
+          "minimumAge": "18 Years",
+          "stdAges": [
+            "ADULT",
+            "OLDER_ADULT"
+          ]
+        },
+        "contactsLocationsModule": {
+          "centralContacts": [
+            {
+              "name": "Head, Regulatory Affairs",
+              "role": "CONTACT",
+              "phone": "9122 66455645",
+              "email": "Clinical.Trial@sunpharma.com"
+            }
+          ],
+          "locations": [
+            {
+              "facility": "Lynn Institute of the Ozarks",
+              "status": "RECRUITING",
+              "city": "Little Rock",
+              "state": "Arkansas",
+              "zip": "72204",
+              "country": "United States",
+              "geoPoint": {
+                "lat": 34.74648,
+                "lon": -92.28959
+              }
+            },
+            {
+              "facility": "Family First Medical Research Center",
+              "status": "RECRUITING",
+              "city": "Hialeah Gardens",
+              "state": "Florida",
+              "zip": "33175",
+              "country": "United States",
+              "geoPoint": {
+                "lat": 25.8651,
+                "lon": -80.3245
+              }
+            },
+            {
+              "facility": "Alliance for Multispecialty Research (AMR Clinical) - Wichita East",
+              "status": "RECRUITING",
+              "city": "Lakeland",
+              "state": "Florida",
+              "zip": "33803",
+              "country": "United States",
+              "geoPoint": {
+                "lat": 28.03947,
+                "lon": -81.9498
+              }
+            },
+            {
+              "facility": "CNS Healthcare - Memphis (Clinical Neuroscience Solutions - Memphis)",
+              "status": "RECRUITING",
+              "city": "Lakeland",
+              "state": "Florida",
+              "zip": "33803",
+              "country": "United States",
+              "geoPoint": {
+                "lat": 28.03947,
+                "lon": -81.9498
+              }
+            },
+            {
+              "facility": "GTL Medical & Research Group",
+              "status": "RECRUITING",
+              "city": "Miami",
+              "state": "Florida",
+              "zip": "33173",
+              "country": "United States",
+              "geoPoint": {
+                "lat": 25.77427,
+                "lon": -80.19366
+              }
+            },
+            {
+              "facility": "Florida Institute for Clinical Research LLC",
+              "status": "RECRUITING",
+              "city": "Orlando",
+              "state": "Florida",
+              "zip": "32835",
+              "country": "United States",
+              "geoPoint": {
+                "lat": 28.53834,
+                "lon": -81.37924
+              }
+            },
+            {
+              "facility": "AMR Clinical, El Dorado",
+              "status": "RECRUITING",
+              "city": "El Dorado",
+              "state": "Kansas",
+              "zip": "67042",
+              "country": "United States",
+              "geoPoint": {
+                "lat": 37.81724,
+                "lon": -96.86225
+              }
+            },
+            {
+              "facility": "AMR Clinical - Newton",
+              "status": "RECRUITING",
+              "city": "Newton",
+              "state": "Kansas",
+              "zip": "67114",
+              "country": "United States",
+              "geoPoint": {
+                "lat": 38.04668,
+                "lon": -97.34504
+              }
+            },
+            {
+              "facility": "Lynn Health Science Institute - Oklahoma City",
+              "status": "RECRUITING",
+              "city": "Oklahoma City",
+              "state": "Oklahoma",
+              "zip": "73112",
+              "country": "United States",
+              "geoPoint": {
+                "lat": 35.46756,
+                "lon": -97.51643
+              }
+            },
+            {
+              "facility": "Endolife Specialty Hospitals Pvt. Ltd.",
+              "status": "RECRUITING",
+              "city": "Guntur",
+              "state": "Andhra Pradesh",
+              "zip": "522001",
+              "country": "India",
+              "geoPoint": {
+                "lat": 16.29974,
+                "lon": 80.45729
+              }
+            },
+            {
+              "facility": "Life Care Hospital and Research Centre",
+              "status": "RECRUITING",
+              "city": "Bangalore",
+              "state": "Karnataka",
+              "zip": "560092",
+              "country": "India",
+              "geoPoint": {
+                "lat": 12.97194,
+                "lon": 77.59369
+              }
+            },
+            {
+              "facility": "Government Medical College",
+              "status": "RECRUITING",
+              "city": "Kozhikode",
+              "state": "Kerala",
+              "zip": "673008",
+              "country": "India",
+              "geoPoint": {
+                "lat": 11.24802,
+                "lon": 75.7804
+              }
+            },
+            {
+              "facility": "Jothydevs Diabetes Research Centre",
+              "status": "RECRUITING",
+              "city": "Trivandrum",
+              "state": "Kerala",
+              "zip": "695032",
+              "country": "India",
+              "geoPoint": {
+                "lat": 8.4855,
+                "lon": 76.94924
+              }
+            },
+            {
+              "facility": "Nirmal Hospital Private Limited",
+              "status": "RECRUITING",
+              "city": "Kolhāpur",
+              "state": "Maharashtra",
+              "zip": "416008",
+              "country": "India",
+              "geoPoint": {
+                "lat": 16.69563,
+                "lon": 74.23167
+              }
+            },
+            {
+              "facility": "Topiwala National Medical College & BYL Nair Hospital",
+              "status": "RECRUITING",
+              "city": "Mumbai",
+              "state": "Maharashtra",
+              "zip": "400008",
+              "country": "India",
+              "geoPoint": {
+                "lat": 19.07283,
+                "lon": 72.88261
+              }
+            },
+            {
+              "facility": "Seth G. S. medical college and KEM hospital",
+              "status": "RECRUITING",
+              "city": "Mumbai",
+              "state": "Maharashtra",
+              "zip": "400012",
+              "country": "India",
+              "geoPoint": {
+                "lat": 19.07283,
+                "lon": 72.88261
+              }
+            },
+            {
+              "facility": "BSES Municipal General Hospital",
+              "status": "RECRUITING",
+              "city": "Mumbai",
+              "state": "Maharashtra",
+              "zip": "400058",
+              "country": "India",
+              "geoPoint": {
+                "lat": 19.07283,
+                "lon": 72.88261
+              }
+            },
+            {
+              "facility": "LMMF's Deenanath Mangeshkar Hospital and Research Center",
+              "status": "RECRUITING",
+              "city": "Pune",
+              "state": "Maharashtra",
+              "zip": "411004",
+              "country": "India",
+              "geoPoint": {
+                "lat": 18.51957,
+                "lon": 73.85535
+              }
+            },
+            {
+              "facility": "Lady Hardinge Medical College and S.S.K. Hospital",
+              "status": "RECRUITING",
+              "city": "New Delhi",
+              "state": "National Capital Territory of Delhi",
+              "zip": "110001",
+              "country": "India",
+              "geoPoint": {
+                "lat": 28.62137,
+                "lon": 77.2148
+              }
+            },
+            {
+              "facility": "All India Institute of Medical Sciences",
+              "status": "RECRUITING",
+              "city": "New Delhi",
+              "state": "National Capital Territory of Delhi",
+              "zip": "110029",
+              "country": "India",
+              "geoPoint": {
+                "lat": 28.62137,
+                "lon": 77.2148
+              }
+            },
+            {
+              "facility": "Madras Diabetes Research Foundation (MDRF)",
+              "status": "RECRUITING",
+              "city": "Chennai",
+              "state": "Tamil Nadu",
+              "zip": "600086",
+              "country": "India",
+              "geoPoint": {
+                "lat": 13.08784,
+                "lon": 80.27847
+              }
+            }
+          ]
+        }
+      },
+      "derivedSection": {
+        "miscInfoModule": {
+          "versionHolder": "2026-08-07"
+        },
+        "conditionBrowseModule": {
+          "meshes": [
+            {
+              "id": "D003924",
+              "term": "Diabetes Mellitus, Type 2"
+            }
+          ],
+          "ancestors": [
+            {
+              "id": "D003920",
+              "term": "Diabetes Mellitus"
+            },
+            {
+              "id": "D044882",
+              "term": "Glucose Metabolism Disorders"
+            },
+            {
+              "id": "D008659",
+              "term": "Metabolic Diseases"
+            },
+            {
+              "id": "D009750",
+              "term": "Nutritional and Metabolic Diseases"
+            },
+            {
+              "id": "D004700",
+              "term": "Endocrine System Diseases"
+            }
+          ]
+        }
+      },
+      "hasResults": false
+    }
+  ],
+  "nextPageToken": "ZVdj7o2Elu8o3lp2Vcm44unumpOQJJxtYvSg2fQdkA"
+}

@@ -1,0 +1,46 @@
+# === Python & UV ===
+.venv/
+.uv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# === Secrets & Environment Variables ===
+# NEVER commit your API keys (OpenAI, Anthropic, LangChain, etc.)
+.env
+.env.*
+!.env.example
+secrets.toml
+
+# === Agent Frameworks & Vectors ===
+# LangChain / LangGraph / CrewAI tracing caches
+.langchain/
+.langgraph/
+.crewai/
+
+# Local Vector Databases (Chroma, FAISS, LanceDB, etc.)
+.chroma/
+chroma_db/
+faiss_index/
+lancedb/
+*.db
+*.sqlite
+
+# === Agent Outputs, Logs & Memories ===
+# Agent operational logs, step traces, and generated artifacts
+logs/
+*.log
+agent_output/
+workspace/
+memories/
+.memories/
+
+# === OS & IDEs ===
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

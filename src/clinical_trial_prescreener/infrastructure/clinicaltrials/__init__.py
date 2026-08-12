@@ -1,0 +1,1 @@
+"""ClinicalTrials.gov infrastructure adapters."""

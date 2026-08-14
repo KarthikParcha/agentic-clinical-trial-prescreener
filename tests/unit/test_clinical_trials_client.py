@@ -37,7 +37,9 @@ def test_successful_response_sends_condition_and_page_size_parameters() -> None:
         return httpx.Response(200, json={"studies": [{"id": "study-1"}]})
 
     async def operation(client: ClinicalTrialsClient) -> object:
-        return await client.search_studies("Type 2 Diabetes", page_size=25)
+        return await client.search_studies(
+            "Type 2 Diabetes", page_size=25, query_term="AREA[StudyType]INTERVENTIONAL"
+        )
 
     result = run(with_client(handler, operation))
 
@@ -46,6 +48,7 @@ def test_successful_response_sends_condition_and_page_size_parameters() -> None:
     assert received_request.url.path == "/api/v2/studies"
     assert received_request.url.params["query.cond"] == "Type 2 Diabetes"
     assert received_request.url.params["pageSize"] == "25"
+    assert received_request.url.params["query.term"] == "AREA[StudyType]INTERVENTIONAL"
     assert "pageToken" not in received_request.url.params
 
 

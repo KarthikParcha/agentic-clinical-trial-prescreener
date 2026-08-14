@@ -30,6 +30,7 @@ class ClinicalTrialsClient:
         condition: str,
         page_size: int = 10,
         page_token: str | None = None,
+        query_term: str | None = None,
     ) -> dict[str, Any]:
         """Return the raw API response for a condition search."""
 
@@ -40,6 +41,8 @@ class ClinicalTrialsClient:
         }
         if page_token is not None:
             params["pageToken"] = page_token
+        if query_term is not None:
+            params["query.term"] = query_term
 
         try:
             response = await self._client.get("studies", params=params)

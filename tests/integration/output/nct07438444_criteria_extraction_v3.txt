@@ -1,0 +1,1408 @@
+{
+  "trial_id": "NCT07438444",
+  "target_population": "Type 2 Diabetes",
+  "criteria": [
+    {
+      "criterion_id": "INC-001",
+      "criterion_type": "INCLUSION",
+      "category": "DIAGNOSIS",
+      "original_text": "Have had type 2 diabetes for at least one year",
+      "evaluation_type": "NUMERIC",
+      "field_name": "diagnosis_duration_years",
+      "operator": "GTE",
+      "value": "1",
+      "lower_value": null,
+      "upper_value": null,
+      "unit": "year",
+      "temporal_window": null,
+      "logical_operator": null,
+      "children": [],
+      "required_patient_fields": [
+        "diagnosis_date"
+      ],
+      "requires_human_review": false
+    },
+    {
+      "criterion_id": "INC-002",
+      "criterion_type": "INCLUSION",
+      "category": "MEDICATION",
+      "original_text": "Insulin naive",
+      "evaluation_type": "BOOLEAN",
+      "field_name": "insulin_naive",
+      "operator": "EQ",
+      "value": true,
+      "lower_value": null,
+      "upper_value": null,
+      "unit": null,
+      "temporal_window": null,
+      "logical_operator": null,
+      "children": [],
+      "required_patient_fields": [
+        "medications"
+      ],
+      "requires_human_review": false
+    },
+    {
+      "criterion_id": "INC-003",
+      "criterion_type": "INCLUSION",
+      "category": "LAB",
+      "original_text": "Have HbA1c ≥7.5% and ≤10% at screening",
+      "evaluation_type": "NUMERIC",
+      "field_name": "hba1c",
+      "operator": "BETWEEN_INCLUSIVE",
+      "value": null,
+      "lower_value": "7.5",
+      "upper_value": "10",
+      "unit": "%",
+      "temporal_window": null,
+      "logical_operator": null,
+      "children": [],
+      "required_patient_fields": [
+        "laboratory_results"
+      ],
+      "requires_human_review": false
+    },
+    {
+      "criterion_id": "INC-004",
+      "criterion_type": "INCLUSION",
+      "category": "BMI",
+      "original_text": "Have body mass index (BMI) ≥23 kilograms per square meter (kg/m2)",
+      "evaluation_type": "NUMERIC",
+      "field_name": "bmi",
+      "operator": "GTE",
+      "value": "23",
+      "lower_value": null,
+      "upper_value": null,
+      "unit": "kg/m2",
+      "temporal_window": null,
+      "logical_operator": null,
+      "children": [],
+      "required_patient_fields": [
+        "bmi"
+      ],
+      "requires_human_review": false
+    },
+    {
+      "criterion_id": "EXC-001",
+      "criterion_type": "EXCLUSION",
+      "category": "DIAGNOSIS",
+      "original_text": "Have type 1 diabetes",
+      "evaluation_type": "BOOLEAN",
+      "field_name": "type_1_diabetes",
+      "operator": "EQ",
+      "value": true,
+      "lower_value": null,
+      "upper_value": null,
+      "unit": null,
+      "temporal_window": null,
+      "logical_operator": null,
+      "children": [],
+      "required_patient_fields": [
+        "medical_history"
+      ],
+      "requires_human_review": false
+    },
+    {
+      "criterion_id": "EXC-002",
+      "criterion_type": "EXCLUSION",
+      "category": "MEDICAL_HISTORY",
+      "original_text": "Have had any of the following heart conditions within 6 months prior to screening: heart attack, stroke, hospitalization due to heart failure",
+      "evaluation_type": "COMPOUND",
+      "field_name": null,
+      "operator": null,
+      "value": null,
+      "lower_value": null,
+      "upper_value": null,
+      "unit": null,
+      "temporal_window": {
+        "value": "6",
+        "unit": "MONTH"
+      },
+      "logical_operator": "OR",
+      "children": [
+        {
+          "criterion_id": "EXC-002.1",
+          "criterion_type": "EXCLUSION",
+          "category": "MEDICAL_HISTORY",
+          "original_text": "heart attack",
+          "evaluation_type": "BOOLEAN",
+          "field_name": "heart_attack",
+          "operator": "EQ",
+          "value": true,
+          "lower_value": null,
+          "upper_value": null,
+          "unit": null,
+          "temporal_window": null,
+          "logical_operator": null,
+          "children": [],
+          "required_patient_fields": [
+            "medical_history"
+          ],
+          "requires_human_review": false
+        },
+        {
+          "criterion_id": "EXC-002.2",
+          "criterion_type": "EXCLUSION",
+          "category": "MEDICAL_HISTORY",
+          "original_text": "stroke",
+          "evaluation_type": "BOOLEAN",
+          "field_name": "stroke",
+          "operator": "EQ",
+          "value": true,
+          "lower_value": null,
+          "upper_value": null,
+          "unit": null,
+          "temporal_window": null,
+          "logical_operator": null,
+          "children": [],
+          "required_patient_fields": [
+            "medical_history"
+          ],
+          "requires_human_review": false
+        },
+        {
+          "criterion_id": "EXC-002.3",
+          "criterion_type": "EXCLUSION",
+          "category": "MEDICAL_HISTORY",
+          "original_text": "hospitalization due to heart failure",
+          "evaluation_type": "BOOLEAN",
+          "field_name": "heart_failure_hospitalization",
+          "operator": "EQ",
+          "value": true,
+          "lower_value": null,
+          "upper_value": null,
+          "unit": null,
+          "temporal_window": null,
+          "logical_operator": null,
+          "children": [],
+          "required_patient_fields": [
+            "medical_history"
+          ],
+          "requires_human_review": false
+        }
+      ],
+      "required_patient_fields": [
+        "medical_history"
+      ],
+      "requires_human_review": false
+    },
+    {
+      "criterion_id": "EXC-003",
+      "criterion_type": "EXCLUSION",
+      "category": "MEDICAL_HISTORY",
+      "original_text": "Have New York Heart Association Functional Classification Class III or IV congestive heart failure (CHF)",
+      "evaluation_type": "COMPOUND",
+      "field_name": null,
+      "operator": null,
+      "value": null,
+      "lower_value": null,
+      "upper_value": null,
+      "unit": null,
+      "temporal_window": null,
+      "logical_operator": "OR",
+      "children": [
+        {
+          "criterion_id": "EXC-003.1",
+          "criterion_type": "EXCLUSION",
+          "category": "MEDICAL_HISTORY",
+          "original_text": "Class III",
+          "evaluation_type": "BOOLEAN",
+          "field_name": null,
+          "operator": "IN",
+          "value": [
+            "III"
+          ],
+          "lower_value": null,
+          "upper_value": null,
+          "unit": null,
+          "temporal_window": null,
+          "logical_operator": null,
+          "children": [],
+          "required_patient_fields": [],
+          "requires_human_review": true
+        },
+        {
+          "criterion_id": "EXC-003.2",
+          "criterion_type": "EXCLUSION",
+          "category": "MEDICAL_HISTORY",
+          "original_text": "Class IV",
+          "evaluation_type": "BOOLEAN",
+          "field_name": null,
+          "operator": "IN",
+          "value": [
+            "IV"
+          ],
+          "lower_value": null,
+          "upper_value": null,
+          "unit": null,
+          "temporal_window": null,
+          "logical_operator": null,
+          "children": [],
+          "required_patient_fields": [],
+          "requires_human_review": true
+        }
+      ],
+      "required_patient_fields": [],
+      "requires_human_review": true
+    },
+    {
+      "criterion_id": "EXC-004",
+      "criterion_type": "EXCLUSION",
+      "category": "OTHER",
+      "original_text": "Have type 2 diabetes along with morbid obesity and being considered for bariatric surgery or any other procedure intended for weight loss",
+      "evaluation_type": "COMPOUND",
+      "field_name": null,
+      "operator": null,
+      "value": null,
+      "lower_value": null,
+      "upper_value": null,
+      "unit": null,
+      "temporal_window": null,
+      "logical_operator": "AND",
+      "children": [
+        {
+          "criterion_id": "EXC-004.1",
+          "criterion_type": "EXCLUSION",
+          "category": "DIAGNOSIS",
+          "original_text": "Have type 2 diabetes",
+          "evaluation_type": "BOOLEAN",
+          "field_name": "type_2_diabetes",
+          "operator": "EQ",
+          "value": true,
+          "lower_value": null,
+          "upper_value": null,
+          "unit": null,
+          "temporal_window": null,
+          "logical_operator": null,
+          "children": [],
+          "required_patient_fields": [
+            "condition"
+          ],
+          "requires_human_review": false
+        },
+        {
+          "criterion_id": "EXC-004.2",
+          "criterion_type": "EXCLUSION",
+          "category": "DIAGNOSIS",
+          "original_text": "morbid obesity",
+          "evaluation_type": "BOOLEAN",
+          "field_name": "morbid_obesity",
+          "operator": "EQ",
+          "value": true,
+          "lower_value": null,
+          "upper_value": null,
+          "unit": null,
+          "temporal_window": null,
+          "logical_operator": null,
+          "children": [],
+          "required_patient_fields": [
+            "medical_history"
+          ],
+          "requires_human_review": true
+        },
+        {
+          "criterion_id": "EXC-004.3",
+          "criterion_type": "EXCLUSION",
+          "category": "PROCEDURE",
+          "original_text": "being considered for bariatric surgery or any other procedure intended for weight loss",
+          "evaluation_type": "HUMAN_ONLY",
+          "field_name": null,
+          "operator": null,
+          "value": null,
+          "lower_value": null,
+          "upper_value": null,
+          "unit": null,
+          "temporal_window": null,
+          "logical_operator": null,
+          "children": [],
+          "required_patient_fields": [],
+          "requires_human_review": true
+        }
+      ],
+      "required_patient_fields": [
+        "condition",
+        "medical_history"
+      ],
+      "requires_human_review": true
+    }
+  ],
+  "golden_evaluation": {
+    "expected_count": 8,
+    "found_count": 8,
+    "matched_count": 8,
+    "matched_criteria": [
+      "T2D_DURATION: Type 2 Diabetes for at least one year",
+      "INSULIN_NAIVE: Insulin naive",
+      "HBA1C_RANGE: HbA1c from 7.5% through 10%, inclusive",
+      "BMI_MINIMUM: BMI at least 23 kg/m2",
+      "TYPE_1_DIABETES: Type 1 Diabetes exclusion",
+      "RECENT_CARDIOVASCULAR_EVENT: Heart attack, stroke, or heart-failure hospitalization within six months",
+      "NYHA_CLASS_III_IV: NYHA Class III or IV CHF",
+      "T2D_MORBID_OBESITY_WEIGHT_LOSS_PROCEDURE: Type 2 Diabetes with morbid obesity and consideration for a weight-loss procedure"
+    ],
+    "missed_criteria": [],
+    "unexpected_criteria": [],
+    "structural_errors": [
+      "NYHA_CLASS_III_IV.evaluation_type: expected 'CATEGORICAL', got 'COMPOUND'",
+      "NYHA_CLASS_III_IV.field_name: expected 'nyha_class', got None",
+      "NYHA_CLASS_III_IV.operator: expected 'IN', got None",
+      "NYHA_CLASS_III_IV.value: expected ['III', 'IV'], got None",
+      "NYHA_CLASS_III_IV.logical_operator: expected None, got 'OR'",
+      "NYHA_CLASS_III_IV.required_patient_fields: expected ['medical_history'], got []",
+      "NYHA_CLASS_III_IV.children_count: expected 0, got 2",
+      "T2D_MORBID_OBESITY_WEIGHT_LOSS_PROCEDURE.category: expected 'DIAGNOSIS', got 'OTHER'",
+      "T2D_MORBID_OBESITY_WEIGHT_LOSS_PROCEDURE.children[3].evaluation_type: expected 'COMPOUND', got 'HUMAN_ONLY'",
+      "T2D_MORBID_OBESITY_WEIGHT_LOSS_PROCEDURE.children[3].logical_operator: expected 'OR', got None",
+      "T2D_MORBID_OBESITY_WEIGHT_LOSS_PROCEDURE.children[3].children_count: expected 2, got 0",
+      "T2D_MORBID_OBESITY_WEIGHT_LOSS_PROCEDURE.children[3].children[1].criterion_type: expected 'EXCLUSION', got '<missing>'",
+      "T2D_MORBID_OBESITY_WEIGHT_LOSS_PROCEDURE.children[3].children[1].category: expected 'PROCEDURE', got '<missing>'",
+      "T2D_MORBID_OBESITY_WEIGHT_LOSS_PROCEDURE.children[3].children[1].evaluation_type: expected 'BOOLEAN', got '<missing>'",
+      "T2D_MORBID_OBESITY_WEIGHT_LOSS_PROCEDURE.children[3].children[1].field_name: expected None, got '<missing>'",
+      "T2D_MORBID_OBESITY_WEIGHT_LOSS_PROCEDURE.children[3].children[1].operator: expected 'EQ', got '<missing>'",
+      "T2D_MORBID_OBESITY_WEIGHT_LOSS_PROCEDURE.children[3].children[1].value: expected True, got '<missing>'",
+      "T2D_MORBID_OBESITY_WEIGHT_LOSS_PROCEDURE.children[3].children[2].criterion_type: expected 'EXCLUSION', got '<missing>'",
+      "T2D_MORBID_OBESITY_WEIGHT_LOSS_PROCEDURE.children[3].children[2].category: expected 'PROCEDURE', got '<missing>'",
+      "T2D_MORBID_OBESITY_WEIGHT_LOSS_PROCEDURE.children[3].children[2].evaluation_type: expected 'BOOLEAN', got '<missing>'",
+      "T2D_MORBID_OBESITY_WEIGHT_LOSS_PROCEDURE.children[3].children[2].field_name: expected None, got '<missing>'",
+      "T2D_MORBID_OBESITY_WEIGHT_LOSS_PROCEDURE.children[3].children[2].operator: expected 'EQ', got '<missing>'",
+      "T2D_MORBID_OBESITY_WEIGHT_LOSS_PROCEDURE.children[3].children[2].value: expected True, got '<missing>'"
+    ],
+    "population_leakage": [],
+    "field_mapping_accuracy": {
+      "passed_checks": 10,
+      "total_checks": 11,
+      "accuracy_percent": 90.9,
+      "status": "FAIL",
+      "quality": "good"
+    },
+    "threshold_accuracy": {
+      "passed_checks": 10,
+      "total_checks": 10,
+      "accuracy_percent": 100.0,
+      "status": "PASS",
+      "quality": "good"
+    },
+    "logical_structure_accuracy": {
+      "passed_checks": 6,
+      "total_checks": 9,
+      "accuracy_percent": 66.7,
+      "status": "FAIL",
+      "quality": "poor"
+    },
+    "required_patient_fields_accuracy": {
+      "passed_checks": 12,
+      "total_checks": 13,
+      "accuracy_percent": 92.3,
+      "status": "FAIL",
+      "quality": "good"
+    },
+    "boolean_semantics_accuracy": {
+      "passed_checks": 21,
+      "total_checks": 27,
+      "accuracy_percent": 77.8,
+      "status": "FAIL",
+      "quality": "fair"
+    },
+    "temporal_window_accuracy": {
+      "passed_checks": 4,
+      "total_checks": 4,
+      "accuracy_percent": 100.0,
+      "status": "PASS",
+      "quality": "good"
+    },
+    "criterion_comparisons": [
+      {
+        "expectation_id": "T2D_DURATION",
+        "label": "Type 2 Diabetes for at least one year",
+        "matched": true,
+        "actual_criterion_id": "INC-001",
+        "field_comparisons": [
+          {
+            "path": "T2D_DURATION",
+            "field_name": "criterion_type",
+            "expected": "'INCLUSION'",
+            "actual": "'INCLUSION'",
+            "passed": true,
+            "metric_group": null
+          },
+          {
+            "path": "T2D_DURATION",
+            "field_name": "category",
+            "expected": "'DIAGNOSIS'",
+            "actual": "'DIAGNOSIS'",
+            "passed": true,
+            "metric_group": null
+          },
+          {
+            "path": "T2D_DURATION",
+            "field_name": "evaluation_type",
+            "expected": "'NUMERIC'",
+            "actual": "'NUMERIC'",
+            "passed": true,
+            "metric_group": null
+          },
+          {
+            "path": "T2D_DURATION",
+            "field_name": "field_name",
+            "expected": "'diagnosis_duration_years'",
+            "actual": "'diagnosis_duration_years'",
+            "passed": true,
+            "metric_group": "field_mapping"
+          },
+          {
+            "path": "T2D_DURATION",
+            "field_name": "operator",
+            "expected": "'GTE'",
+            "actual": "'GTE'",
+            "passed": true,
+            "metric_group": "threshold"
+          },
+          {
+            "path": "T2D_DURATION",
+            "field_name": "value",
+            "expected": "'1'",
+            "actual": "'1'",
+            "passed": true,
+            "metric_group": "threshold"
+          },
+          {
+            "path": "T2D_DURATION",
+            "field_name": "unit",
+            "expected": "'year'",
+            "actual": "'year'",
+            "passed": true,
+            "metric_group": "threshold"
+          },
+          {
+            "path": "T2D_DURATION",
+            "field_name": "required_patient_fields",
+            "expected": "['diagnosis_date']",
+            "actual": "['diagnosis_date']",
+            "passed": true,
+            "metric_group": "required_patient_fields"
+          }
+        ]
+      },
+      {
+        "expectation_id": "INSULIN_NAIVE",
+        "label": "Insulin naive",
+        "matched": true,
+        "actual_criterion_id": "INC-002",
+        "field_comparisons": [
+          {
+            "path": "INSULIN_NAIVE",
+            "field_name": "criterion_type",
+            "expected": "'INCLUSION'",
+            "actual": "'INCLUSION'",
+            "passed": true,
+            "metric_group": null
+          },
+          {
+            "path": "INSULIN_NAIVE",
+            "field_name": "category",
+            "expected": "'MEDICATION'",
+            "actual": "'MEDICATION'",
+            "passed": true,
+            "metric_group": null
+          },
+          {
+            "path": "INSULIN_NAIVE",
+            "field_name": "evaluation_type",
+            "expected": "'BOOLEAN'",
+            "actual": "'BOOLEAN'",
+            "passed": true,
+            "metric_group": "boolean_semantics"
+          },
+          {
+            "path": "INSULIN_NAIVE",
+            "field_name": "field_name",
+            "expected": "'insulin_naive'",
+            "actual": "'insulin_naive'",
+            "passed": true,
+            "metric_group": "field_mapping"
+          },
+          {
+            "path": "INSULIN_NAIVE",
+            "field_name": "operator",
+            "expected": "'EQ'",
+            "actual": "'EQ'",
+            "passed": true,
+            "metric_group": "boolean_semantics"
+          },
+          {
+            "path": "INSULIN_NAIVE",
+            "field_name": "value",
+            "expected": "True",
+            "actual": "True",
+            "passed": true,
+            "metric_group": "boolean_semantics"
+          },
+          {
+            "path": "INSULIN_NAIVE",
+            "field_name": "required_patient_fields",
+            "expected": "['medications']",
+            "actual": "['medications']",
+            "passed": true,
+            "metric_group": "required_patient_fields"
+          }
+        ]
+      },
+      {
+        "expectation_id": "HBA1C_RANGE",
+        "label": "HbA1c from 7.5% through 10%, inclusive",
+        "matched": true,
+        "actual_criterion_id": "INC-003",
+        "field_comparisons": [
+          {
+            "path": "HBA1C_RANGE",
+            "field_name": "criterion_type",
+            "expected": "'INCLUSION'",
+            "actual": "'INCLUSION'",
+            "passed": true,
+            "metric_group": null
+          },
+          {
+            "path": "HBA1C_RANGE",
+            "field_name": "category",
+            "expected": "'LAB'",
+            "actual": "'LAB'",
+            "passed": true,
+            "metric_group": null
+          },
+          {
+            "path": "HBA1C_RANGE",
+            "field_name": "evaluation_type",
+            "expected": "'NUMERIC'",
+            "actual": "'NUMERIC'",
+            "passed": true,
+            "metric_group": null
+          },
+          {
+            "path": "HBA1C_RANGE",
+            "field_name": "field_name",
+            "expected": "'hba1c'",
+            "actual": "'hba1c'",
+            "passed": true,
+            "metric_group": "field_mapping"
+          },
+          {
+            "path": "HBA1C_RANGE",
+            "field_name": "operator",
+            "expected": "'BETWEEN_INCLUSIVE'",
+            "actual": "'BETWEEN_INCLUSIVE'",
+            "passed": true,
+            "metric_group": "threshold"
+          },
+          {
+            "path": "HBA1C_RANGE",
+            "field_name": "lower_value",
+            "expected": "'7.5'",
+            "actual": "'7.5'",
+            "passed": true,
+            "metric_group": "threshold"
+          },
+          {
+            "path": "HBA1C_RANGE",
+            "field_name": "upper_value",
+            "expected": "'10'",
+            "actual": "'10'",
+            "passed": true,
+            "metric_group": "threshold"
+          },
+          {
+            "path": "HBA1C_RANGE",
+            "field_name": "unit",
+            "expected": "'%'",
+            "actual": "'%'",
+            "passed": true,
+            "metric_group": "threshold"
+          },
+          {
+            "path": "HBA1C_RANGE",
+            "field_name": "required_patient_fields",
+            "expected": "['laboratory_results']",
+            "actual": "['laboratory_results']",
+            "passed": true,
+            "metric_group": "required_patient_fields"
+          }
+        ]
+      },
+      {
+        "expectation_id": "BMI_MINIMUM",
+        "label": "BMI at least 23 kg/m2",
+        "matched": true,
+        "actual_criterion_id": "INC-004",
+        "field_comparisons": [
+          {
+            "path": "BMI_MINIMUM",
+            "field_name": "criterion_type",
+            "expected": "'INCLUSION'",
+            "actual": "'INCLUSION'",
+            "passed": true,
+            "metric_group": null
+          },
+          {
+            "path": "BMI_MINIMUM",
+            "field_name": "category",
+            "expected": "'BMI'",
+            "actual": "'BMI'",
+            "passed": true,
+            "metric_group": null
+          },
+          {
+            "path": "BMI_MINIMUM",
+            "field_name": "evaluation_type",
+            "expected": "'NUMERIC'",
+            "actual": "'NUMERIC'",
+            "passed": true,
+            "metric_group": null
+          },
+          {
+            "path": "BMI_MINIMUM",
+            "field_name": "field_name",
+            "expected": "'bmi'",
+            "actual": "'bmi'",
+            "passed": true,
+            "metric_group": "field_mapping"
+          },
+          {
+            "path": "BMI_MINIMUM",
+            "field_name": "operator",
+            "expected": "'GTE'",
+            "actual": "'GTE'",
+            "passed": true,
+            "metric_group": "threshold"
+          },
+          {
+            "path": "BMI_MINIMUM",
+            "field_name": "value",
+            "expected": "'23'",
+            "actual": "'23'",
+            "passed": true,
+            "metric_group": "threshold"
+          },
+          {
+            "path": "BMI_MINIMUM",
+            "field_name": "unit",
+            "expected": "'kg/m2'",
+            "actual": "'kg/m2'",
+            "passed": true,
+            "metric_group": "threshold"
+          },
+          {
+            "path": "BMI_MINIMUM",
+            "field_name": "required_patient_fields",
+            "expected": "['bmi']",
+            "actual": "['bmi']",
+            "passed": true,
+            "metric_group": "required_patient_fields"
+          }
+        ]
+      },
+      {
+        "expectation_id": "TYPE_1_DIABETES",
+        "label": "Type 1 Diabetes exclusion",
+        "matched": true,
+        "actual_criterion_id": "EXC-001",
+        "field_comparisons": [
+          {
+            "path": "TYPE_1_DIABETES",
+            "field_name": "criterion_type",
+            "expected": "'EXCLUSION'",
+            "actual": "'EXCLUSION'",
+            "passed": true,
+            "metric_group": null
+          },
+          {
+            "path": "TYPE_1_DIABETES",
+            "field_name": "category",
+            "expected": "'DIAGNOSIS'",
+            "actual": "'DIAGNOSIS'",
+            "passed": true,
+            "metric_group": null
+          },
+          {
+            "path": "TYPE_1_DIABETES",
+            "field_name": "evaluation_type",
+            "expected": "'BOOLEAN'",
+            "actual": "'BOOLEAN'",
+            "passed": true,
+            "metric_group": "boolean_semantics"
+          },
+          {
+            "path": "TYPE_1_DIABETES",
+            "field_name": "field_name",
+            "expected": "'type_1_diabetes'",
+            "actual": "'type_1_diabetes'",
+            "passed": true,
+            "metric_group": "field_mapping"
+          },
+          {
+            "path": "TYPE_1_DIABETES",
+            "field_name": "operator",
+            "expected": "'EQ'",
+            "actual": "'EQ'",
+            "passed": true,
+            "metric_group": "boolean_semantics"
+          },
+          {
+            "path": "TYPE_1_DIABETES",
+            "field_name": "value",
+            "expected": "True",
+            "actual": "True",
+            "passed": true,
+            "metric_group": "boolean_semantics"
+          },
+          {
+            "path": "TYPE_1_DIABETES",
+            "field_name": "required_patient_fields",
+            "expected": "['medical_history']",
+            "actual": "['medical_history']",
+            "passed": true,
+            "metric_group": "required_patient_fields"
+          }
+        ]
+      },
+      {
+        "expectation_id": "RECENT_CARDIOVASCULAR_EVENT",
+        "label": "Heart attack, stroke, or heart-failure hospitalization within six months",
+        "matched": true,
+        "actual_criterion_id": "EXC-002",
+        "field_comparisons": [
+          {
+            "path": "RECENT_CARDIOVASCULAR_EVENT",
+            "field_name": "criterion_type",
+            "expected": "'EXCLUSION'",
+            "actual": "'EXCLUSION'",
+            "passed": true,
+            "metric_group": null
+          },
+          {
+            "path": "RECENT_CARDIOVASCULAR_EVENT",
+            "field_name": "category",
+            "expected": "'MEDICAL_HISTORY'",
+            "actual": "'MEDICAL_HISTORY'",
+            "passed": true,
+            "metric_group": null
+          },
+          {
+            "path": "RECENT_CARDIOVASCULAR_EVENT",
+            "field_name": "evaluation_type",
+            "expected": "'COMPOUND'",
+            "actual": "'COMPOUND'",
+            "passed": true,
+            "metric_group": "logical_structure"
+          },
+          {
+            "path": "RECENT_CARDIOVASCULAR_EVENT",
+            "field_name": "temporal_window",
+            "expected": "{'value': '6', 'unit': 'MONTH'}",
+            "actual": "{'value': '6', 'unit': 'MONTH'}",
+            "passed": true,
+            "metric_group": "temporal_window"
+          },
+          {
+            "path": "RECENT_CARDIOVASCULAR_EVENT",
+            "field_name": "logical_operator",
+            "expected": "'OR'",
+            "actual": "'OR'",
+            "passed": true,
+            "metric_group": "logical_structure"
+          },
+          {
+            "path": "RECENT_CARDIOVASCULAR_EVENT",
+            "field_name": "required_patient_fields",
+            "expected": "['medical_history']",
+            "actual": "['medical_history']",
+            "passed": true,
+            "metric_group": "required_patient_fields"
+          },
+          {
+            "path": "RECENT_CARDIOVASCULAR_EVENT",
+            "field_name": "children_count",
+            "expected": "3",
+            "actual": "3",
+            "passed": true,
+            "metric_group": "logical_structure"
+          },
+          {
+            "path": "RECENT_CARDIOVASCULAR_EVENT.children[1]",
+            "field_name": "criterion_type",
+            "expected": "'EXCLUSION'",
+            "actual": "'EXCLUSION'",
+            "passed": true,
+            "metric_group": null
+          },
+          {
+            "path": "RECENT_CARDIOVASCULAR_EVENT.children[1]",
+            "field_name": "category",
+            "expected": "'MEDICAL_HISTORY'",
+            "actual": "'MEDICAL_HISTORY'",
+            "passed": true,
+            "metric_group": null
+          },
+          {
+            "path": "RECENT_CARDIOVASCULAR_EVENT.children[1]",
+            "field_name": "evaluation_type",
+            "expected": "'BOOLEAN'",
+            "actual": "'BOOLEAN'",
+            "passed": true,
+            "metric_group": "boolean_semantics"
+          },
+          {
+            "path": "RECENT_CARDIOVASCULAR_EVENT.children[1]",
+            "field_name": "field_name",
+            "expected": "'heart_attack'",
+            "actual": "'heart_attack'",
+            "passed": true,
+            "metric_group": "field_mapping"
+          },
+          {
+            "path": "RECENT_CARDIOVASCULAR_EVENT.children[1]",
+            "field_name": "operator",
+            "expected": "'EQ'",
+            "actual": "'EQ'",
+            "passed": true,
+            "metric_group": "boolean_semantics"
+          },
+          {
+            "path": "RECENT_CARDIOVASCULAR_EVENT.children[1]",
+            "field_name": "value",
+            "expected": "True",
+            "actual": "True",
+            "passed": true,
+            "metric_group": "boolean_semantics"
+          },
+          {
+            "path": "RECENT_CARDIOVASCULAR_EVENT.children[1]",
+            "field_name": "temporal_window",
+            "expected": "{'value': '6', 'unit': 'MONTH'}",
+            "actual": "inherited {'value': '6', 'unit': 'MONTH'}",
+            "passed": true,
+            "metric_group": "temporal_window"
+          },
+          {
+            "path": "RECENT_CARDIOVASCULAR_EVENT.children[1]",
+            "field_name": "required_patient_fields",
+            "expected": "['medical_history']",
+            "actual": "['medical_history']",
+            "passed": true,
+            "metric_group": "required_patient_fields"
+          },
+          {
+            "path": "RECENT_CARDIOVASCULAR_EVENT.children[2]",
+            "field_name": "criterion_type",
+            "expected": "'EXCLUSION'",
+            "actual": "'EXCLUSION'",
+            "passed": true,
+            "metric_group": null
+          },
+          {
+            "path": "RECENT_CARDIOVASCULAR_EVENT.children[2]",
+            "field_name": "category",
+            "expected": "'MEDICAL_HISTORY'",
+            "actual": "'MEDICAL_HISTORY'",
+            "passed": true,
+            "metric_group": null
+          },
+          {
+            "path": "RECENT_CARDIOVASCULAR_EVENT.children[2]",
+            "field_name": "evaluation_type",
+            "expected": "'BOOLEAN'",
+            "actual": "'BOOLEAN'",
+            "passed": true,
+            "metric_group": "boolean_semantics"
+          },
+          {
+            "path": "RECENT_CARDIOVASCULAR_EVENT.children[2]",
+            "field_name": "field_name",
+            "expected": "'stroke'",
+            "actual": "'stroke'",
+            "passed": true,
+            "metric_group": "field_mapping"
+          },
+          {
+            "path": "RECENT_CARDIOVASCULAR_EVENT.children[2]",
+            "field_name": "operator",
+            "expected": "'EQ'",
+            "actual": "'EQ'",
+            "passed": true,
+            "metric_group": "boolean_semantics"
+          },
+          {
+            "path": "RECENT_CARDIOVASCULAR_EVENT.children[2]",
+            "field_name": "value",
+            "expected": "True",
+            "actual": "True",
+            "passed": true,
+            "metric_group": "boolean_semantics"
+          },
+          {
+            "path": "RECENT_CARDIOVASCULAR_EVENT.children[2]",
+            "field_name": "temporal_window",
+            "expected": "{'value': '6', 'unit': 'MONTH'}",
+            "actual": "inherited {'value': '6', 'unit': 'MONTH'}",
+            "passed": true,
+            "metric_group": "temporal_window"
+          },
+          {
+            "path": "RECENT_CARDIOVASCULAR_EVENT.children[2]",
+            "field_name": "required_patient_fields",
+            "expected": "['medical_history']",
+            "actual": "['medical_history']",
+            "passed": true,
+            "metric_group": "required_patient_fields"
+          },
+          {
+            "path": "RECENT_CARDIOVASCULAR_EVENT.children[3]",
+            "field_name": "criterion_type",
+            "expected": "'EXCLUSION'",
+            "actual": "'EXCLUSION'",
+            "passed": true,
+            "metric_group": null
+          },
+          {
+            "path": "RECENT_CARDIOVASCULAR_EVENT.children[3]",
+            "field_name": "category",
+            "expected": "'MEDICAL_HISTORY'",
+            "actual": "'MEDICAL_HISTORY'",
+            "passed": true,
+            "metric_group": null
+          },
+          {
+            "path": "RECENT_CARDIOVASCULAR_EVENT.children[3]",
+            "field_name": "evaluation_type",
+            "expected": "'BOOLEAN'",
+            "actual": "'BOOLEAN'",
+            "passed": true,
+            "metric_group": "boolean_semantics"
+          },
+          {
+            "path": "RECENT_CARDIOVASCULAR_EVENT.children[3]",
+            "field_name": "field_name",
+            "expected": "'heart_failure_hospitalization'",
+            "actual": "'heart_failure_hospitalization'",
+            "passed": true,
+            "metric_group": "field_mapping"
+          },
+          {
+            "path": "RECENT_CARDIOVASCULAR_EVENT.children[3]",
+            "field_name": "operator",
+            "expected": "'EQ'",
+            "actual": "'EQ'",
+            "passed": true,
+            "metric_group": "boolean_semantics"
+          },
+          {
+            "path": "RECENT_CARDIOVASCULAR_EVENT.children[3]",
+            "field_name": "value",
+            "expected": "True",
+            "actual": "True",
+            "passed": true,
+            "metric_group": "boolean_semantics"
+          },
+          {
+            "path": "RECENT_CARDIOVASCULAR_EVENT.children[3]",
+            "field_name": "temporal_window",
+            "expected": "{'value': '6', 'unit': 'MONTH'}",
+            "actual": "inherited {'value': '6', 'unit': 'MONTH'}",
+            "passed": true,
+            "metric_group": "temporal_window"
+          },
+          {
+            "path": "RECENT_CARDIOVASCULAR_EVENT.children[3]",
+            "field_name": "required_patient_fields",
+            "expected": "['medical_history']",
+            "actual": "['medical_history']",
+            "passed": true,
+            "metric_group": "required_patient_fields"
+          }
+        ]
+      },
+      {
+        "expectation_id": "NYHA_CLASS_III_IV",
+        "label": "NYHA Class III or IV CHF",
+        "matched": true,
+        "actual_criterion_id": "EXC-003",
+        "field_comparisons": [
+          {
+            "path": "NYHA_CLASS_III_IV",
+            "field_name": "criterion_type",
+            "expected": "'EXCLUSION'",
+            "actual": "'EXCLUSION'",
+            "passed": true,
+            "metric_group": null
+          },
+          {
+            "path": "NYHA_CLASS_III_IV",
+            "field_name": "category",
+            "expected": "'MEDICAL_HISTORY'",
+            "actual": "'MEDICAL_HISTORY'",
+            "passed": true,
+            "metric_group": null
+          },
+          {
+            "path": "NYHA_CLASS_III_IV",
+            "field_name": "evaluation_type",
+            "expected": "'CATEGORICAL'",
+            "actual": "'COMPOUND'",
+            "passed": false,
+            "metric_group": null
+          },
+          {
+            "path": "NYHA_CLASS_III_IV",
+            "field_name": "field_name",
+            "expected": "'nyha_class'",
+            "actual": "None",
+            "passed": false,
+            "metric_group": "field_mapping"
+          },
+          {
+            "path": "NYHA_CLASS_III_IV",
+            "field_name": "operator",
+            "expected": "'IN'",
+            "actual": "None",
+            "passed": false,
+            "metric_group": null
+          },
+          {
+            "path": "NYHA_CLASS_III_IV",
+            "field_name": "value",
+            "expected": "['III', 'IV']",
+            "actual": "None",
+            "passed": false,
+            "metric_group": null
+          },
+          {
+            "path": "NYHA_CLASS_III_IV",
+            "field_name": "logical_operator",
+            "expected": "None",
+            "actual": "'OR'",
+            "passed": false,
+            "metric_group": null
+          },
+          {
+            "path": "NYHA_CLASS_III_IV",
+            "field_name": "required_patient_fields",
+            "expected": "['medical_history']",
+            "actual": "[]",
+            "passed": false,
+            "metric_group": "required_patient_fields"
+          },
+          {
+            "path": "NYHA_CLASS_III_IV",
+            "field_name": "children_count",
+            "expected": "0",
+            "actual": "2",
+            "passed": false,
+            "metric_group": null
+          }
+        ]
+      },
+      {
+        "expectation_id": "T2D_MORBID_OBESITY_WEIGHT_LOSS_PROCEDURE",
+        "label": "Type 2 Diabetes with morbid obesity and consideration for a weight-loss procedure",
+        "matched": true,
+        "actual_criterion_id": "EXC-004",
+        "field_comparisons": [
+          {
+            "path": "T2D_MORBID_OBESITY_WEIGHT_LOSS_PROCEDURE",
+            "field_name": "criterion_type",
+            "expected": "'EXCLUSION'",
+            "actual": "'EXCLUSION'",
+            "passed": true,
+            "metric_group": null
+          },
+          {
+            "path": "T2D_MORBID_OBESITY_WEIGHT_LOSS_PROCEDURE",
+            "field_name": "category",
+            "expected": "'DIAGNOSIS'",
+            "actual": "'OTHER'",
+            "passed": false,
+            "metric_group": null
+          },
+          {
+            "path": "T2D_MORBID_OBESITY_WEIGHT_LOSS_PROCEDURE",
+            "field_name": "evaluation_type",
+            "expected": "'COMPOUND'",
+            "actual": "'COMPOUND'",
+            "passed": true,
+            "metric_group": "logical_structure"
+          },
+          {
+            "path": "T2D_MORBID_OBESITY_WEIGHT_LOSS_PROCEDURE",
+            "field_name": "logical_operator",
+            "expected": "'AND'",
+            "actual": "'AND'",
+            "passed": true,
+            "metric_group": "logical_structure"
+          },
+          {
+            "path": "T2D_MORBID_OBESITY_WEIGHT_LOSS_PROCEDURE",
+            "field_name": "required_patient_fields",
+            "expected": "['condition', 'medical_history']",
+            "actual": "['condition', 'medical_history']",
+            "passed": true,
+            "metric_group": "required_patient_fields"
+          },
+          {
+            "path": "T2D_MORBID_OBESITY_WEIGHT_LOSS_PROCEDURE",
+            "field_name": "children_count",
+            "expected": "3",
+            "actual": "3",
+            "passed": true,
+            "metric_group": "logical_structure"
+          },
+          {
+            "path": "T2D_MORBID_OBESITY_WEIGHT_LOSS_PROCEDURE.children[1]",
+            "field_name": "criterion_type",
+            "expected": "'EXCLUSION'",
+            "actual": "'EXCLUSION'",
+            "passed": true,
+            "metric_group": null
+          },
+          {
+            "path": "T2D_MORBID_OBESITY_WEIGHT_LOSS_PROCEDURE.children[1]",
+            "field_name": "category",
+            "expected": "'DIAGNOSIS'",
+            "actual": "'DIAGNOSIS'",
+            "passed": true,
+            "metric_group": null
+          },
+          {
+            "path": "T2D_MORBID_OBESITY_WEIGHT_LOSS_PROCEDURE.children[1]",
+            "field_name": "evaluation_type",
+            "expected": "'BOOLEAN'",
+            "actual": "'BOOLEAN'",
+            "passed": true,
+            "metric_group": "boolean_semantics"
+          },
+          {
+            "path": "T2D_MORBID_OBESITY_WEIGHT_LOSS_PROCEDURE.children[1]",
+            "field_name": "field_name",
+            "expected": "'type_2_diabetes'",
+            "actual": "'type_2_diabetes'",
+            "passed": true,
+            "metric_group": "field_mapping"
+          },
+          {
+            "path": "T2D_MORBID_OBESITY_WEIGHT_LOSS_PROCEDURE.children[1]",
+            "field_name": "operator",
+            "expected": "'EQ'",
+            "actual": "'EQ'",
+            "passed": true,
+            "metric_group": "boolean_semantics"
+          },
+          {
+            "path": "T2D_MORBID_OBESITY_WEIGHT_LOSS_PROCEDURE.children[1]",
+            "field_name": "value",
+            "expected": "True",
+            "actual": "True",
+            "passed": true,
+            "metric_group": "boolean_semantics"
+          },
+          {
+            "path": "T2D_MORBID_OBESITY_WEIGHT_LOSS_PROCEDURE.children[1]",
+            "field_name": "required_patient_fields",
+            "expected": "['condition']",
+            "actual": "['condition']",
+            "passed": true,
+            "metric_group": "required_patient_fields"
+          },
+          {
+            "path": "T2D_MORBID_OBESITY_WEIGHT_LOSS_PROCEDURE.children[2]",
+            "field_name": "criterion_type",
+            "expected": "'EXCLUSION'",
+            "actual": "'EXCLUSION'",
+            "passed": true,
+            "metric_group": null
+          },
+          {
+            "path": "T2D_MORBID_OBESITY_WEIGHT_LOSS_PROCEDURE.children[2]",
+            "field_name": "category",
+            "expected": "'DIAGNOSIS'",
+            "actual": "'DIAGNOSIS'",
+            "passed": true,
+            "metric_group": null
+          },
+          {
+            "path": "T2D_MORBID_OBESITY_WEIGHT_LOSS_PROCEDURE.children[2]",
+            "field_name": "evaluation_type",
+            "expected": "'BOOLEAN'",
+            "actual": "'BOOLEAN'",
+            "passed": true,
+            "metric_group": "boolean_semantics"
+          },
+          {
+            "path": "T2D_MORBID_OBESITY_WEIGHT_LOSS_PROCEDURE.children[2]",
+            "field_name": "field_name",
+            "expected": "'morbid_obesity'",
+            "actual": "'morbid_obesity'",
+            "passed": true,
+            "metric_group": "field_mapping"
+          },
+          {
+            "path": "T2D_MORBID_OBESITY_WEIGHT_LOSS_PROCEDURE.children[2]",
+            "field_name": "operator",
+            "expected": "'EQ'",
+            "actual": "'EQ'",
+            "passed": true,
+            "metric_group": "boolean_semantics"
+          },
+          {
+            "path": "T2D_MORBID_OBESITY_WEIGHT_LOSS_PROCEDURE.children[2]",
+            "field_name": "value",
+            "expected": "True",
+            "actual": "True",
+            "passed": true,
+            "metric_group": "boolean_semantics"
+          },
+          {
+            "path": "T2D_MORBID_OBESITY_WEIGHT_LOSS_PROCEDURE.children[2]",
+            "field_name": "required_patient_fields",
+            "expected": "['medical_history']",
+            "actual": "['medical_history']",
+            "passed": true,
+            "metric_group": "required_patient_fields"
+          },
+          {
+            "path": "T2D_MORBID_OBESITY_WEIGHT_LOSS_PROCEDURE.children[3]",
+            "field_name": "criterion_type",
+            "expected": "'EXCLUSION'",
+            "actual": "'EXCLUSION'",
+            "passed": true,
+            "metric_group": null
+          },
+          {
+            "path": "T2D_MORBID_OBESITY_WEIGHT_LOSS_PROCEDURE.children[3]",
+            "field_name": "category",
+            "expected": "'PROCEDURE'",
+            "actual": "'PROCEDURE'",
+            "passed": true,
+            "metric_group": null
+          },
+          {
+            "path": "T2D_MORBID_OBESITY_WEIGHT_LOSS_PROCEDURE.children[3]",
+            "field_name": "evaluation_type",
+            "expected": "'COMPOUND'",
+            "actual": "'HUMAN_ONLY'",
+            "passed": false,
+            "metric_group": "logical_structure"
+          },
+          {
+            "path": "T2D_MORBID_OBESITY_WEIGHT_LOSS_PROCEDURE.children[3]",
+            "field_name": "logical_operator",
+            "expected": "'OR'",
+            "actual": "None",
+            "passed": false,
+            "metric_group": "logical_structure"
+          },
+          {
+            "path": "T2D_MORBID_OBESITY_WEIGHT_LOSS_PROCEDURE.children[3]",
+            "field_name": "children_count",
+            "expected": "2",
+            "actual": "0",
+            "passed": false,
+            "metric_group": "logical_structure"
+          },
+          {
+            "path": "T2D_MORBID_OBESITY_WEIGHT_LOSS_PROCEDURE.children[3].children[1]",
+            "field_name": "criterion_type",
+            "expected": "'EXCLUSION'",
+            "actual": "'<missing>'",
+            "passed": false,
+            "metric_group": null
+          },
+          {
+            "path": "T2D_MORBID_OBESITY_WEIGHT_LOSS_PROCEDURE.children[3].children[1]",
+            "field_name": "category",
+            "expected": "'PROCEDURE'",
+            "actual": "'<missing>'",
+            "passed": false,
+            "metric_group": null
+          },
+          {
+            "path": "T2D_MORBID_OBESITY_WEIGHT_LOSS_PROCEDURE.children[3].children[1]",
+            "field_name": "evaluation_type",
+            "expected": "'BOOLEAN'",
+            "actual": "'<missing>'",
+            "passed": false,
+            "metric_group": "boolean_semantics"
+          },
+          {
+            "path": "T2D_MORBID_OBESITY_WEIGHT_LOSS_PROCEDURE.children[3].children[1]",
+            "field_name": "field_name",
+            "expected": "None",
+            "actual": "'<missing>'",
+            "passed": false,
+            "metric_group": null
+          },
+          {
+            "path": "T2D_MORBID_OBESITY_WEIGHT_LOSS_PROCEDURE.children[3].children[1]",
+            "field_name": "operator",
+            "expected": "'EQ'",
+            "actual": "'<missing>'",
+            "passed": false,
+            "metric_group": "boolean_semantics"
+          },
+          {
+            "path": "T2D_MORBID_OBESITY_WEIGHT_LOSS_PROCEDURE.children[3].children[1]",
+            "field_name": "value",
+            "expected": "True",
+            "actual": "'<missing>'",
+            "passed": false,
+            "metric_group": "boolean_semantics"
+          },
+          {
+            "path": "T2D_MORBID_OBESITY_WEIGHT_LOSS_PROCEDURE.children[3].children[2]",
+            "field_name": "criterion_type",
+            "expected": "'EXCLUSION'",
+            "actual": "'<missing>'",
+            "passed": false,
+            "metric_group": null
+          },
+          {
+            "path": "T2D_MORBID_OBESITY_WEIGHT_LOSS_PROCEDURE.children[3].children[2]",
+            "field_name": "category",
+            "expected": "'PROCEDURE'",
+            "actual": "'<missing>'",
+            "passed": false,
+            "metric_group": null
+          },
+          {
+            "path": "T2D_MORBID_OBESITY_WEIGHT_LOSS_PROCEDURE.children[3].children[2]",
+            "field_name": "evaluation_type",
+            "expected": "'BOOLEAN'",
+            "actual": "'<missing>'",
+            "passed": false,
+            "metric_group": "boolean_semantics"
+          },
+          {
+            "path": "T2D_MORBID_OBESITY_WEIGHT_LOSS_PROCEDURE.children[3].children[2]",
+            "field_name": "field_name",
+            "expected": "None",
+            "actual": "'<missing>'",
+            "passed": false,
+            "metric_group": null
+          },
+          {
+            "path": "T2D_MORBID_OBESITY_WEIGHT_LOSS_PROCEDURE.children[3].children[2]",
+            "field_name": "operator",
+            "expected": "'EQ'",
+            "actual": "'<missing>'",
+            "passed": false,
+            "metric_group": "boolean_semantics"
+          },
+          {
+            "path": "T2D_MORBID_OBESITY_WEIGHT_LOSS_PROCEDURE.children[3].children[2]",
+            "field_name": "value",
+            "expected": "True",
+            "actual": "'<missing>'",
+            "passed": false,
+            "metric_group": "boolean_semantics"
+          }
+        ]
+      }
+    ]
+  }
+}

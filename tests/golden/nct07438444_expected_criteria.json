@@ -1,0 +1,263 @@
+{
+  "trial_id": "NCT07438444",
+  "target_population": "Type 2 Diabetes",
+  "excluded_population": "Obesity or Overweight without Type 2 Diabetes",
+  "excluded_population_markers": [
+    "greater than or equal to 30 kg/m2",
+    "greater than or equal to 27 kg/m2",
+    "self-reported change in body weight greater than 5 kilograms",
+    "prior or planned surgical treatment for obesity",
+    "medications or alternative remedies for weight loss"
+  ],
+  "criteria": [
+    {
+      "expectation_id": "T2D_DURATION",
+      "label": "Type 2 Diabetes for at least one year",
+      "match_groups": [
+        ["type 2 diabetes"],
+        ["at least one year", "1 year"]
+      ],
+      "expected": {
+        "criterion_id": "INC-001",
+        "criterion_type": "INCLUSION",
+        "category": "DIAGNOSIS",
+        "original_text": "Have had type 2 diabetes for at least one year",
+        "evaluation_type": "NUMERIC",
+        "field_name": "diagnosis_duration_years",
+        "operator": "GTE",
+        "value": 1,
+        "unit": "year",
+        "required_patient_fields": ["diagnosis_date"]
+      }
+    },
+    {
+      "expectation_id": "INSULIN_NAIVE",
+      "label": "Insulin naive",
+      "match_groups": [["insulin naive"]],
+      "expected": {
+        "criterion_id": "INC-002",
+        "criterion_type": "INCLUSION",
+        "category": "MEDICATION",
+        "original_text": "Insulin naive",
+        "evaluation_type": "BOOLEAN",
+        "field_name": "insulin_naive",
+        "operator": "EQ",
+        "value": true,
+        "required_patient_fields": ["medications"]
+      }
+    },
+    {
+      "expectation_id": "HBA1C_RANGE",
+      "label": "HbA1c from 7.5% through 10%, inclusive",
+      "match_groups": [["hba1c"], ["7.5"], ["10"]],
+      "expected": {
+        "criterion_id": "INC-003",
+        "criterion_type": "INCLUSION",
+        "category": "LAB",
+        "original_text": "Have HbA1c ≥7.5% and ≤10% at screening",
+        "evaluation_type": "NUMERIC",
+        "field_name": "hba1c",
+        "operator": "BETWEEN_INCLUSIVE",
+        "lower_value": 7.5,
+        "upper_value": 10,
+        "unit": "%",
+        "required_patient_fields": ["laboratory_results"]
+      }
+    },
+    {
+      "expectation_id": "BMI_MINIMUM",
+      "label": "BMI at least 23 kg/m2",
+      "match_groups": [["body mass index", "bmi"], ["23"]],
+      "expected": {
+        "criterion_id": "INC-004",
+        "criterion_type": "INCLUSION",
+        "category": "BMI",
+        "original_text": "Have body mass index (BMI) ≥23 kilograms per square meter (kg/m2)",
+        "evaluation_type": "NUMERIC",
+        "field_name": "bmi",
+        "operator": "GTE",
+        "value": 23,
+        "unit": "kg/m2",
+        "required_patient_fields": ["bmi"]
+      }
+    },
+    {
+      "expectation_id": "TYPE_1_DIABETES",
+      "label": "Type 1 Diabetes exclusion",
+      "match_groups": [["type 1 diabetes"]],
+      "expected": {
+        "criterion_id": "EXC-001",
+        "criterion_type": "EXCLUSION",
+        "category": "DIAGNOSIS",
+        "original_text": "Have type 1 diabetes",
+        "evaluation_type": "BOOLEAN",
+        "field_name": "type_1_diabetes",
+        "operator": "EQ",
+        "value": true,
+        "required_patient_fields": ["medical_history"]
+      }
+    },
+    {
+      "expectation_id": "RECENT_CARDIOVASCULAR_EVENT",
+      "label": "Heart attack, stroke, or heart-failure hospitalization within six months",
+      "match_groups": [
+        ["heart conditions"],
+        ["6 months", "six months"],
+        ["heart attack"],
+        ["stroke"],
+        ["hospitalization due to heart failure"]
+      ],
+      "expected": {
+        "criterion_id": "EXC-002",
+        "criterion_type": "EXCLUSION",
+        "category": "MEDICAL_HISTORY",
+        "original_text": "Have had any of the following heart conditions within 6 months prior to screening: heart attack, stroke, hospitalization due to heart failure",
+        "evaluation_type": "COMPOUND",
+        "temporal_window": {"value": 6, "unit": "MONTH"},
+        "logical_operator": "OR",
+        "children": [
+          {
+            "criterion_id": "EXC-002.1",
+            "criterion_type": "EXCLUSION",
+            "category": "MEDICAL_HISTORY",
+            "original_text": "heart attack",
+            "evaluation_type": "BOOLEAN",
+            "field_name": "heart_attack",
+            "operator": "EQ",
+            "value": true,
+            "temporal_window": {"value": 6, "unit": "MONTH"},
+            "required_patient_fields": [
+              "medical_history"
+            ]
+          },
+          {
+            "criterion_id": "EXC-002.2",
+            "criterion_type": "EXCLUSION",
+            "category": "MEDICAL_HISTORY",
+            "original_text": "stroke",
+            "evaluation_type": "BOOLEAN",
+            "field_name": "stroke",
+            "operator": "EQ",
+            "value": true,
+            "temporal_window": {"value": 6, "unit": "MONTH"},
+            "required_patient_fields": [
+              "medical_history"
+            ]
+          },
+          {
+            "criterion_id": "EXC-002.3",
+            "criterion_type": "EXCLUSION",
+            "category": "MEDICAL_HISTORY",
+            "original_text": "hospitalization due to heart failure",
+            "evaluation_type": "BOOLEAN",
+            "field_name": "heart_failure_hospitalization",
+            "operator": "EQ",
+            "value": true,
+            "temporal_window": {"value": 6, "unit": "MONTH"},
+            "required_patient_fields": [
+              "medical_history"
+            ]
+          }
+        ],
+        "required_patient_fields": [
+          "medical_history"
+        ]
+      }
+    },
+    {
+      "expectation_id": "NYHA_CLASS_III_IV",
+      "label": "NYHA Class III or IV CHF",
+      "match_groups": [["new york heart association", "nyha"], ["class iii"], ["iv"]],
+      "expected": {
+        "criterion_id": "EXC-003",
+        "criterion_type": "EXCLUSION",
+        "category": "MEDICAL_HISTORY",
+        "original_text": "Have New York Heart Association Functional Classification Class III or IV congestive heart failure (CHF)",
+        "evaluation_type": "CATEGORICAL",
+        "field_name": "nyha_class",
+        "operator": "IN",
+        "value": ["III", "IV"],
+        "required_patient_fields": ["medical_history"]
+      }
+    },
+    {
+      "expectation_id": "T2D_MORBID_OBESITY_WEIGHT_LOSS_PROCEDURE",
+      "label": "Type 2 Diabetes with morbid obesity and consideration for a weight-loss procedure",
+      "match_groups": [
+        ["type 2 diabetes"],
+        ["morbid obesity"],
+        ["bariatric surgery"],
+        ["procedure intended for weight loss"]
+      ],
+      "expected": {
+        "criterion_id": "EXC-004",
+        "criterion_type": "EXCLUSION",
+        "category": "DIAGNOSIS",
+        "original_text": "Have type 2 diabetes along with morbid obesity and being considered for bariatric surgery or any other procedure intended for weight loss",
+        "evaluation_type": "COMPOUND",
+        "logical_operator": "AND",
+        "children": [
+          {
+            "criterion_id": "EXC-004.1",
+            "criterion_type": "EXCLUSION",
+            "category": "DIAGNOSIS",
+            "original_text": "Have type 2 diabetes",
+            "evaluation_type": "BOOLEAN",
+            "field_name": "type_2_diabetes",
+            "operator": "EQ",
+            "value": true,
+            "required_patient_fields": ["condition"]
+          },
+          {
+            "criterion_id": "EXC-004.2",
+            "criterion_type": "EXCLUSION",
+            "category": "DIAGNOSIS",
+            "original_text": "morbid obesity",
+            "evaluation_type": "BOOLEAN",
+            "field_name": "morbid_obesity",
+            "operator": "EQ",
+            "value": true,
+            "required_patient_fields": ["medical_history"]
+          },
+          {
+            "criterion_id": "EXC-004.3",
+            "criterion_type": "EXCLUSION",
+            "category": "PROCEDURE",
+            "original_text": "being considered for bariatric surgery or any other procedure intended for weight loss",
+            "evaluation_type": "COMPOUND",
+            "logical_operator": "OR",
+            "requires_human_review": true,
+            "children": [
+              {
+                "criterion_id": "EXC-004.3.1",
+                "criterion_type": "EXCLUSION",
+                "category": "PROCEDURE",
+                "original_text": "being considered for bariatric surgery",
+                "evaluation_type": "BOOLEAN",
+                "field_name": null,
+                "operator": "EQ",
+                "value": true,
+                "required_patient_fields": [],
+                "requires_human_review": true
+              },
+              {
+                "criterion_id": "EXC-004.3.2",
+                "criterion_type": "EXCLUSION",
+                "category": "PROCEDURE",
+                "original_text": "any other procedure intended for weight loss",
+                "evaluation_type": "BOOLEAN",
+                "field_name": null,
+                "operator": "EQ",
+                "value": true,
+                "required_patient_fields": [],
+                "requires_human_review": true
+              }
+            ]
+          }
+        ],
+        "required_patient_fields": ["condition", "medical_history"],
+        "requires_human_review": true
+      }
+    }
+  ]
+}

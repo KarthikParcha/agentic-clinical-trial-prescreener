@@ -1,0 +1,41 @@
+NCT07438444 MANUAL CRITERION ASSESSMENT
+========================================
+Patient: DEMO-P001
+Resolver: deterministic Version 1 canonical facts
+
+Criterion assessments:
+- Type 2 Diabetes for at least one year: MET (fact: 4.082135523613963039014373717)
+- Insulin naive: MET (fact: True)
+- HbA1c from 7.5% through 10%, inclusive: MET (fact: 8.2)
+- BMI at least 23 kg/m2: MET (fact: 29.1)
+- Type 1 Diabetes exclusion: NOT_MET (fact: False)
+- Heart attack, stroke, or heart-failure hospitalization within six months: UNKNOWN (fact: human-review leaf)
+  missing: medical_history: heart_failure_hospitalization
+- NYHA Class III or IV CHF: NOT_MET (fact: II)
+- Type 2 Diabetes with morbid obesity and consideration for a weight-loss procedure: NOT_MET (fact: human-review leaf)
+
+TRIAL-LEVEL ASSESSMENT
+========================================
+Trial: NCT07438444
+Patient: DEMO-P001
+
+Criteria evaluated: 8
+
+MET: 4
+NOT_MET: 3
+UNKNOWN: 1
+
+Overall:
+INSUFFICIENT_INFORMATION
+
+Blocking criteria:
+None
+
+Unknown criteria:
+EXC-002
+
+Missing information:
+heart failure hospitalization history
+
+Human review:
+False / not inherently required yet

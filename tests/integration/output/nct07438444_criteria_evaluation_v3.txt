@@ -9,12 +9,12 @@ Population leakage: 0
 
 AGGREGATE ACCURACY
 ----------------------------------------------------
-Field mapping accuracy: 90.9% (10/11) FAIL
+Field mapping accuracy: 100.0% (11/11) PASS
 Threshold accuracy: 100.0% (10/10) PASS
-Logical structure: 66.7% (6/9) FAIL
-Required patient fields: 92.3% (12/13) FAIL
+Logical structure: 100.0% (9/9) PASS
+Required patient fields: 100.0% (13/13) PASS
 Boolean semantics: 77.8% (21/27) FAIR
-Temporal windows: 100.0% (4/4) PASS
+Temporal windows: 75.0% (3/4) FAIL
 
 DETAILED FIELD-WISE COMPARISON
 ----------------------------------------------------
@@ -71,7 +71,7 @@ DETAILED FIELD-WISE COMPARISON
   [PASS] RECENT_CARDIOVASCULAR_EVENT.criterion_type: expected='EXCLUSION'; actual='EXCLUSION'
   [PASS] RECENT_CARDIOVASCULAR_EVENT.category: expected='MEDICAL_HISTORY'; actual='MEDICAL_HISTORY'
   [PASS] RECENT_CARDIOVASCULAR_EVENT.evaluation_type: expected='COMPOUND'; actual='COMPOUND'
-  [PASS] RECENT_CARDIOVASCULAR_EVENT.temporal_window: expected={'value': '6', 'unit': 'MONTH'}; actual={'value': '6', 'unit': 'MONTH'}
+  [FAIL] RECENT_CARDIOVASCULAR_EVENT.temporal_window: expected={'value': '6', 'unit': 'MONTH'}; actual=None
   [PASS] RECENT_CARDIOVASCULAR_EVENT.logical_operator: expected='OR'; actual='OR'
   [PASS] RECENT_CARDIOVASCULAR_EVENT.required_patient_fields: expected=['medical_history']; actual=['medical_history']
   [PASS] RECENT_CARDIOVASCULAR_EVENT.children_count: expected=3; actual=3
@@ -81,7 +81,7 @@ DETAILED FIELD-WISE COMPARISON
   [PASS] RECENT_CARDIOVASCULAR_EVENT.children[1].field_name: expected='heart_attack'; actual='heart_attack'
   [PASS] RECENT_CARDIOVASCULAR_EVENT.children[1].operator: expected='EQ'; actual='EQ'
   [PASS] RECENT_CARDIOVASCULAR_EVENT.children[1].value: expected=True; actual=True
-  [PASS] RECENT_CARDIOVASCULAR_EVENT.children[1].temporal_window: expected={'value': '6', 'unit': 'MONTH'}; actual=inherited {'value': '6', 'unit': 'MONTH'}
+  [PASS] RECENT_CARDIOVASCULAR_EVENT.children[1].temporal_window: expected={'value': '6', 'unit': 'MONTH'}; actual={'value': '6', 'unit': 'MONTH'}
   [PASS] RECENT_CARDIOVASCULAR_EVENT.children[1].required_patient_fields: expected=['medical_history']; actual=['medical_history']
   [PASS] RECENT_CARDIOVASCULAR_EVENT.children[2].criterion_type: expected='EXCLUSION'; actual='EXCLUSION'
   [PASS] RECENT_CARDIOVASCULAR_EVENT.children[2].category: expected='MEDICAL_HISTORY'; actual='MEDICAL_HISTORY'
@@ -89,7 +89,7 @@ DETAILED FIELD-WISE COMPARISON
   [PASS] RECENT_CARDIOVASCULAR_EVENT.children[2].field_name: expected='stroke'; actual='stroke'
   [PASS] RECENT_CARDIOVASCULAR_EVENT.children[2].operator: expected='EQ'; actual='EQ'
   [PASS] RECENT_CARDIOVASCULAR_EVENT.children[2].value: expected=True; actual=True
-  [PASS] RECENT_CARDIOVASCULAR_EVENT.children[2].temporal_window: expected={'value': '6', 'unit': 'MONTH'}; actual=inherited {'value': '6', 'unit': 'MONTH'}
+  [PASS] RECENT_CARDIOVASCULAR_EVENT.children[2].temporal_window: expected={'value': '6', 'unit': 'MONTH'}; actual={'value': '6', 'unit': 'MONTH'}
   [PASS] RECENT_CARDIOVASCULAR_EVENT.children[2].required_patient_fields: expected=['medical_history']; actual=['medical_history']
   [PASS] RECENT_CARDIOVASCULAR_EVENT.children[3].criterion_type: expected='EXCLUSION'; actual='EXCLUSION'
   [PASS] RECENT_CARDIOVASCULAR_EVENT.children[3].category: expected='MEDICAL_HISTORY'; actual='MEDICAL_HISTORY'
@@ -97,19 +97,17 @@ DETAILED FIELD-WISE COMPARISON
   [PASS] RECENT_CARDIOVASCULAR_EVENT.children[3].field_name: expected='heart_failure_hospitalization'; actual='heart_failure_hospitalization'
   [PASS] RECENT_CARDIOVASCULAR_EVENT.children[3].operator: expected='EQ'; actual='EQ'
   [PASS] RECENT_CARDIOVASCULAR_EVENT.children[3].value: expected=True; actual=True
-  [PASS] RECENT_CARDIOVASCULAR_EVENT.children[3].temporal_window: expected={'value': '6', 'unit': 'MONTH'}; actual=inherited {'value': '6', 'unit': 'MONTH'}
+  [PASS] RECENT_CARDIOVASCULAR_EVENT.children[3].temporal_window: expected={'value': '6', 'unit': 'MONTH'}; actual={'value': '6', 'unit': 'MONTH'}
   [PASS] RECENT_CARDIOVASCULAR_EVENT.children[3].required_patient_fields: expected=['medical_history']; actual=['medical_history']
 
 [MATCHED] NYHA_CLASS_III_IV: NYHA Class III or IV CHF -> EXC-003
   [PASS] NYHA_CLASS_III_IV.criterion_type: expected='EXCLUSION'; actual='EXCLUSION'
   [PASS] NYHA_CLASS_III_IV.category: expected='MEDICAL_HISTORY'; actual='MEDICAL_HISTORY'
-  [FAIL] NYHA_CLASS_III_IV.evaluation_type: expected='CATEGORICAL'; actual='COMPOUND'
-  [FAIL] NYHA_CLASS_III_IV.field_name: expected='nyha_class'; actual=None
-  [FAIL] NYHA_CLASS_III_IV.operator: expected='IN'; actual=None
-  [FAIL] NYHA_CLASS_III_IV.value: expected=['III', 'IV']; actual=None
-  [FAIL] NYHA_CLASS_III_IV.logical_operator: expected=None; actual='OR'
-  [FAIL] NYHA_CLASS_III_IV.required_patient_fields: expected=['medical_history']; actual=[]
-  [FAIL] NYHA_CLASS_III_IV.children_count: expected=0; actual=2
+  [PASS] NYHA_CLASS_III_IV.evaluation_type: expected='CATEGORICAL'; actual='CATEGORICAL'
+  [PASS] NYHA_CLASS_III_IV.field_name: expected='nyha_class'; actual='nyha_class'
+  [PASS] NYHA_CLASS_III_IV.operator: expected='IN'; actual='IN'
+  [PASS] NYHA_CLASS_III_IV.value: expected=['III', 'IV']; actual=['III', 'IV']
+  [PASS] NYHA_CLASS_III_IV.required_patient_fields: expected=['medical_history']; actual=['medical_history']
 
 [MATCHED] T2D_MORBID_OBESITY_WEIGHT_LOSS_PROCEDURE: Type 2 Diabetes with morbid obesity and consideration for a weight-loss procedure -> EXC-004
   [PASS] T2D_MORBID_OBESITY_WEIGHT_LOSS_PROCEDURE.criterion_type: expected='EXCLUSION'; actual='EXCLUSION'
@@ -134,18 +132,16 @@ DETAILED FIELD-WISE COMPARISON
   [PASS] T2D_MORBID_OBESITY_WEIGHT_LOSS_PROCEDURE.children[2].required_patient_fields: expected=['medical_history']; actual=['medical_history']
   [PASS] T2D_MORBID_OBESITY_WEIGHT_LOSS_PROCEDURE.children[3].criterion_type: expected='EXCLUSION'; actual='EXCLUSION'
   [PASS] T2D_MORBID_OBESITY_WEIGHT_LOSS_PROCEDURE.children[3].category: expected='PROCEDURE'; actual='PROCEDURE'
-  [FAIL] T2D_MORBID_OBESITY_WEIGHT_LOSS_PROCEDURE.children[3].evaluation_type: expected='COMPOUND'; actual='HUMAN_ONLY'
-  [FAIL] T2D_MORBID_OBESITY_WEIGHT_LOSS_PROCEDURE.children[3].logical_operator: expected='OR'; actual=None
-  [FAIL] T2D_MORBID_OBESITY_WEIGHT_LOSS_PROCEDURE.children[3].children_count: expected=2; actual=0
-  [FAIL] T2D_MORBID_OBESITY_WEIGHT_LOSS_PROCEDURE.children[3].children[1].criterion_type: expected='EXCLUSION'; actual='<missing>'
-  [FAIL] T2D_MORBID_OBESITY_WEIGHT_LOSS_PROCEDURE.children[3].children[1].category: expected='PROCEDURE'; actual='<missing>'
-  [FAIL] T2D_MORBID_OBESITY_WEIGHT_LOSS_PROCEDURE.children[3].children[1].evaluation_type: expected='BOOLEAN'; actual='<missing>'
-  [FAIL] T2D_MORBID_OBESITY_WEIGHT_LOSS_PROCEDURE.children[3].children[1].field_name: expected=None; actual='<missing>'
-  [FAIL] T2D_MORBID_OBESITY_WEIGHT_LOSS_PROCEDURE.children[3].children[1].operator: expected='EQ'; actual='<missing>'
-  [FAIL] T2D_MORBID_OBESITY_WEIGHT_LOSS_PROCEDURE.children[3].children[1].value: expected=True; actual='<missing>'
-  [FAIL] T2D_MORBID_OBESITY_WEIGHT_LOSS_PROCEDURE.children[3].children[2].criterion_type: expected='EXCLUSION'; actual='<missing>'
-  [FAIL] T2D_MORBID_OBESITY_WEIGHT_LOSS_PROCEDURE.children[3].children[2].category: expected='PROCEDURE'; actual='<missing>'
-  [FAIL] T2D_MORBID_OBESITY_WEIGHT_LOSS_PROCEDURE.children[3].children[2].evaluation_type: expected='BOOLEAN'; actual='<missing>'
-  [FAIL] T2D_MORBID_OBESITY_WEIGHT_LOSS_PROCEDURE.children[3].children[2].field_name: expected=None; actual='<missing>'
-  [FAIL] T2D_MORBID_OBESITY_WEIGHT_LOSS_PROCEDURE.children[3].children[2].operator: expected='EQ'; actual='<missing>'
-  [FAIL] T2D_MORBID_OBESITY_WEIGHT_LOSS_PROCEDURE.children[3].children[2].value: expected=True; actual='<missing>'
+  [PASS] T2D_MORBID_OBESITY_WEIGHT_LOSS_PROCEDURE.children[3].evaluation_type: expected='COMPOUND'; actual='COMPOUND'
+  [PASS] T2D_MORBID_OBESITY_WEIGHT_LOSS_PROCEDURE.children[3].logical_operator: expected='OR'; actual='OR'
+  [PASS] T2D_MORBID_OBESITY_WEIGHT_LOSS_PROCEDURE.children[3].children_count: expected=2; actual=2
+  [PASS] T2D_MORBID_OBESITY_WEIGHT_LOSS_PROCEDURE.children[3].children[1].criterion_type: expected='EXCLUSION'; actual='EXCLUSION'
+  [PASS] T2D_MORBID_OBESITY_WEIGHT_LOSS_PROCEDURE.children[3].children[1].category: expected='PROCEDURE'; actual='PROCEDURE'
+  [FAIL] T2D_MORBID_OBESITY_WEIGHT_LOSS_PROCEDURE.children[3].children[1].evaluation_type: expected='BOOLEAN'; actual='HUMAN_ONLY'
+  [FAIL] T2D_MORBID_OBESITY_WEIGHT_LOSS_PROCEDURE.children[3].children[1].operator: expected='EQ'; actual=None
+  [FAIL] T2D_MORBID_OBESITY_WEIGHT_LOSS_PROCEDURE.children[3].children[1].value: expected=True; actual=None
+  [PASS] T2D_MORBID_OBESITY_WEIGHT_LOSS_PROCEDURE.children[3].children[2].criterion_type: expected='EXCLUSION'; actual='EXCLUSION'
+  [PASS] T2D_MORBID_OBESITY_WEIGHT_LOSS_PROCEDURE.children[3].children[2].category: expected='PROCEDURE'; actual='PROCEDURE'
+  [FAIL] T2D_MORBID_OBESITY_WEIGHT_LOSS_PROCEDURE.children[3].children[2].evaluation_type: expected='BOOLEAN'; actual='HUMAN_ONLY'
+  [FAIL] T2D_MORBID_OBESITY_WEIGHT_LOSS_PROCEDURE.children[3].children[2].operator: expected='EQ'; actual=None
+  [FAIL] T2D_MORBID_OBESITY_WEIGHT_LOSS_PROCEDURE.children[3].children[2].value: expected=True; actual=None

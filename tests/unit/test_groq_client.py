@@ -11,6 +11,7 @@ from clinical_trial_prescreener.config import GroqSettings
 from clinical_trial_prescreener.infrastructure.llm.groq_client import (
     GroqClient,
     GroqClientError,
+    _error_metadata,
 )
 
 
@@ -106,6 +107,15 @@ def test_missing_generated_content_becomes_groq_client_error() -> None:
 
     with pytest.raises(GroqClientError, match="no generated content"):
         run(client.generate(system_prompt="system", user_prompt="user"))
+
+
+def test_error_metadata_extracts_only_safe_json_generation_code() -> None:
+    error = SimpleNamespace(
+        status_code=400,
+        body={"error": {"code": "json_validate_failed", "message": "private"}},
+    )
+
+    assert _error_metadata(error) == (400, "json_validate_failed")  # type: ignore[arg-type]
 
 
 def test_aclose_closes_sdk_client() -> None:

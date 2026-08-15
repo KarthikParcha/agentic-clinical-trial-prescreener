@@ -40,3 +40,12 @@ class GroqSettings(BaseSettings):
         if not value.strip():
             raise ValueError("must not be blank")
         return value
+
+
+class CoordinatorSettings(BaseSettings):
+    """Bounds for the coordinator's finite workflow decisions."""
+
+    model_config = SettingsConfigDict(env_prefix="COORDINATOR_", extra="ignore")
+
+    max_retry_count: int = Field(default=1, ge=0)
+    max_reevaluation_count: int = Field(default=1, ge=0)

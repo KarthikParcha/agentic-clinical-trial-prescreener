@@ -6,6 +6,8 @@ from enum import Enum
 
 from pydantic import BaseModel, ConfigDict, Field, field_validator, model_validator
 
+from clinical_trial_prescreener.domain.criterion import TemporalWindow
+
 
 class Sex(str, Enum):
     MALE = "MALE"
@@ -81,6 +83,23 @@ class MedicalCondition(BaseModel):
         return self
 
 
+class PatientFactConfirmation(BaseModel):
+    """A bounded, patient-supplied confirmation for a supported canonical fact."""
+
+    model_config = ConfigDict(extra="forbid")
+
+    fact_name: str
+    value: bool
+    temporal_context: TemporalWindow | None = None
+
+    @field_validator("fact_name")
+    @classmethod
+    def validate_fact_name(cls, value: str) -> str:
+        if not value.strip():
+            raise ValueError("must not be blank")
+        return value
+
+
 class PatientProfile(BaseModel):
     """Validated synthetic patient data for Version 1 pre-screening."""
 
@@ -100,6 +119,7 @@ class PatientProfile(BaseModel):
     laboratory_results: list[LabResult] = Field(default_factory=list)
     medications: list[Medication] = Field(default_factory=list)
     medical_history: list[MedicalCondition] = Field(default_factory=list)
+    fact_confirmations: list[PatientFactConfirmation] = Field(default_factory=list)
     pregnancy_status: PregnancyStatus | None = None
     currently_in_trial: bool | None = None
 

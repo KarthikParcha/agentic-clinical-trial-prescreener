@@ -14,6 +14,7 @@ from clinical_trial_prescreener.infrastructure.clinicaltrials.normalizer import 
 )
 from clinical_trial_prescreener.infrastructure.llm.groq_client import GroqClient
 from clinical_trial_prescreener.services.criteria_extraction import (
+    CriteriaExtractionError,
     CriteriaExtractionService,
 )
 from tests.golden.criteria_evaluation import (
@@ -95,7 +96,14 @@ def test_live_groq_extracts_nct07438444_type_2_diabetes_criteria_v3() -> None:
         finally:
             await client.aclose()
 
-    criteria = run(extract())
+    try:
+        criteria = run(extract())
+    except CriteriaExtractionError as error:
+        stage = error.validation_category.value if error.validation_category else "n/a"
+        pytest.fail(
+            "Live extraction failed: "
+            f"category={error.category.value}; validation_stage={stage}"
+        )
 
     assert criteria
     assert all(isinstance(item, EligibilityCriterion) for item in criteria)

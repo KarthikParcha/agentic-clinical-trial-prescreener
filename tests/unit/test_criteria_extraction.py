@@ -11,6 +11,7 @@ from clinical_trial_prescreener.domain.criterion import (
     EligibilityCriterion,
     EvaluationType,
     LogicalOperator,
+    TemporalUnit,
 )
 from clinical_trial_prescreener.domain.trial import (
     ClinicalTrial,
@@ -21,6 +22,9 @@ from clinical_trial_prescreener.infrastructure.llm.groq_client import GroqClient
 from clinical_trial_prescreener.services.criteria_extraction import (
     CriteriaExtractionError,
     CriteriaExtractionService,
+    ExtractionFailureCategory,
+    _SourceEvidenceError,
+    _validate_source_evidence,
 )
 
 ELIGIBILITY_TEXT = """Inclusion Criteria:
@@ -38,7 +42,6 @@ Heart attack within 6 months before screening.
 Stroke within 6 months before screening.
 """
 
-
 def run(coroutine: Awaitable[Any]) -> Any:
     return asyncio.run(coroutine)
 
@@ -47,13 +50,20 @@ class StubGeneratedContentClient:
     def __init__(self, responses: list[str | Exception]) -> None:
         self.responses = responses
         self.calls: list[dict[str, str]] = []
+        self._response_index = 0
 
     async def generate(self, *, system_prompt: str, user_prompt: str) -> str:
-        self.calls.append({"system_prompt": system_prompt, "user_prompt": user_prompt})
-        response = self.responses[len(self.calls) - 1]
+        call = {"system_prompt": system_prompt, "user_prompt": user_prompt}
+        self.calls.append(call)
+        response = self.responses[self._response_index]
+        self._response_index += 1
         if isinstance(response, Exception):
             raise response
         return response
+
+
+class RateLimitCause(Exception):
+    status_code = 429
 
 
 def criterion(**overrides: object) -> dict[str, object]:
@@ -81,6 +91,14 @@ def service_with(
 ) -> tuple[CriteriaExtractionService, StubGeneratedContentClient]:
     client = StubGeneratedContentClient(list(responses))
     return CriteriaExtractionService(client), client
+
+
+def json_generation_failure() -> GroqClientError:
+    return GroqClientError(
+        "Groq request failed",
+        status_code=400,
+        error_code="json_validate_failed",
+    )
 
 
 def test_valid_numeric_json_becomes_domain_criterion() -> None:
@@ -419,7 +437,7 @@ def test_semantic_criterion_without_deterministic_fields_validates() -> None:
     assert result[0].requires_human_review is True
 
 
-def test_semantic_criterion_with_fake_deterministic_field_triggers_repair() -> None:
+def test_semantic_criterion_with_fake_deterministic_field_is_canonicalized() -> None:
     invalid_semantic = criterion(
         category="MEDICAL_HISTORY",
         original_text="Participants must be medically stable.",
@@ -430,12 +448,172 @@ def test_semantic_criterion_with_fake_deterministic_field_triggers_repair() -> N
         unit=None,
         requires_human_review=True,
     )
-    repaired_semantic = {**invalid_semantic, "field_name": None}
-    service, client = service_with(output(invalid_semantic), output(repaired_semantic))
+    service, client = service_with(output(invalid_semantic))
 
     result = run(service.extract_text(ELIGIBILITY_TEXT))
 
     assert result[0].field_name is None
+    assert result[0].evaluation_type is EvaluationType.SEMANTIC
+    assert len(client.calls) == 1
+    assert [item.model_dump(mode="json") for item in service.last_canonicalizations] == [
+        {
+                "criterion_path": "criteria.0",
+            "raw_evaluation_type": "SEMANTIC",
+            "removed_fields": ["field_name"],
+        }
+    ]
+
+
+def test_human_only_forbidden_fields_are_removed_before_domain_construction() -> None:
+    source = "Subject has a contraindication for a MR examination."
+    human_only = criterion(
+        category="PROCEDURE",
+        original_text=source,
+        evaluation_type="HUMAN_ONLY",
+        field_name="mri_contraindication",
+        operator="BETWEEN",
+        value="unsafe",
+        lower_value=1,
+        upper_value=2,
+        unit="score",
+        temporal_window={"value": 3, "unit": "MONTH"},
+        required_patient_fields=["medical_history"],
+        requires_human_review=True,
+    )
+    service, _ = service_with(output(human_only))
+
+    result = run(service.extract_text(source))
+
+    assert result[0].evaluation_type is EvaluationType.HUMAN_ONLY
+    assert result[0].original_text == source
+    assert result[0].field_name is None
+    assert result[0].operator is None
+    assert result[0].value is None
+    assert result[0].lower_value is None
+    assert result[0].upper_value is None
+    assert result[0].unit is None
+    assert result[0].temporal_window is None
+    assert result[0].required_patient_fields == ["medical_history"]
+    assert result[0].requires_human_review is True
+    assert service.last_canonicalizations[0].removed_fields == [
+        "field_name",
+        "operator",
+        "value",
+        "lower_value",
+        "upper_value",
+        "unit",
+        "temporal_window",
+    ]
+
+
+def test_boolean_deterministic_fields_are_not_removed() -> None:
+    source = "Participants with Type 1 Diabetes are excluded."
+    boolean = criterion(
+        criterion_type="EXCLUSION",
+        category="DIAGNOSIS",
+        original_text=source,
+        evaluation_type="BOOLEAN",
+        field_name="type_1_diabetes",
+        operator="EQ",
+        value=True,
+        unit=None,
+    )
+    service, _ = service_with(output(boolean))
+
+    result = run(service.extract_text(source))
+
+    assert result[0].evaluation_type is EvaluationType.BOOLEAN
+    assert result[0].field_name == "type_1_diabetes"
+    assert result[0].operator is ComparisonOperator.EQ
+    assert result[0].value is True
+    assert service.last_canonicalizations == []
+
+
+def test_numeric_thresholds_are_preserved_by_dto_canonicalization() -> None:
+    service, _ = service_with(output(criterion()))
+
+    result = run(service.extract_text(ELIGIBILITY_TEXT))
+
+    assert result[0].evaluation_type is EvaluationType.NUMERIC
+    assert result[0].operator is ComparisonOperator.GTE
+    assert result[0].value == 23
+    assert result[0].unit == "kg/m2"
+    assert service.last_canonicalizations == []
+
+
+def test_nested_semantic_fields_are_canonicalized_recursively() -> None:
+    source = (
+        "Subject has metallic material in the body or any contraindication for a MR "
+        "examination."
+    )
+    compound = criterion(
+        criterion_type="EXCLUSION",
+        category="PROCEDURE",
+        original_text=source,
+        evaluation_type="COMPOUND",
+        field_name=None,
+        operator=None,
+        value=None,
+        unit=None,
+        logical_operator="OR",
+        children=[
+            criterion(
+                criterion_type="EXCLUSION",
+                category="PROCEDURE",
+                original_text="metallic material in the body",
+                evaluation_type="HUMAN_ONLY",
+                field_name="metal_in_body",
+                operator="EQ",
+                value=True,
+                unit=None,
+                requires_human_review=True,
+            ),
+            criterion(
+                criterion_type="EXCLUSION",
+                category="PROCEDURE",
+                original_text="any contraindication for a MR examination",
+                evaluation_type="SEMANTIC",
+                field_name=None,
+                operator=None,
+                value=None,
+                unit=None,
+                requires_human_review=True,
+            ),
+        ],
+    )
+    service, _ = service_with(output(compound))
+
+    result = run(service.extract_text(source))
+
+    nested = result[0].children[0]
+    assert nested.evaluation_type is EvaluationType.HUMAN_ONLY
+    assert nested.original_text == "metallic material in the body"
+    assert nested.field_name is None
+    assert (
+        service.last_canonicalizations[0].criterion_path
+        == "criteria.0.children.0"
+    )
+    assert service.last_canonicalizations[0].raw_evaluation_type is EvaluationType.HUMAN_ONLY
+    assert service.last_canonicalizations[0].removed_fields == [
+        "field_name",
+        "operator",
+        "value",
+    ]
+
+
+def test_non_compound_with_children_still_fails_bounded_validation() -> None:
+    unsafe = criterion(
+        evaluation_type="HUMAN_ONLY",
+        logical_operator="AND",
+        children=[criterion()],
+    )
+    service, client = service_with(output(unsafe), output(unsafe))
+
+    with pytest.raises(CriteriaExtractionError) as raised:
+        run(service.extract_text(ELIGIBILITY_TEXT))
+
+    assert raised.value.category is ExtractionFailureCategory.REPAIR_EXHAUSTED
+    assert raised.value.validation_category is ExtractionFailureCategory.SCHEMA_VALIDATION
     assert len(client.calls) == 2
 
 
@@ -579,13 +757,295 @@ def test_schema_invalid_json_triggers_one_repair_attempt() -> None:
     assert "NOT_A_CATEGORY" in client.calls[1]["user_prompt"]
 
 
+def test_empty_compound_repair_prompt_has_path_rule_and_source_text() -> None:
+    invalid_compound = criterion(
+        criterion_type="EXCLUSION",
+        original_text="Heart attack or stroke within 6 months before screening.",
+        evaluation_type="COMPOUND",
+        field_name=None,
+        operator=None,
+        value=None,
+        unit=None,
+        logical_operator="OR",
+        children=[],
+    )
+    repaired = criterion(
+        criterion_type="EXCLUSION",
+        category="MEDICAL_HISTORY",
+        original_text=invalid_compound["original_text"],
+        evaluation_type="COMPOUND",
+        field_name=None,
+        operator=None,
+        value=None,
+        unit=None,
+        logical_operator="OR",
+        children=[
+            criterion(
+                criterion_type="EXCLUSION",
+                category="MEDICAL_HISTORY",
+                original_text="Heart attack within 6 months before screening.",
+                evaluation_type="BOOLEAN",
+                field_name="heart_attack",
+                operator="EQ",
+                value=True,
+                unit=None,
+            ),
+            criterion(
+                criterion_type="EXCLUSION",
+                category="MEDICAL_HISTORY",
+                original_text="Stroke within 6 months before screening.",
+                evaluation_type="BOOLEAN",
+                field_name="stroke",
+                operator="EQ",
+                value=True,
+                unit=None,
+            ),
+        ],
+    )
+    service, client = service_with(output(invalid_compound), output(repaired))
+
+    result = run(service.extract_text(ELIGIBILITY_TEXT))
+
+    repair_prompt = client.calls[1]["user_prompt"]
+    assert result[0].evaluation_type is EvaluationType.COMPOUND
+    assert len(result[0].children) == 2
+    assert "Failing criterion path: criteria.0" in repair_prompt
+    assert "compound criterion must contain children" in repair_prompt
+    assert invalid_compound["original_text"] in repair_prompt
+    assert "logical_operator=AND or OR" in repair_prompt
+    assert "at least 2 meaningful child criteria" in repair_prompt
+    assert "do not invent children" in repair_prompt
+
+
+def test_valid_compound_does_not_trigger_targeted_repair() -> None:
+    source = "Heart attack or stroke within 6 months before screening."
+    compound = criterion(
+        criterion_type="EXCLUSION",
+        category="MEDICAL_HISTORY",
+        original_text=source,
+        evaluation_type="COMPOUND",
+        field_name=None,
+        operator=None,
+        value=None,
+        unit=None,
+        logical_operator="OR",
+        children=[
+            criterion(
+                criterion_type="EXCLUSION",
+                category="MEDICAL_HISTORY",
+                original_text="Heart attack within 6 months before screening.",
+                evaluation_type="BOOLEAN",
+                field_name="heart_attack",
+                operator="EQ",
+                value=True,
+                unit=None,
+            ),
+            criterion(
+                criterion_type="EXCLUSION",
+                category="MEDICAL_HISTORY",
+                original_text="Stroke within 6 months before screening.",
+                evaluation_type="BOOLEAN",
+                field_name="stroke",
+                operator="EQ",
+                value=True,
+                unit=None,
+            ),
+        ],
+    )
+    service, client = service_with(output(compound))
+
+    result = run(service.extract_text(source))
+
+    assert result[0].logical_operator is LogicalOperator.OR
+    assert len(result[0].children) == 2
+    assert len(client.calls) == 1
+
+
+def test_repair_with_invented_children_fails_source_traceability() -> None:
+    source = "Participants must be medically stable."
+    invalid_compound = criterion(
+        category="MEDICAL_HISTORY",
+        original_text=source,
+        evaluation_type="COMPOUND",
+        field_name=None,
+        operator=None,
+        value=None,
+        unit=None,
+        logical_operator="AND",
+        children=[],
+    )
+    invented_children = {
+        **invalid_compound,
+        "children": [
+            criterion(
+                category="MEDICAL_HISTORY",
+                original_text="Invented child criterion one.",
+                evaluation_type="SEMANTIC",
+                field_name=None,
+                operator=None,
+                value=None,
+                unit=None,
+                requires_human_review=True,
+            ),
+            criterion(
+                category="MEDICAL_HISTORY",
+                original_text="Invented child criterion two.",
+                evaluation_type="SEMANTIC",
+                field_name=None,
+                operator=None,
+                value=None,
+                unit=None,
+                requires_human_review=True,
+            ),
+        ],
+    }
+    service, client = service_with(output(invalid_compound), output(invented_children))
+
+    with pytest.raises(CriteriaExtractionError) as raised:
+        run(service.extract_text(source))
+
+    assert raised.value.category is ExtractionFailureCategory.REPAIR_EXHAUSTED
+    assert raised.value.validation_category is ExtractionFailureCategory.SOURCE_TRACEABILITY
+    assert len(client.calls) == 2
+
+
+def test_nested_empty_compound_reports_nested_path_in_repair_prompt() -> None:
+    source = "Heart attack or stroke within 6 months before screening."
+    nested_invalid = criterion(
+        criterion_type="EXCLUSION",
+        category="MEDICAL_HISTORY",
+        original_text=source,
+        evaluation_type="COMPOUND",
+        field_name=None,
+        operator=None,
+        value=None,
+        unit=None,
+        logical_operator="OR",
+        children=[
+            criterion(
+                criterion_type="EXCLUSION",
+                category="MEDICAL_HISTORY",
+                original_text="Heart attack or stroke",
+                evaluation_type="COMPOUND",
+                field_name=None,
+                operator=None,
+                value=None,
+                unit=None,
+                logical_operator="OR",
+                children=[],
+            )
+        ],
+    )
+    service, client = service_with(output(nested_invalid), output(nested_invalid))
+
+    with pytest.raises(CriteriaExtractionError):
+        run(service.extract_text(source))
+
+    assert "Failing criterion path: criteria.0.children.0" in client.calls[1][
+        "user_prompt"
+    ]
+
+
+def test_unsuccessful_empty_compound_repair_still_fails_closed() -> None:
+    invalid_compound = criterion(
+        evaluation_type="COMPOUND",
+        field_name=None,
+        operator=None,
+        value=None,
+        unit=None,
+        logical_operator="AND",
+        children=[],
+    )
+    service, client = service_with(output(invalid_compound), output(invalid_compound))
+
+    with pytest.raises(CriteriaExtractionError) as raised:
+        run(service.extract_text(ELIGIBILITY_TEXT))
+
+    assert raised.value.category is ExtractionFailureCategory.REPAIR_EXHAUSTED
+    assert raised.value.validation_category is ExtractionFailureCategory.SCHEMA_VALIDATION
+    assert len(client.calls) == 2
+
+
+@pytest.mark.parametrize(
+    ("raw_unit", "expected_unit"),
+    [
+        ("month", TemporalUnit.MONTH),
+        ("months", TemporalUnit.MONTH),
+        ("Months", TemporalUnit.MONTH),
+        ("MONTH", TemporalUnit.MONTH),
+        ("years", TemporalUnit.YEAR),
+        ("weeks", TemporalUnit.WEEK),
+        ("days", TemporalUnit.DAY),
+    ],
+)
+def test_temporal_unit_aliases_are_canonicalized_before_validation(
+    raw_unit: str, expected_unit: TemporalUnit
+) -> None:
+    temporal = criterion(temporal_window={"value": 6, "unit": raw_unit})
+    service, client = service_with(output(temporal))
+
+    result = run(service.extract_text(ELIGIBILITY_TEXT))
+
+    assert result[0].temporal_window is not None
+    assert result[0].temporal_window.unit is expected_unit
+    assert result[0].temporal_window.value == 6
+    assert len(client.calls) == 1
+
+
+def test_unsupported_temporal_unit_remains_a_schema_validation_failure() -> None:
+    unsupported = output(criterion(temporal_window={"value": 6, "unit": "quarter"}))
+    service, client = service_with(unsupported, unsupported)
+
+    with pytest.raises(CriteriaExtractionError) as raised:
+        run(service.extract_text(ELIGIBILITY_TEXT))
+
+    assert raised.value.category is ExtractionFailureCategory.REPAIR_EXHAUSTED
+    assert raised.value.validation_category is ExtractionFailureCategory.SCHEMA_VALIDATION
+    assert len(client.calls) == 2
+
+
+def test_nested_child_temporal_unit_is_canonicalized_without_changing_value() -> None:
+    source_text = "Heart attack within 6 months before screening."
+    child = criterion(
+        category="MEDICAL_HISTORY",
+        original_text=source_text,
+        evaluation_type="BOOLEAN",
+        field_name="heart_attack",
+        operator="EQ",
+        value=True,
+        unit=None,
+        temporal_window={"value": 6, "unit": "months"},
+    )
+    compound = criterion(
+        category="MEDICAL_HISTORY",
+        original_text=source_text,
+        evaluation_type="COMPOUND",
+        field_name=None,
+        operator=None,
+        value=None,
+        unit=None,
+        logical_operator="AND",
+        children=[child],
+    )
+    service, _ = service_with(output(compound))
+
+    result = run(service.extract_text(source_text))
+
+    nested_window = result[0].children[0].temporal_window
+    assert nested_window is not None
+    assert nested_window.unit is TemporalUnit.MONTH
+    assert nested_window.value == 6
+
+
 def test_second_invalid_response_raises_criteria_extraction_error() -> None:
     service, client = service_with("not-json", '{"criteria":"still invalid"}')
 
-    with pytest.raises(CriteriaExtractionError, match="one repair attempt"):
+    with pytest.raises(CriteriaExtractionError, match="one repair attempt") as raised:
         run(service.extract_text(ELIGIBILITY_TEXT))
 
     assert len(client.calls) == 2
+    assert raised.value.category is ExtractionFailureCategory.REPAIR_EXHAUSTED
+    assert raised.value.validation_category is ExtractionFailureCategory.SCHEMA_VALIDATION
 
 
 @pytest.mark.parametrize("eligibility_text", [None, "", "   "])
@@ -600,13 +1060,86 @@ def test_blank_or_missing_eligibility_text_is_rejected(
     assert client.calls == []
 
 
-def test_provider_failure_is_not_converted_to_empty_criteria() -> None:
+def test_provider_failure_is_categorized_without_returning_empty_criteria() -> None:
     service, client = service_with(GroqClientError("provider unavailable"))
 
-    with pytest.raises(GroqClientError, match="provider unavailable"):
+    with pytest.raises(CriteriaExtractionError) as raised:
         run(service.extract_text(ELIGIBILITY_TEXT))
 
     assert len(client.calls) == 1
+    assert raised.value.category is ExtractionFailureCategory.PROVIDER_ERROR
+
+
+def test_json_generation_failure_retries_once_without_using_repair_budget() -> None:
+    service, client = service_with(json_generation_failure(), output(criterion()))
+
+    result = run(service.extract_text(ELIGIBILITY_TEXT))
+
+    assert len(result) == 1
+    assert len(client.calls) == 2
+    assert service.provider_attempts == 2
+    assert service.extraction_repair_attempts == 0
+    assert service.provider_error_code == "json_validate_failed"
+
+
+def test_second_json_generation_failure_fails_as_provider_error() -> None:
+    service, client = service_with(
+        json_generation_failure(), json_generation_failure()
+    )
+
+    with pytest.raises(CriteriaExtractionError) as raised:
+        run(service.extract_text(ELIGIBILITY_TEXT))
+
+    assert len(client.calls) == 2
+    assert raised.value.category is ExtractionFailureCategory.PROVIDER_ERROR
+    assert raised.value.provider_attempts == 2
+    assert raised.value.extraction_repair_attempts == 0
+    assert raised.value.provider_error_code == "json_validate_failed"
+
+
+@pytest.mark.parametrize(
+    "failure",
+    [
+        GroqClientError("invalid credentials", status_code=401),
+        GroqClientError("invalid configuration", status_code=400),
+    ],
+)
+def test_non_json_provider_failures_are_not_retried(failure: GroqClientError) -> None:
+    service, client = service_with(failure, output(criterion()))
+
+    with pytest.raises(CriteriaExtractionError):
+        run(service.extract_text(ELIGIBILITY_TEXT))
+
+    assert len(client.calls) == 1
+    assert service.provider_attempts == 1
+    assert service.extraction_repair_attempts == 0
+
+
+def test_schema_repair_budget_remains_separate_from_provider_attempts() -> None:
+    service, client = service_with(
+        json_generation_failure(),
+        "not-json",
+        output(criterion()),
+    )
+
+    result = run(service.extract_text(ELIGIBILITY_TEXT))
+
+    assert len(result) == 1
+    assert len(client.calls) == 3
+    assert service.provider_attempts == 3
+    assert service.extraction_repair_attempts == 1
+
+
+def test_provider_rate_limit_is_categorized_and_preserves_cause() -> None:
+    provider_error = GroqClientError("provider unavailable")
+    provider_error.__cause__ = RateLimitCause("rate limited")
+    service, _ = service_with(provider_error)
+
+    with pytest.raises(CriteriaExtractionError) as raised:
+        run(service.extract_text(ELIGIBILITY_TEXT))
+
+    assert raised.value.category is ExtractionFailureCategory.PROVIDER_RATE_LIMIT
+    assert isinstance(raised.value.__cause__, GroqClientError)
 
 
 def test_extract_accepts_clinical_trial_without_patient_profile() -> None:
@@ -633,10 +1166,60 @@ def test_source_text_not_present_in_eligibility_retries_then_fails() -> None:
     invented = output(criterion(original_text="Invented clinical requirement."))
     service, client = service_with(invented, invented)
 
-    with pytest.raises(CriteriaExtractionError, match="one repair attempt"):
+    with pytest.raises(CriteriaExtractionError, match="one repair attempt") as raised:
         run(service.extract_text(ELIGIBILITY_TEXT))
 
     assert len(client.calls) == 2
+    assert raised.value.category is ExtractionFailureCategory.REPAIR_EXHAUSTED
+    assert raised.value.validation_category is ExtractionFailureCategory.SOURCE_TRACEABILITY
+
+
+@pytest.mark.parametrize(
+    ("source_text", "extracted_text"),
+    [
+        ("HbA1c <9% at screening.", "HbA1c \\<9% at screening."),
+        ("HbA1c &lt;9% at screening.", "HbA1c <9% at screening."),
+        (
+            "HbA1c <9%\n\n at screening.",
+            "HbA1c <9% at screening.",
+        ),
+        (
+            "Use of PPAR-γ \\[e.g., pioglitazone\\] at screening.",
+            "Use of PPAR-γ [e.g., pioglitazone] at screening.",
+        ),
+        ("Café HbA1c <9% at screening.", "Cafe\u0301 HbA1c <9% at screening."),
+    ],
+)
+def test_traceability_normalizes_harmless_text_representations(
+    source_text: str, extracted_text: str
+) -> None:
+    extracted = EligibilityCriterion(
+        criterion_id="INC-001",
+        criterion_type=CriterionType.INCLUSION,
+        category="LAB",
+        original_text=extracted_text,
+        evaluation_type=EvaluationType.SEMANTIC,
+    )
+
+    _validate_source_evidence([extracted], source_text)
+
+    assert extracted.original_text == extracted_text
+
+
+@pytest.mark.parametrize("extracted_text", ["HbA1c >9% at screening.", "HbA1c <=9% at screening."])
+def test_traceability_rejects_different_comparison_operator(
+    extracted_text: str,
+) -> None:
+    extracted = EligibilityCriterion(
+        criterion_id="INC-001",
+        criterion_type=CriterionType.INCLUSION,
+        category="LAB",
+        original_text=extracted_text,
+        evaluation_type=EvaluationType.SEMANTIC,
+    )
+
+    with pytest.raises(_SourceEvidenceError, match="not present"):
+        _validate_source_evidence([extracted], "HbA1c <9% at screening.")
 
 
 def test_source_validation_allows_flattened_markdown_list_formatting() -> None:

@@ -1,0 +1,337 @@
+{
+  "trial_id": "NCT06035874",
+  "target_population": "Type 2 Diabetes",
+  "excluded_population": "None; this source has a single Type 2 Diabetes population.",
+  "excluded_population_markers": [],
+  "criteria": [
+    {
+      "expectation_id": "INC-001",
+      "label": "Adult Type 2 Diabetes population with treatment, HbA1c, and MRI-PDFF requirements",
+      "match_groups": [["20 years of age"], ["type 2 diabetes"], ["hba1c"], ["mri-pdff"]],
+      "expected": {
+        "criterion_id": "INC-001",
+        "criterion_type": "INCLUSION",
+        "category": "DIAGNOSIS",
+        "original_text": "A man or woman, 20 years of age or above with the diagnosis of type 2 diabetes for at least 3 months who meets all the following two criteria:\n\n   1. On standard anti-diabetic agents (metformin, DPP-4 inhibitors, sulphonylureas or insulin, in any combination) with an HbA1c of \\<9% at screening\n   2. Have documented hepatic steatosis (MRI-PDFF \\>5.6%) on screening MRI- PDFF",
+        "evaluation_type": "COMPOUND",
+        "logical_operator": "AND",
+        "children": [
+          {
+            "criterion_id": "INC-001.1",
+            "criterion_type": "INCLUSION",
+            "category": "AGE",
+            "original_text": "20 years of age or above",
+            "evaluation_type": "NUMERIC",
+            "operator": "GTE",
+            "value": 20,
+            "unit": "year",
+            "requires_human_review": true
+          },
+          {
+            "criterion_id": "INC-001.2",
+            "criterion_type": "INCLUSION",
+            "category": "DIAGNOSIS",
+            "original_text": "diagnosis of type 2 diabetes for at least 3 months",
+            "evaluation_type": "COMPOUND",
+            "logical_operator": "AND",
+            "children": [
+              {
+                "criterion_id": "INC-001.2.1",
+                "criterion_type": "INCLUSION",
+                "category": "DIAGNOSIS",
+                "original_text": "diagnosis of type 2 diabetes",
+                "evaluation_type": "BOOLEAN",
+                "field_name": "type_2_diabetes",
+                "operator": "EQ",
+                "value": true,
+                "required_patient_fields": ["condition"]
+              },
+              {
+                "criterion_id": "INC-001.2.2",
+                "criterion_type": "INCLUSION",
+                "category": "DIAGNOSIS",
+                "original_text": "for at least 3 months",
+                "evaluation_type": "NUMERIC",
+                "field_name": "diagnosis_duration_years",
+                "operator": "GTE",
+                "value": 0.25,
+                "unit": "year",
+                "required_patient_fields": ["diagnosis_date"]
+              }
+            ]
+          },
+          {
+            "criterion_id": "INC-001.3",
+            "criterion_type": "INCLUSION",
+            "category": "MEDICATION",
+            "original_text": "On standard anti-diabetic agents (metformin, DPP-4 inhibitors, sulphonylureas or insulin, in any combination) with an HbA1c of \\<9% at screening",
+            "evaluation_type": "COMPOUND",
+            "logical_operator": "AND",
+            "requires_human_review": true,
+            "children": [
+              {
+                "criterion_id": "INC-001.3.1",
+                "criterion_type": "INCLUSION",
+                "category": "MEDICATION",
+                "original_text": "On standard anti-diabetic agents (metformin, DPP-4 inhibitors, sulphonylureas or insulin, in any combination)",
+                "evaluation_type": "HUMAN_ONLY",
+                "requires_human_review": true
+              },
+              {
+                "criterion_id": "INC-001.3.2",
+                "criterion_type": "INCLUSION",
+                "category": "LAB",
+                "original_text": "HbA1c of \\<9% at screening",
+                "evaluation_type": "NUMERIC",
+                "field_name": "hba1c",
+                "operator": "LT",
+                "value": 9,
+                "unit": "%",
+                "required_patient_fields": ["laboratory_results"]
+              }
+            ]
+          },
+          {
+            "criterion_id": "INC-001.4",
+            "criterion_type": "INCLUSION",
+            "category": "LAB",
+            "original_text": "Have documented hepatic steatosis (MRI-PDFF \\>5.6%) on screening MRI- PDFF",
+            "evaluation_type": "NUMERIC",
+            "operator": "GT",
+            "value": 5.6,
+            "unit": "%",
+            "requires_human_review": true
+          }
+        ]
+      }
+    },
+    {
+      "expectation_id": "INC-002",
+      "label": "Medically stable",
+      "match_groups": [["medically stable"]],
+      "expected": {
+        "criterion_id": "INC-002",
+        "criterion_type": "INCLUSION",
+        "category": "MEDICAL_HISTORY",
+        "original_text": "Participants must be medically stable based on medical history, physical examination and laboratory investigations.",
+        "evaluation_type": "SEMANTIC",
+        "requires_human_review": true
+      }
+    },
+    {
+      "expectation_id": "INC-003",
+      "label": "Ability to follow protocol restrictions",
+      "match_groups": [["willing and able"], ["prohibitions and restrictions"]],
+      "expected": {
+        "criterion_id": "INC-003",
+        "criterion_type": "INCLUSION",
+        "category": "OTHER",
+        "original_text": "Participants must be willing and able to adhere to the prohibitions and restrictions specified in this protocol.",
+        "evaluation_type": "HUMAN_ONLY",
+        "requires_human_review": true
+      }
+    },
+    {
+      "expectation_id": "INC-004",
+      "label": "Informed consent",
+      "match_groups": [["sign an informed consent form"]],
+      "expected": {
+        "criterion_id": "INC-004",
+        "criterion_type": "INCLUSION",
+        "category": "CONSENT",
+        "original_text": "Each participant must sign an informed consent form (ICF) indicating that he or she understands the purpose of the study and are willing to participate in the study.",
+        "evaluation_type": "HUMAN_ONLY",
+        "requires_human_review": true
+      }
+    },
+    {
+      "expectation_id": "EXC-001",
+      "label": "Diabetes-related diagnostic history exclusions",
+      "match_groups": [["diabetic ketoacidosis"], ["type 1 diabetes"], ["pancreatitis"]],
+      "expected": {
+        "criterion_id": "EXC-001",
+        "criterion_type": "EXCLUSION",
+        "category": "DIAGNOSIS",
+        "original_text": "History of diabetic ketoacidosis, type 1 diabetes, pancreas or beta-cell transplantation, or diabetes secondary to pancreatitis or pancreatectomy.",
+        "evaluation_type": "COMPOUND",
+        "logical_operator": "OR",
+        "requires_human_review": true,
+        "children": [
+          {"criterion_id": "EXC-001.1", "criterion_type": "EXCLUSION", "category": "MEDICAL_HISTORY", "original_text": "History of diabetic ketoacidosis", "evaluation_type": "HUMAN_ONLY", "requires_human_review": true},
+          {"criterion_id": "EXC-001.2", "criterion_type": "EXCLUSION", "category": "DIAGNOSIS", "original_text": "type 1 diabetes", "evaluation_type": "BOOLEAN", "field_name": "type_1_diabetes", "operator": "EQ", "value": true, "required_patient_fields": ["medical_history"]},
+          {"criterion_id": "EXC-001.3", "criterion_type": "EXCLUSION", "category": "PROCEDURE", "original_text": "pancreas or beta-cell transplantation", "evaluation_type": "HUMAN_ONLY", "requires_human_review": true},
+          {"criterion_id": "EXC-001.4", "criterion_type": "EXCLUSION", "category": "DIAGNOSIS", "original_text": "diabetes secondary to pancreatitis or pancreatectomy", "evaluation_type": "HUMAN_ONLY", "requires_human_review": true}
+        ]
+      }
+    },
+    {
+      "expectation_id": "EXC-002",
+      "label": "Brittle or labile glycemic control",
+      "match_groups": [["brittle or labile glycemic control"]],
+      "expected": {"criterion_id": "EXC-002", "criterion_type": "EXCLUSION", "category": "MEDICAL_HISTORY", "original_text": "History of brittle or labile glycemic control, with widely varying glucose measurements by FPG or SMBG such that stable glucose control over the treatment period would be unlikely.", "evaluation_type": "SEMANTIC", "requires_human_review": true}
+    },
+    {
+      "expectation_id": "EXC-003",
+      "label": "Substance-use and alcohol exclusions",
+      "match_groups": [["drug or alcohol abuse"], ["audit"], ["alcohol consumption"]],
+      "expected": {
+        "criterion_id": "EXC-003", "criterion_type": "EXCLUSION", "category": "LIFESTYLE",
+        "original_text": "History of drug or alcohol abuse according to Diagnostic and Statistical Manual of Mental Disorders (5th edition) (DSM-V) criteria within 3 years before Screening, or an Alcohol Use Disorders Identification Test (AUDIT) with a score \\>8, or alcohol consumption of more than 20 g per day in the case of women and more than 30 g per day in the case of men for at least three consecutive months during the previous 5 years.",
+        "evaluation_type": "COMPOUND", "logical_operator": "OR", "requires_human_review": true,
+        "children": [
+          {"criterion_id": "EXC-003.1", "criterion_type": "EXCLUSION", "category": "LIFESTYLE", "original_text": "History of drug or alcohol abuse according to Diagnostic and Statistical Manual of Mental Disorders (5th edition) (DSM-V) criteria within 3 years before Screening", "evaluation_type": "HUMAN_ONLY", "temporal_window": {"value": 3, "unit": "YEAR"}, "requires_human_review": true},
+          {"criterion_id": "EXC-003.2", "criterion_type": "EXCLUSION", "category": "LIFESTYLE", "original_text": "Alcohol Use Disorders Identification Test (AUDIT) with a score \\>8", "evaluation_type": "NUMERIC", "operator": "GT", "value": 8, "requires_human_review": true},
+          {"criterion_id": "EXC-003.3", "criterion_type": "EXCLUSION", "category": "LIFESTYLE", "original_text": "alcohol consumption of more than 20 g per day in the case of women and more than 30 g per day in the case of men for at least three consecutive months during the previous 5 years", "evaluation_type": "HUMAN_ONLY", "temporal_window": {"value": 5, "unit": "YEAR"}, "requires_human_review": true}
+        ]
+      }
+    },
+    {
+      "expectation_id": "EXC-004",
+      "label": "TSH outside range and thyroid replacement stability",
+      "match_groups": [["thyroid stimulating hormone"], ["0.45"], ["10"]],
+      "expected": {
+        "criterion_id": "EXC-004", "criterion_type": "EXCLUSION", "category": "LAB",
+        "original_text": "Thyroid stimulating hormone (TSH) value that is either \\< 0.45 mIU/L or \\>10 mIU/L at Screening. Note: Subjects on thyroid hormone replacement therapy must be on a stable dose and dosing regimen for at least 4 weeks prior to enrollment.",
+        "evaluation_type": "COMPOUND", "logical_operator": "OR", "requires_human_review": true,
+        "children": [
+          {"criterion_id": "EXC-004.1", "criterion_type": "EXCLUSION", "category": "LAB", "original_text": "Thyroid stimulating hormone (TSH) value that is either \\< 0.45 mIU/L", "evaluation_type": "NUMERIC", "operator": "LT", "value": 0.45, "unit": "mIU/L", "requires_human_review": true},
+          {"criterion_id": "EXC-004.2", "criterion_type": "EXCLUSION", "category": "LAB", "original_text": "or \\>10 mIU/L at Screening", "evaluation_type": "NUMERIC", "operator": "GT", "value": 10, "unit": "mIU/L", "requires_human_review": true}
+        ]
+      }
+    },
+    {
+      "expectation_id": "EXC-005",
+      "label": "Recent prohibited anti-diabetic therapy",
+      "match_groups": [["ppar"], ["sglt2"], ["glp-1"], ["12 weeks"]],
+      "expected": {
+        "criterion_id": "EXC-005", "criterion_type": "EXCLUSION", "category": "MEDICATION",
+        "original_text": "Use of a PPAR-γ agonist \\[e.g., a thiazolidinedione (pioglitazone\\], an SGLT2 inhibitor (e.g., canagliflozin, empagliflozin, dapagliflozin), GLP-1 receptor agonists (e.g., liraglutide, dulaglutide) or saroglitazar (Dual PPARα/γ agonist) within 12 weeks before the enrollment.",
+        "evaluation_type": "COMPOUND", "logical_operator": "OR", "temporal_window": {"value": 12, "unit": "WEEK"}, "requires_human_review": true,
+        "children": [
+          {"criterion_id": "EXC-005.1", "criterion_type": "EXCLUSION", "category": "MEDICATION", "original_text": "Use of a PPAR-γ agonist", "evaluation_type": "HUMAN_ONLY", "temporal_window": {"value": 12, "unit": "WEEK"}, "requires_human_review": true},
+          {"criterion_id": "EXC-005.2", "criterion_type": "EXCLUSION", "category": "MEDICATION", "original_text": "an SGLT2 inhibitor", "evaluation_type": "HUMAN_ONLY", "temporal_window": {"value": 12, "unit": "WEEK"}, "requires_human_review": true},
+          {"criterion_id": "EXC-005.3", "criterion_type": "EXCLUSION", "category": "MEDICATION", "original_text": "GLP-1 receptor agonists", "evaluation_type": "HUMAN_ONLY", "temporal_window": {"value": 12, "unit": "WEEK"}, "requires_human_review": true},
+          {"criterion_id": "EXC-005.4", "criterion_type": "EXCLUSION", "category": "MEDICATION", "original_text": "saroglitazar (Dual PPARα/γ agonist)", "evaluation_type": "HUMAN_ONLY", "temporal_window": {"value": 12, "unit": "WEEK"}, "requires_human_review": true}
+        ]
+      }
+    },
+    {
+      "expectation_id": "EXC-006", "label": "BMI above 40 kg/m2", "match_groups": [["bmi"], ["40 kg/m2"]],
+      "expected": {"criterion_id": "EXC-006", "criterion_type": "EXCLUSION", "category": "BMI", "original_text": "BMI \\>40 kg/m2.", "evaluation_type": "NUMERIC", "field_name": "bmi", "operator": "GT", "value": 40, "unit": "kg/m2", "required_patient_fields": ["bmi"]}
+    },
+    {
+      "expectation_id": "EXC-007", "label": "Eating disorder or recent significant weight change", "match_groups": [["eating disorder"], ["weight loss"], ["12 weeks"]],
+      "expected": {
+        "criterion_id": "EXC-007", "criterion_type": "EXCLUSION", "category": "LIFESTYLE", "original_text": "Ongoing eating disorder, or a significant weight loss or weight gain within 12 weeks before the Screening visit, defined as an increase or decrease of 5% in body weight based upon clinic-based measurement or, if not available, based on subject's report.", "evaluation_type": "COMPOUND", "logical_operator": "OR", "requires_human_review": true,
+        "children": [
+          {"criterion_id": "EXC-007.1", "criterion_type": "EXCLUSION", "category": "MEDICAL_HISTORY", "original_text": "Ongoing eating disorder", "evaluation_type": "HUMAN_ONLY", "requires_human_review": true},
+          {"criterion_id": "EXC-007.2", "criterion_type": "EXCLUSION", "category": "LIFESTYLE", "original_text": "a significant weight loss or weight gain within 12 weeks before the Screening visit, defined as an increase or decrease of 5% in body weight", "evaluation_type": "HUMAN_ONLY", "temporal_window": {"value": 12, "unit": "WEEK"}, "requires_human_review": true}
+        ]
+      }
+    },
+    {
+      "expectation_id": "EXC-008", "label": "Recent weight-loss medication or program", "match_groups": [["weight loss medication"], ["weight loss/diet program"]],
+      "expected": {
+        "criterion_id": "EXC-008", "criterion_type": "EXCLUSION", "category": "MEDICATION", "original_text": "Use of weight loss medication (prescription and/or over the counter) within 3 months prior to Screening or have participated in a weight loss/diet program within 12 months prior to Screening.", "evaluation_type": "COMPOUND", "logical_operator": "OR", "requires_human_review": true,
+        "children": [
+          {"criterion_id": "EXC-008.1", "criterion_type": "EXCLUSION", "category": "MEDICATION", "original_text": "Use of weight loss medication (prescription and/or over the counter) within 3 months prior to Screening", "evaluation_type": "HUMAN_ONLY", "temporal_window": {"value": 3, "unit": "MONTH"}, "requires_human_review": true},
+          {"criterion_id": "EXC-008.2", "criterion_type": "EXCLUSION", "category": "LIFESTYLE", "original_text": "have participated in a weight loss/diet program within 12 months prior to Screening", "evaluation_type": "HUMAN_ONLY", "temporal_window": {"value": 12, "unit": "MONTH"}, "requires_human_review": true}
+        ]
+      }
+    },
+    {
+      "expectation_id": "EXC-009", "label": "Renal immunosuppression, dialysis, or transplant history", "match_groups": [["renal disease"], ["dialysis"], ["renal transplant"]],
+      "expected": {"criterion_id": "EXC-009", "criterion_type": "EXCLUSION", "category": "MEDICAL_HISTORY", "original_text": "Renal disease that required treatment with immunosuppressive therapy or a history of dialysis or renal transplant.", "evaluation_type": "COMPOUND", "logical_operator": "OR", "requires_human_review": true, "children": [
+        {"criterion_id": "EXC-009.1", "criterion_type": "EXCLUSION", "category": "MEDICAL_HISTORY", "original_text": "Renal disease that required treatment with immunosuppressive therapy", "evaluation_type": "HUMAN_ONLY", "requires_human_review": true},
+        {"criterion_id": "EXC-009.2", "criterion_type": "EXCLUSION", "category": "MEDICAL_HISTORY", "original_text": "a history of dialysis", "evaluation_type": "HUMAN_ONLY", "requires_human_review": true},
+        {"criterion_id": "EXC-009.3", "criterion_type": "EXCLUSION", "category": "MEDICAL_HISTORY", "original_text": "renal transplant", "evaluation_type": "HUMAN_ONLY", "requires_human_review": true}
+      ]}
+    },
+    {
+      "expectation_id": "EXC-010", "label": "Cardiovascular history, planned revascularization, or NYHA III-IV disease", "match_groups": [["myocardial infarction"], ["revascularization"], ["nyha"]],
+      "expected": {
+        "criterion_id": "EXC-010", "criterion_type": "EXCLUSION", "category": "MEDICAL_HISTORY", "original_text": "Myocardial infarction, unstable angina, pulmonary hypertension, revascularization procedure (e.g., stent or bypass graft surgery), or cerebrovascular accident within 3 months before Screening, or revascularization procedure is planned, or subject has a history of New York Heart Association (NYHA) Class III-IV cardiac disease.", "evaluation_type": "COMPOUND", "logical_operator": "OR", "requires_human_review": true,
+        "children": [
+          {"criterion_id": "EXC-010.1", "criterion_type": "EXCLUSION", "category": "MEDICAL_HISTORY", "original_text": "Myocardial infarction within 3 months before Screening", "evaluation_type": "BOOLEAN", "field_name": "heart_attack", "operator": "EQ", "value": true, "temporal_window": {"value": 3, "unit": "MONTH"}, "required_patient_fields": ["medical_history"]},
+          {"criterion_id": "EXC-010.2", "criterion_type": "EXCLUSION", "category": "MEDICAL_HISTORY", "original_text": "unstable angina within 3 months before Screening", "evaluation_type": "HUMAN_ONLY", "temporal_window": {"value": 3, "unit": "MONTH"}, "requires_human_review": true},
+          {"criterion_id": "EXC-010.3", "criterion_type": "EXCLUSION", "category": "MEDICAL_HISTORY", "original_text": "pulmonary hypertension within 3 months before Screening", "evaluation_type": "HUMAN_ONLY", "temporal_window": {"value": 3, "unit": "MONTH"}, "requires_human_review": true},
+          {"criterion_id": "EXC-010.4", "criterion_type": "EXCLUSION", "category": "PROCEDURE", "original_text": "revascularization procedure (e.g., stent or bypass graft surgery) within 3 months before Screening", "evaluation_type": "HUMAN_ONLY", "temporal_window": {"value": 3, "unit": "MONTH"}, "requires_human_review": true},
+          {"criterion_id": "EXC-010.5", "criterion_type": "EXCLUSION", "category": "MEDICAL_HISTORY", "original_text": "cerebrovascular accident within 3 months before Screening", "evaluation_type": "BOOLEAN", "field_name": "stroke", "operator": "EQ", "value": true, "temporal_window": {"value": 3, "unit": "MONTH"}, "required_patient_fields": ["medical_history"]},
+          {"criterion_id": "EXC-010.6", "criterion_type": "EXCLUSION", "category": "PROCEDURE", "original_text": "revascularization procedure is planned", "evaluation_type": "HUMAN_ONLY", "requires_human_review": true},
+          {"criterion_id": "EXC-010.7", "criterion_type": "EXCLUSION", "category": "MEDICAL_HISTORY", "original_text": "history of New York Heart Association (NYHA) Class III-IV cardiac disease", "evaluation_type": "CATEGORICAL", "field_name": "nyha_class", "operator": "IN", "value": ["III", "IV"], "required_patient_fields": ["medical_history"]}
+        ]
+      }
+    },
+    {
+      "expectation_id": "EXC-011", "label": "Viral hepatitis markers or active liver disease", "match_groups": [["hbsag"], ["anti-hcv"], ["liver disease"]],
+      "expected": {"criterion_id": "EXC-011", "criterion_type": "EXCLUSION", "category": "MEDICAL_HISTORY", "original_text": "History of hepatitis B surface antigen (HBsAg) or hepatitis C antibody (anti-HCV) positive, or other clinically active liver disease, or tests positive for HBsAg or anti- HCV at Screening.", "evaluation_type": "COMPOUND", "logical_operator": "OR", "requires_human_review": true, "children": [
+        {"criterion_id": "EXC-011.1", "criterion_type": "EXCLUSION", "category": "MEDICAL_HISTORY", "original_text": "History of hepatitis B surface antigen (HBsAg) or hepatitis C antibody (anti-HCV) positive", "evaluation_type": "HUMAN_ONLY", "requires_human_review": true},
+        {"criterion_id": "EXC-011.2", "criterion_type": "EXCLUSION", "category": "MEDICAL_HISTORY", "original_text": "other clinically active liver disease", "evaluation_type": "HUMAN_ONLY", "requires_human_review": true},
+        {"criterion_id": "EXC-011.3", "criterion_type": "EXCLUSION", "category": "LAB", "original_text": "tests positive for HBsAg or anti- HCV at Screening", "evaluation_type": "HUMAN_ONLY", "requires_human_review": true}
+      ]}
+    },
+    {
+      "expectation_id": "EXC-012", "label": "Recent vitamin E use", "match_groups": [["vitamin e"], ["12 weeks"]],
+      "expected": {"criterion_id": "EXC-012", "criterion_type": "EXCLUSION", "category": "MEDICATION", "original_text": "Use of vitamin E within 12 weeks before screening.", "evaluation_type": "HUMAN_ONLY", "temporal_window": {"value": 12, "unit": "WEEK"}, "requires_human_review": true}
+    },
+    {
+      "expectation_id": "EXC-013", "label": "Prior bariatric or upper gastrointestinal surgery", "match_groups": [["bariatric"], ["gastric resection"]],
+      "expected": {"criterion_id": "EXC-013", "criterion_type": "EXCLUSION", "category": "PROCEDURE", "original_text": "History of prior bariatric (e.g., Roux-en-Y gastric bypass) or other major upper gastrointestinal surgical procedure (including gastric resection).", "evaluation_type": "HUMAN_ONLY", "requires_human_review": true}
+    },
+    {
+      "expectation_id": "EXC-014", "label": "Gastrointestinal disorder history", "match_groups": [["diabetic gastroparesis"], ["inflammatory bowel disease"], ["gastrointestinal disorder"]],
+      "expected": {"criterion_id": "EXC-014", "criterion_type": "EXCLUSION", "category": "MEDICAL_HISTORY", "original_text": "History of diabetic gastroparesis (or symptoms suggestive of this disorder, including postprandial bloating or vomiting), malabsorption, inflammatory bowel disease, or any other chronic, clinically important gastrointestinal disorder.", "evaluation_type": "COMPOUND", "logical_operator": "OR", "requires_human_review": true, "children": [
+        {"criterion_id": "EXC-014.1", "criterion_type": "EXCLUSION", "category": "MEDICAL_HISTORY", "original_text": "History of diabetic gastroparesis (or symptoms suggestive of this disorder, including postprandial bloating or vomiting)", "evaluation_type": "HUMAN_ONLY", "requires_human_review": true},
+        {"criterion_id": "EXC-014.2", "criterion_type": "EXCLUSION", "category": "MEDICAL_HISTORY", "original_text": "malabsorption", "evaluation_type": "HUMAN_ONLY", "requires_human_review": true},
+        {"criterion_id": "EXC-014.3", "criterion_type": "EXCLUSION", "category": "MEDICAL_HISTORY", "original_text": "inflammatory bowel disease", "evaluation_type": "HUMAN_ONLY", "requires_human_review": true},
+        {"criterion_id": "EXC-014.4", "criterion_type": "EXCLUSION", "category": "MEDICAL_HISTORY", "original_text": "any other chronic, clinically important gastrointestinal disorder", "evaluation_type": "HUMAN_ONLY", "requires_human_review": true}
+      ]}
+    },
+    {
+      "expectation_id": "EXC-015", "label": "eGFR below 60 mL/min/1.73 m2", "match_groups": [["egfr"], ["60 ml/min"]],
+      "expected": {"criterion_id": "EXC-015", "criterion_type": "EXCLUSION", "category": "LAB", "original_text": "Estimated glomerular filtration rate (eGFR) \\<60 mL/min/1•73 m2 using the Modification of Diet in Renal Disease Study (MDRD) equation.", "evaluation_type": "NUMERIC", "operator": "LT", "value": 60, "unit": "mL/min/1.73 m2", "requires_human_review": true}
+    },
+    {
+      "expectation_id": "EXC-016", "label": "Metallic material or MR contraindication", "match_groups": [["metallic material"], ["mr examination"]],
+      "expected": {"criterion_id": "EXC-016", "criterion_type": "EXCLUSION", "category": "PROCEDURE", "original_text": "Subjects with a history of having or possibly having metallic material in the body or any contraindication for a MR examination.", "evaluation_type": "COMPOUND", "logical_operator": "OR", "requires_human_review": true, "children": [
+        {"criterion_id": "EXC-016.1", "criterion_type": "EXCLUSION", "category": "PROCEDURE", "original_text": "history of having or possibly having metallic material in the body", "evaluation_type": "HUMAN_ONLY", "requires_human_review": true},
+        {"criterion_id": "EXC-016.2", "criterion_type": "EXCLUSION", "category": "PROCEDURE", "original_text": "any contraindication for a MR examination", "evaluation_type": "HUMAN_ONLY", "requires_human_review": true}
+      ]}
+    },
+    {
+      "expectation_id": "EXC-017", "label": "MRI tolerance or willingness", "match_groups": [["claustrophobia"], ["magnetic resonance imaging"]],
+      "expected": {"criterion_id": "EXC-017", "criterion_type": "EXCLUSION", "category": "OTHER", "original_text": "Claustrophobia, or anxiety related to previous negative experiences with magnetic resonance imaging procedures or if the subject is unwilling to participate in magnetic resonance imaging procedures.", "evaluation_type": "COMPOUND", "logical_operator": "OR", "requires_human_review": true, "children": [
+        {"criterion_id": "EXC-017.1", "criterion_type": "EXCLUSION", "category": "MEDICAL_HISTORY", "original_text": "Claustrophobia", "evaluation_type": "HUMAN_ONLY", "requires_human_review": true},
+        {"criterion_id": "EXC-017.2", "criterion_type": "EXCLUSION", "category": "MEDICAL_HISTORY", "original_text": "anxiety related to previous negative experiences with magnetic resonance imaging procedures", "evaluation_type": "HUMAN_ONLY", "requires_human_review": true},
+        {"criterion_id": "EXC-017.3", "criterion_type": "EXCLUSION", "category": "OTHER", "original_text": "the subject is unwilling to participate in magnetic resonance imaging procedures", "evaluation_type": "HUMAN_ONLY", "requires_human_review": true}
+      ]}
+    },
+    {
+      "expectation_id": "EXC-018", "label": "Clinically important hematologic disorder", "match_groups": [["hematologic disorder"]],
+      "expected": {"criterion_id": "EXC-018", "criterion_type": "EXCLUSION", "category": "MEDICAL_HISTORY", "original_text": "Clinically important hematologic disorder (e.g., symptomatic anemia, proliferative bone marrow disorder, thrombocytopenia) at Screening.", "evaluation_type": "SEMANTIC", "requires_human_review": true}
+    },
+    {
+      "expectation_id": "EXC-019", "label": "HIV antibody positive", "match_groups": [["human immunodeficiency virus"], ["hiv"]],
+      "expected": {"criterion_id": "EXC-019", "criterion_type": "EXCLUSION", "category": "LAB", "original_text": "History of human immunodeficiency virus (HIV) antibody positive at Screening.", "evaluation_type": "HUMAN_ONLY", "requires_human_review": true}
+    },
+    {
+      "expectation_id": "EXC-020", "label": "Recent, unrecovered, or planned major surgery", "match_groups": [["major surgery"], ["12 weeks"], ["surgery planned"]],
+      "expected": {"criterion_id": "EXC-020", "criterion_type": "EXCLUSION", "category": "PROCEDURE", "original_text": "Major surgery (e.g., requiring general anesthesia) within 12 weeks before Screening, or will not have fully recovered from surgery, or has surgery planned during the time the subject is expected to participate in the study.", "evaluation_type": "COMPOUND", "logical_operator": "OR", "requires_human_review": true, "children": [
+        {"criterion_id": "EXC-020.1", "criterion_type": "EXCLUSION", "category": "PROCEDURE", "original_text": "Major surgery (e.g., requiring general anesthesia) within 12 weeks before Screening", "evaluation_type": "HUMAN_ONLY", "temporal_window": {"value": 12, "unit": "WEEK"}, "requires_human_review": true},
+        {"criterion_id": "EXC-020.2", "criterion_type": "EXCLUSION", "category": "PROCEDURE", "original_text": "will not have fully recovered from surgery", "evaluation_type": "HUMAN_ONLY", "requires_human_review": true},
+        {"criterion_id": "EXC-020.3", "criterion_type": "EXCLUSION", "category": "PROCEDURE", "original_text": "has surgery planned during the time the subject is expected to participate in the study", "evaluation_type": "HUMAN_ONLY", "requires_human_review": true}
+      ]}
+    },
+    {
+      "expectation_id": "EXC-021", "label": "Bempedoic acid contraindication", "match_groups": [["contraindications"], ["bempedoic acid"]],
+      "expected": {"criterion_id": "EXC-021", "criterion_type": "EXCLUSION", "category": "MEDICATION", "original_text": "Contraindications to the use of bempedoic acid (per BEMPEDOIC ACID Prescribing Information).", "evaluation_type": "HUMAN_ONLY", "requires_human_review": true}
+    },
+    {
+      "expectation_id": "EXC-022", "label": "Current or anticipated corticosteroid or immunosuppressive therapy", "match_groups": [["corticosteroid medication"], ["immunosuppressive agent"]],
+      "expected": {"criterion_id": "EXC-022", "criterion_type": "EXCLUSION", "category": "MEDICATION", "original_text": "Current use of a corticosteroid medication or immunosuppressive agent, or likely to require treatment with a corticosteroid medication or an immunosuppressive agent.", "evaluation_type": "COMPOUND", "logical_operator": "OR", "requires_human_review": true, "children": [
+        {"criterion_id": "EXC-022.1", "criterion_type": "EXCLUSION", "category": "MEDICATION", "original_text": "Current use of a corticosteroid medication or immunosuppressive agent", "evaluation_type": "HUMAN_ONLY", "requires_human_review": true},
+        {"criterion_id": "EXC-022.2", "criterion_type": "EXCLUSION", "category": "MEDICATION", "original_text": "likely to require treatment with a corticosteroid medication or an immunosuppressive agent", "evaluation_type": "HUMAN_ONLY", "requires_human_review": true}
+      ]}
+    }
+  ]
+}

@@ -114,10 +114,7 @@
       "lower_value": null,
       "upper_value": null,
       "unit": null,
-      "temporal_window": {
-        "value": "6",
-        "unit": "MONTH"
-      },
+      "temporal_window": null,
       "logical_operator": "OR",
       "children": [
         {
@@ -132,7 +129,10 @@
           "lower_value": null,
           "upper_value": null,
           "unit": null,
-          "temporal_window": null,
+          "temporal_window": {
+            "value": "6",
+            "unit": "MONTH"
+          },
           "logical_operator": null,
           "children": [],
           "required_patient_fields": [
@@ -152,7 +152,10 @@
           "lower_value": null,
           "upper_value": null,
           "unit": null,
-          "temporal_window": null,
+          "temporal_window": {
+            "value": "6",
+            "unit": "MONTH"
+          },
           "logical_operator": null,
           "children": [],
           "required_patient_fields": [
@@ -172,7 +175,10 @@
           "lower_value": null,
           "upper_value": null,
           "unit": null,
-          "temporal_window": null,
+          "temporal_window": {
+            "value": "6",
+            "unit": "MONTH"
+          },
           "logical_operator": null,
           "children": [],
           "required_patient_fields": [
@@ -191,59 +197,23 @@
       "criterion_type": "EXCLUSION",
       "category": "MEDICAL_HISTORY",
       "original_text": "Have New York Heart Association Functional Classification Class III or IV congestive heart failure (CHF)",
-      "evaluation_type": "COMPOUND",
-      "field_name": null,
-      "operator": null,
-      "value": null,
+      "evaluation_type": "CATEGORICAL",
+      "field_name": "nyha_class",
+      "operator": "IN",
+      "value": [
+        "III",
+        "IV"
+      ],
       "lower_value": null,
       "upper_value": null,
       "unit": null,
       "temporal_window": null,
-      "logical_operator": "OR",
-      "children": [
-        {
-          "criterion_id": "EXC-003.1",
-          "criterion_type": "EXCLUSION",
-          "category": "MEDICAL_HISTORY",
-          "original_text": "Class III",
-          "evaluation_type": "BOOLEAN",
-          "field_name": null,
-          "operator": "IN",
-          "value": [
-            "III"
-          ],
-          "lower_value": null,
-          "upper_value": null,
-          "unit": null,
-          "temporal_window": null,
-          "logical_operator": null,
-          "children": [],
-          "required_patient_fields": [],
-          "requires_human_review": true
-        },
-        {
-          "criterion_id": "EXC-003.2",
-          "criterion_type": "EXCLUSION",
-          "category": "MEDICAL_HISTORY",
-          "original_text": "Class IV",
-          "evaluation_type": "BOOLEAN",
-          "field_name": null,
-          "operator": "IN",
-          "value": [
-            "IV"
-          ],
-          "lower_value": null,
-          "upper_value": null,
-          "unit": null,
-          "temporal_window": null,
-          "logical_operator": null,
-          "children": [],
-          "required_patient_fields": [],
-          "requires_human_review": true
-        }
+      "logical_operator": null,
+      "children": [],
+      "required_patient_fields": [
+        "medical_history"
       ],
-      "required_patient_fields": [],
-      "requires_human_review": true
+      "requires_human_review": false
     },
     {
       "criterion_id": "EXC-004",
@@ -305,7 +275,7 @@
           "criterion_type": "EXCLUSION",
           "category": "PROCEDURE",
           "original_text": "being considered for bariatric surgery or any other procedure intended for weight loss",
-          "evaluation_type": "HUMAN_ONLY",
+          "evaluation_type": "COMPOUND",
           "field_name": null,
           "operator": null,
           "value": null,
@@ -313,8 +283,45 @@
           "upper_value": null,
           "unit": null,
           "temporal_window": null,
-          "logical_operator": null,
-          "children": [],
+          "logical_operator": "OR",
+          "children": [
+            {
+              "criterion_id": "EXC-004.3.1",
+              "criterion_type": "EXCLUSION",
+              "category": "PROCEDURE",
+              "original_text": "being considered for bariatric surgery",
+              "evaluation_type": "HUMAN_ONLY",
+              "field_name": null,
+              "operator": null,
+              "value": null,
+              "lower_value": null,
+              "upper_value": null,
+              "unit": null,
+              "temporal_window": null,
+              "logical_operator": null,
+              "children": [],
+              "required_patient_fields": [],
+              "requires_human_review": true
+            },
+            {
+              "criterion_id": "EXC-004.3.2",
+              "criterion_type": "EXCLUSION",
+              "category": "PROCEDURE",
+              "original_text": "being considered for any other procedure intended for weight loss",
+              "evaluation_type": "HUMAN_ONLY",
+              "field_name": null,
+              "operator": null,
+              "value": null,
+              "lower_value": null,
+              "upper_value": null,
+              "unit": null,
+              "temporal_window": null,
+              "logical_operator": null,
+              "children": [],
+              "required_patient_fields": [],
+              "requires_human_review": true
+            }
+          ],
           "required_patient_fields": [],
           "requires_human_review": true
         }
@@ -343,36 +350,21 @@
     "missed_criteria": [],
     "unexpected_criteria": [],
     "structural_errors": [
-      "NYHA_CLASS_III_IV.evaluation_type: expected 'CATEGORICAL', got 'COMPOUND'",
-      "NYHA_CLASS_III_IV.field_name: expected 'nyha_class', got None",
-      "NYHA_CLASS_III_IV.operator: expected 'IN', got None",
-      "NYHA_CLASS_III_IV.value: expected ['III', 'IV'], got None",
-      "NYHA_CLASS_III_IV.logical_operator: expected None, got 'OR'",
-      "NYHA_CLASS_III_IV.required_patient_fields: expected ['medical_history'], got []",
-      "NYHA_CLASS_III_IV.children_count: expected 0, got 2",
+      "RECENT_CARDIOVASCULAR_EVENT.temporal_window: expected {'value': '6', 'unit': 'MONTH'}, got None",
       "T2D_MORBID_OBESITY_WEIGHT_LOSS_PROCEDURE.category: expected 'DIAGNOSIS', got 'OTHER'",
-      "T2D_MORBID_OBESITY_WEIGHT_LOSS_PROCEDURE.children[3].evaluation_type: expected 'COMPOUND', got 'HUMAN_ONLY'",
-      "T2D_MORBID_OBESITY_WEIGHT_LOSS_PROCEDURE.children[3].logical_operator: expected 'OR', got None",
-      "T2D_MORBID_OBESITY_WEIGHT_LOSS_PROCEDURE.children[3].children_count: expected 2, got 0",
-      "T2D_MORBID_OBESITY_WEIGHT_LOSS_PROCEDURE.children[3].children[1].criterion_type: expected 'EXCLUSION', got '<missing>'",
-      "T2D_MORBID_OBESITY_WEIGHT_LOSS_PROCEDURE.children[3].children[1].category: expected 'PROCEDURE', got '<missing>'",
-      "T2D_MORBID_OBESITY_WEIGHT_LOSS_PROCEDURE.children[3].children[1].evaluation_type: expected 'BOOLEAN', got '<missing>'",
-      "T2D_MORBID_OBESITY_WEIGHT_LOSS_PROCEDURE.children[3].children[1].field_name: expected None, got '<missing>'",
-      "T2D_MORBID_OBESITY_WEIGHT_LOSS_PROCEDURE.children[3].children[1].operator: expected 'EQ', got '<missing>'",
-      "T2D_MORBID_OBESITY_WEIGHT_LOSS_PROCEDURE.children[3].children[1].value: expected True, got '<missing>'",
-      "T2D_MORBID_OBESITY_WEIGHT_LOSS_PROCEDURE.children[3].children[2].criterion_type: expected 'EXCLUSION', got '<missing>'",
-      "T2D_MORBID_OBESITY_WEIGHT_LOSS_PROCEDURE.children[3].children[2].category: expected 'PROCEDURE', got '<missing>'",
-      "T2D_MORBID_OBESITY_WEIGHT_LOSS_PROCEDURE.children[3].children[2].evaluation_type: expected 'BOOLEAN', got '<missing>'",
-      "T2D_MORBID_OBESITY_WEIGHT_LOSS_PROCEDURE.children[3].children[2].field_name: expected None, got '<missing>'",
-      "T2D_MORBID_OBESITY_WEIGHT_LOSS_PROCEDURE.children[3].children[2].operator: expected 'EQ', got '<missing>'",
-      "T2D_MORBID_OBESITY_WEIGHT_LOSS_PROCEDURE.children[3].children[2].value: expected True, got '<missing>'"
+      "T2D_MORBID_OBESITY_WEIGHT_LOSS_PROCEDURE.children[3].children[1].evaluation_type: expected 'BOOLEAN', got 'HUMAN_ONLY'",
+      "T2D_MORBID_OBESITY_WEIGHT_LOSS_PROCEDURE.children[3].children[1].operator: expected 'EQ', got None",
+      "T2D_MORBID_OBESITY_WEIGHT_LOSS_PROCEDURE.children[3].children[1].value: expected True, got None",
+      "T2D_MORBID_OBESITY_WEIGHT_LOSS_PROCEDURE.children[3].children[2].evaluation_type: expected 'BOOLEAN', got 'HUMAN_ONLY'",
+      "T2D_MORBID_OBESITY_WEIGHT_LOSS_PROCEDURE.children[3].children[2].operator: expected 'EQ', got None",
+      "T2D_MORBID_OBESITY_WEIGHT_LOSS_PROCEDURE.children[3].children[2].value: expected True, got None"
     ],
     "population_leakage": [],
     "field_mapping_accuracy": {
-      "passed_checks": 10,
+      "passed_checks": 11,
       "total_checks": 11,
-      "accuracy_percent": 90.9,
-      "status": "FAIL",
+      "accuracy_percent": 100.0,
+      "status": "PASS",
       "quality": "good"
     },
     "threshold_accuracy": {
@@ -383,17 +375,17 @@
       "quality": "good"
     },
     "logical_structure_accuracy": {
-      "passed_checks": 6,
+      "passed_checks": 9,
       "total_checks": 9,
-      "accuracy_percent": 66.7,
-      "status": "FAIL",
-      "quality": "poor"
+      "accuracy_percent": 100.0,
+      "status": "PASS",
+      "quality": "good"
     },
     "required_patient_fields_accuracy": {
-      "passed_checks": 12,
+      "passed_checks": 13,
       "total_checks": 13,
-      "accuracy_percent": 92.3,
-      "status": "FAIL",
+      "accuracy_percent": 100.0,
+      "status": "PASS",
       "quality": "good"
     },
     "boolean_semantics_accuracy": {
@@ -404,11 +396,11 @@
       "quality": "fair"
     },
     "temporal_window_accuracy": {
-      "passed_checks": 4,
+      "passed_checks": 3,
       "total_checks": 4,
-      "accuracy_percent": 100.0,
-      "status": "PASS",
-      "quality": "good"
+      "accuracy_percent": 75.0,
+      "status": "FAIL",
+      "quality": "fair"
     },
     "criterion_comparisons": [
       {
@@ -797,8 +789,8 @@
             "path": "RECENT_CARDIOVASCULAR_EVENT",
             "field_name": "temporal_window",
             "expected": "{'value': '6', 'unit': 'MONTH'}",
-            "actual": "{'value': '6', 'unit': 'MONTH'}",
-            "passed": true,
+            "actual": "None",
+            "passed": false,
             "metric_group": "temporal_window"
           },
           {
@@ -877,7 +869,7 @@
             "path": "RECENT_CARDIOVASCULAR_EVENT.children[1]",
             "field_name": "temporal_window",
             "expected": "{'value': '6', 'unit': 'MONTH'}",
-            "actual": "inherited {'value': '6', 'unit': 'MONTH'}",
+            "actual": "{'value': '6', 'unit': 'MONTH'}",
             "passed": true,
             "metric_group": "temporal_window"
           },
@@ -941,7 +933,7 @@
             "path": "RECENT_CARDIOVASCULAR_EVENT.children[2]",
             "field_name": "temporal_window",
             "expected": "{'value': '6', 'unit': 'MONTH'}",
-            "actual": "inherited {'value': '6', 'unit': 'MONTH'}",
+            "actual": "{'value': '6', 'unit': 'MONTH'}",
             "passed": true,
             "metric_group": "temporal_window"
           },
@@ -1005,7 +997,7 @@
             "path": "RECENT_CARDIOVASCULAR_EVENT.children[3]",
             "field_name": "temporal_window",
             "expected": "{'value': '6', 'unit': 'MONTH'}",
-            "actual": "inherited {'value': '6', 'unit': 'MONTH'}",
+            "actual": "{'value': '6', 'unit': 'MONTH'}",
             "passed": true,
             "metric_group": "temporal_window"
           },
@@ -1045,57 +1037,41 @@
             "path": "NYHA_CLASS_III_IV",
             "field_name": "evaluation_type",
             "expected": "'CATEGORICAL'",
-            "actual": "'COMPOUND'",
-            "passed": false,
+            "actual": "'CATEGORICAL'",
+            "passed": true,
             "metric_group": null
           },
           {
             "path": "NYHA_CLASS_III_IV",
             "field_name": "field_name",
             "expected": "'nyha_class'",
-            "actual": "None",
-            "passed": false,
+            "actual": "'nyha_class'",
+            "passed": true,
             "metric_group": "field_mapping"
           },
           {
             "path": "NYHA_CLASS_III_IV",
             "field_name": "operator",
             "expected": "'IN'",
-            "actual": "None",
-            "passed": false,
+            "actual": "'IN'",
+            "passed": true,
             "metric_group": null
           },
           {
             "path": "NYHA_CLASS_III_IV",
             "field_name": "value",
             "expected": "['III', 'IV']",
-            "actual": "None",
-            "passed": false,
-            "metric_group": null
-          },
-          {
-            "path": "NYHA_CLASS_III_IV",
-            "field_name": "logical_operator",
-            "expected": "None",
-            "actual": "'OR'",
-            "passed": false,
+            "actual": "['III', 'IV']",
+            "passed": true,
             "metric_group": null
           },
           {
             "path": "NYHA_CLASS_III_IV",
             "field_name": "required_patient_fields",
             "expected": "['medical_history']",
-            "actual": "[]",
-            "passed": false,
+            "actual": "['medical_history']",
+            "passed": true,
             "metric_group": "required_patient_fields"
-          },
-          {
-            "path": "NYHA_CLASS_III_IV",
-            "field_name": "children_count",
-            "expected": "0",
-            "actual": "2",
-            "passed": false,
-            "metric_group": null
           }
         ]
       },
@@ -1285,63 +1261,55 @@
             "path": "T2D_MORBID_OBESITY_WEIGHT_LOSS_PROCEDURE.children[3]",
             "field_name": "evaluation_type",
             "expected": "'COMPOUND'",
-            "actual": "'HUMAN_ONLY'",
-            "passed": false,
+            "actual": "'COMPOUND'",
+            "passed": true,
             "metric_group": "logical_structure"
           },
           {
             "path": "T2D_MORBID_OBESITY_WEIGHT_LOSS_PROCEDURE.children[3]",
             "field_name": "logical_operator",
             "expected": "'OR'",
-            "actual": "None",
-            "passed": false,
+            "actual": "'OR'",
+            "passed": true,
             "metric_group": "logical_structure"
           },
           {
             "path": "T2D_MORBID_OBESITY_WEIGHT_LOSS_PROCEDURE.children[3]",
             "field_name": "children_count",
             "expected": "2",
-            "actual": "0",
-            "passed": false,
+            "actual": "2",
+            "passed": true,
             "metric_group": "logical_structure"
           },
           {
             "path": "T2D_MORBID_OBESITY_WEIGHT_LOSS_PROCEDURE.children[3].children[1]",
             "field_name": "criterion_type",
             "expected": "'EXCLUSION'",
-            "actual": "'<missing>'",
-            "passed": false,
+            "actual": "'EXCLUSION'",
+            "passed": true,
             "metric_group": null
           },
           {
             "path": "T2D_MORBID_OBESITY_WEIGHT_LOSS_PROCEDURE.children[3].children[1]",
             "field_name": "category",
             "expected": "'PROCEDURE'",
-            "actual": "'<missing>'",
-            "passed": false,
+            "actual": "'PROCEDURE'",
+            "passed": true,
             "metric_group": null
           },
           {
             "path": "T2D_MORBID_OBESITY_WEIGHT_LOSS_PROCEDURE.children[3].children[1]",
             "field_name": "evaluation_type",
             "expected": "'BOOLEAN'",
-            "actual": "'<missing>'",
+            "actual": "'HUMAN_ONLY'",
             "passed": false,
             "metric_group": "boolean_semantics"
           },
           {
             "path": "T2D_MORBID_OBESITY_WEIGHT_LOSS_PROCEDURE.children[3].children[1]",
-            "field_name": "field_name",
-            "expected": "None",
-            "actual": "'<missing>'",
-            "passed": false,
-            "metric_group": null
-          },
-          {
-            "path": "T2D_MORBID_OBESITY_WEIGHT_LOSS_PROCEDURE.children[3].children[1]",
             "field_name": "operator",
             "expected": "'EQ'",
-            "actual": "'<missing>'",
+            "actual": "None",
             "passed": false,
             "metric_group": "boolean_semantics"
           },
@@ -1349,7 +1317,7 @@
             "path": "T2D_MORBID_OBESITY_WEIGHT_LOSS_PROCEDURE.children[3].children[1]",
             "field_name": "value",
             "expected": "True",
-            "actual": "'<missing>'",
+            "actual": "None",
             "passed": false,
             "metric_group": "boolean_semantics"
           },
@@ -1357,39 +1325,31 @@
             "path": "T2D_MORBID_OBESITY_WEIGHT_LOSS_PROCEDURE.children[3].children[2]",
             "field_name": "criterion_type",
             "expected": "'EXCLUSION'",
-            "actual": "'<missing>'",
-            "passed": false,
+            "actual": "'EXCLUSION'",
+            "passed": true,
             "metric_group": null
           },
           {
             "path": "T2D_MORBID_OBESITY_WEIGHT_LOSS_PROCEDURE.children[3].children[2]",
             "field_name": "category",
             "expected": "'PROCEDURE'",
-            "actual": "'<missing>'",
-            "passed": false,
+            "actual": "'PROCEDURE'",
+            "passed": true,
             "metric_group": null
           },
           {
             "path": "T2D_MORBID_OBESITY_WEIGHT_LOSS_PROCEDURE.children[3].children[2]",
             "field_name": "evaluation_type",
             "expected": "'BOOLEAN'",
-            "actual": "'<missing>'",
+            "actual": "'HUMAN_ONLY'",
             "passed": false,
             "metric_group": "boolean_semantics"
           },
           {
             "path": "T2D_MORBID_OBESITY_WEIGHT_LOSS_PROCEDURE.children[3].children[2]",
-            "field_name": "field_name",
-            "expected": "None",
-            "actual": "'<missing>'",
-            "passed": false,
-            "metric_group": null
-          },
-          {
-            "path": "T2D_MORBID_OBESITY_WEIGHT_LOSS_PROCEDURE.children[3].children[2]",
             "field_name": "operator",
             "expected": "'EQ'",
-            "actual": "'<missing>'",
+            "actual": "None",
             "passed": false,
             "metric_group": "boolean_semantics"
           },
@@ -1397,7 +1357,7 @@
             "path": "T2D_MORBID_OBESITY_WEIGHT_LOSS_PROCEDURE.children[3].children[2]",
             "field_name": "value",
             "expected": "True",
-            "actual": "'<missing>'",
+            "actual": "None",
             "passed": false,
             "metric_group": "boolean_semantics"
           }

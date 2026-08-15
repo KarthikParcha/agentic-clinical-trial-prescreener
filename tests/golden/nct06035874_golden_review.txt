@@ -1,0 +1,233 @@
+NCT06035874 GOLDEN CRITERIA REVIEW
+===================================
+
+Status: CANDIDATE_REQUIRES_HUMAN_REVIEW
+Source: saved ClinicalTrials.gov NCT06035874 eligibilityCriteria fixture
+Method: source-only transcription and deterministic structural representation.
+No live Groq extraction was used to create this artifact or its JSON dataset.
+
+INC-001 | INCLUSION
+Source: A man or woman, 20 years of age or above with the diagnosis of type 2
+diabetes for at least 3 months who meets all the following two criteria:
+1. On standard anti-diabetic agents (metformin, DPP-4 inhibitors, sulphonylureas
+or insulin, in any combination) with an HbA1c of \<9% at screening
+2. Have documented hepatic steatosis (MRI-PDFF \>5.6%) on screening MRI-PDFF
+Type: COMPOUND | Structure: AND(age >=20; T2D AND duration >=3 months;
+medication regimen AND HbA1c <9%; MRI-PDFF >5.6%)
+Canonical facts: type_2_diabetes; diagnosis_duration_years (3 months = 0.25 year);
+hba1c. Unresolved: age, qualifying medication regimen, MRI-PDFF/hepatic steatosis.
+Human review: yes
+
+INC-002 | INCLUSION
+Source: Participants must be medically stable based on medical history, physical
+examination and laboratory investigations.
+Type: SEMANTIC | Structure: atomic | Canonical fact: unresolved
+Human review: yes
+
+INC-003 | INCLUSION
+Source: Participants must be willing and able to adhere to the prohibitions and
+restrictions specified in this protocol.
+Type: HUMAN_ONLY | Structure: atomic | Canonical fact: unresolved
+Human review: yes
+
+INC-004 | INCLUSION
+Source: Each participant must sign an informed consent form (ICF) indicating that
+he or she understands the purpose of the study and are willing to participate in
+the study.
+Type: HUMAN_ONLY | Structure: atomic | Canonical fact: unresolved
+Human review: yes
+
+EXC-001 | EXCLUSION
+Source: History of diabetic ketoacidosis, type 1 diabetes, pancreas or beta-cell
+transplantation, or diabetes secondary to pancreatitis or pancreatectomy.
+Type: COMPOUND | Structure: OR(DKA; type 1 diabetes; transplant; secondary diabetes)
+Canonical fact: type_1_diabetes. Other facts unresolved.
+Human review: yes
+
+EXC-002 | EXCLUSION
+Source: History of brittle or labile glycemic control, with widely varying glucose
+measurements by FPG or SMBG such that stable glucose control over treatment would
+be unlikely.
+Type: SEMANTIC | Structure: atomic | Canonical fact: unresolved
+Human review: yes
+
+EXC-003 | EXCLUSION
+Source: History of drug or alcohol abuse according to Diagnostic and Statistical
+Manual of Mental Disorders (5th edition) (DSM-V) criteria within 3 years before
+Screening, or an Alcohol Use Disorders Identification Test (AUDIT) with a score
+\>8, or alcohol consumption of more than 20 g per day in the case of women and
+more than 30 g per day in the case of men for at least three consecutive months
+during the previous 5 years.
+Type: COMPOUND | Structure: OR(DSM-V abuse, 3 years; AUDIT >8; alcohol rule, 5 years)
+Canonical fact: unresolved | Temporal: 3 years; 5 years
+Human review: yes
+
+EXC-004 | EXCLUSION
+Source: Thyroid stimulating hormone (TSH) value that is either \< 0.45 mIU/L or
+\>10 mIU/L at Screening. Note: Subjects on thyroid hormone replacement therapy
+must be on a stable dose and dosing regimen for at least 4 weeks prior to enrollment.
+Type: COMPOUND | Structure: OR(TSH <0.45; TSH >10); associated stability note
+Canonical fact: unresolved | Thresholds: <0.45, >10 mIU/L | Temporal: 4 weeks
+Human review: yes
+
+EXC-005 | EXCLUSION
+Source: Use of a PPAR-γ agonist \[e.g., a thiazolidinedione (pioglitazone\], an
+SGLT2 inhibitor (e.g., canagliflozin, empagliflozin, dapagliflozin), GLP-1 receptor
+agonists (e.g., liraglutide, dulaglutide) or saroglitazar (Dual PPARα/γ agonist)
+within 12 weeks before the enrollment.
+Type: COMPOUND | Structure: OR(each prohibited medication class) | Temporal: 12 weeks
+Canonical fact: unresolved
+Human review: yes
+
+EXC-006 | EXCLUSION
+Source: BMI >40 kg/m2.
+Type: NUMERIC | Threshold: >40 kg/m2 | Canonical fact: bmi
+Human review: no
+
+EXC-007 | EXCLUSION
+Source: Ongoing eating disorder, or a significant weight loss or weight gain within
+12 weeks before the Screening visit, defined as an increase or decrease of 5% in
+body weight based upon clinic-based measurement or, if not available, based on
+subject's report.
+Type: COMPOUND | Structure: OR(eating disorder; weight change >=5%, 12 weeks)
+Canonical fact: unresolved | Temporal: 12 weeks
+Human review: yes
+
+EXC-008 | EXCLUSION
+Source: Use of weight loss medication (prescription and/or over the counter) within
+3 months prior to Screening or have participated in a weight loss/diet program
+within 12 months prior to Screening.
+Type: COMPOUND | Structure: OR(medication, 3 months; program, 12 months)
+Canonical fact: unresolved | Temporal: 3 months; 12 months
+Human review: yes
+
+EXC-009 | EXCLUSION
+Source: Renal disease that required treatment with immunosuppressive therapy or a
+history of dialysis or renal transplant.
+Type: COMPOUND | Structure: OR(renal immunosuppression; dialysis; renal transplant)
+Canonical fact: unresolved
+Human review: yes
+
+EXC-010 | EXCLUSION
+Source: Myocardial infarction, unstable angina, pulmonary hypertension,
+revascularization procedure (e.g., stent or bypass graft surgery), or cerebrovascular
+accident within 3 months before Screening, or revascularization procedure is planned,
+or subject has a history of New York Heart Association (NYHA) Class III-IV cardiac disease.
+Type: COMPOUND | Structure: OR(all listed alternatives)
+Canonical facts: heart_attack; stroke; nyha_class. Other facts unresolved.
+Temporal: 3 months | Human review: yes
+
+EXC-011 | EXCLUSION
+Source: History of hepatitis B surface antigen (HBsAg) or hepatitis C antibody
+(anti-HCV) positive, or other clinically active liver disease, or tests positive for
+HBsAg or anti-HCV at Screening.
+Type: COMPOUND | Structure: OR(history markers; active liver disease; screening labs)
+Canonical fact: unresolved
+Human review: yes
+
+EXC-012 | EXCLUSION
+Source: Use of vitamin E within 12 weeks before screening.
+Type: HUMAN_ONLY | Structure: atomic | Temporal: 12 weeks | Canonical fact: unresolved
+Human review: yes
+
+EXC-013 | EXCLUSION
+Source: History of prior bariatric (e.g., Roux-en-Y gastric bypass) or other major
+upper gastrointestinal surgical procedure (including gastric resection).
+Type: HUMAN_ONLY | Structure: atomic | Canonical fact: unresolved
+Human review: yes
+
+EXC-014 | EXCLUSION
+Source: History of diabetic gastroparesis (or symptoms suggestive of this disorder,
+including postprandial bloating or vomiting), malabsorption, inflammatory bowel
+disease, or any other chronic, clinically important gastrointestinal disorder.
+Type: COMPOUND | Structure: OR(all listed gastrointestinal conditions)
+Canonical fact: unresolved
+Human review: yes
+
+EXC-015 | EXCLUSION
+Source: Estimated glomerular filtration rate (eGFR) \<60 mL/min/1•73 m2 using the
+Modification of Diet in Renal Disease Study (MDRD) equation.
+Type: NUMERIC | Threshold: <60 mL/min/1.73 m2 | Canonical fact: unresolved
+Human review: yes
+
+EXC-016 | EXCLUSION
+Source: Subjects with a history of having or possibly having metallic material in
+the body or any contraindication for a MR examination.
+Type: COMPOUND | Structure: OR(metallic material; MR contraindication)
+Canonical fact: unresolved
+Human review: yes
+
+EXC-017 | EXCLUSION
+Source: Claustrophobia, or anxiety related to previous negative experiences with
+magnetic resonance imaging procedures or if the subject is unwilling to participate
+in magnetic resonance imaging procedures.
+Type: COMPOUND | Structure: OR(all listed alternatives) | Canonical fact: unresolved
+Human review: yes
+
+EXC-018 | EXCLUSION
+Source: Clinically important hematologic disorder (e.g., symptomatic anemia,
+proliferative bone marrow disorder, thrombocytopenia) at Screening.
+Type: SEMANTIC | Structure: atomic | Canonical fact: unresolved
+Human review: yes
+
+EXC-019 | EXCLUSION
+Source: History of human immunodeficiency virus (HIV) antibody positive at Screening.
+Type: HUMAN_ONLY | Structure: atomic | Canonical fact: unresolved
+Human review: yes
+
+EXC-020 | EXCLUSION
+Source: Major surgery (e.g., requiring general anesthesia) within 12 weeks before
+Screening, or will not have fully recovered from surgery, or has surgery planned
+during the time the subject is expected to participate in the study.
+Type: COMPOUND | Structure: OR(recent surgery; incomplete recovery; planned surgery)
+Canonical fact: unresolved | Temporal: 12 weeks
+Human review: yes
+
+EXC-021 | EXCLUSION
+Source: Contraindications to the use of bempedoic acid (per BEMPEDOIC ACID
+Prescribing Information).
+Type: HUMAN_ONLY | Structure: atomic | Canonical fact: unresolved
+Human review: yes
+
+EXC-022 | EXCLUSION
+Source: Current use of a corticosteroid medication or immunosuppressive agent, or
+likely to require treatment with a corticosteroid medication or an immunosuppressive agent.
+Type: COMPOUND | Structure: OR(current use; likely required treatment)
+Canonical fact: unresolved
+Human review: yes
+
+REVIEW TOTALS
+-------------
+Expected source-level criteria: 26
+Inclusions: 4
+Exclusions: 22
+Top-level compound criteria: 15
+Top-level HUMAN_ONLY criteria: 6
+
+UNSUPPORTED CANONICAL FACTS
+---------------------------
+- age
+- qualifying standard anti-diabetic regimen and medication timing
+- MRI-PDFF and documented hepatic steatosis
+- medical stability and protocol-adherence capacity
+- study-specific informed consent
+- diabetic ketoacidosis, pancreatic/beta-cell transplant, and secondary diabetes
+- brittle/labile glycemic control
+- DSM-V substance-use history, AUDIT score, and sex-specific alcohol intake
+- TSH and thyroid replacement dose stability
+- prohibited PPAR-gamma, SGLT2, GLP-1, and saroglitazar exposure
+- eating disorder and clinically significant recent weight change
+- weight-loss medication and diet-program participation
+- renal immunosuppression, dialysis, and renal transplant
+- unstable angina, pulmonary hypertension, and planned/recent revascularization
+- hepatitis B/C markers and active liver disease
+- vitamin E exposure
+- bariatric/upper gastrointestinal surgery
+- gastroparesis, malabsorption, inflammatory bowel disease, and other GI disorders
+- eGFR using MDRD
+- MRI metal/contraindication/tolerance facts
+- hematologic disorder
+- HIV status
+- major-surgery timing, recovery, and plans
+- bempedoic-acid contraindications
+- corticosteroid/immunosuppressive therapy and anticipated need
